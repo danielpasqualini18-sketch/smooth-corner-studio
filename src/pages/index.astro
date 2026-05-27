@@ -60,8 +60,8 @@ import "../styles/global.css";
 
 					<div class="work-grid">
 						<a class="work-card feature-card" href="/films-stories" aria-label="View films and visual stories work">
-							<div class="image-placeholder">
-								<span>Project image</span>
+							<div class="image-placeholder image-cover">
+								<img src="/images/films-cover.jpg" alt="Films and visual stories portfolio preview" />
 							</div>
 							<div class="card-content">
 								<p class="card-meta">Films and visual stories</p>
@@ -74,8 +74,8 @@ import "../styles/global.css";
 						</a>
 
 						<a class="work-card" href="/photography" aria-label="View photography work">
-							<div class="image-placeholder warm">
-								<span>Project image</span>
+							<div class="image-placeholder warm image-cover">
+								<img src="/images/photography-cover.jpg" alt="Photography portfolio preview" />
 							</div>
 							<div class="card-content">
 								<p class="card-meta">Photography</p>
@@ -88,8 +88,8 @@ import "../styles/global.css";
 						</a>
 
 						<a class="work-card" href="/events" aria-label="View people and real life coverage">
-							<div class="image-placeholder blue">
-								<span>Project image</span>
+							<div class="image-placeholder blue image-cover">
+								<img src="/images/events-cover.jpg" alt="People gathered at an event" />
 							</div>
 							<div class="card-content">
 								<p class="card-meta">Event coverage</p>
@@ -286,7 +286,7 @@ import "../styles/global.css";
 						<a href="mailto:hello@smoothcornerstudio.com.au"> Email </a>
 
 						<a
-							href="https://www.instagram.com/danielsmoothcorner/"
+							href="https://www.instagram.com/danielpasqualini_/"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
@@ -402,7 +402,7 @@ import "../styles/global.css";
 		grid-column: 2;
 		position: relative;
 		display: block;
-		width: clamp(280px, 30vw, 500px);
+		width: clamp(280px, 30vw, 425px);
 	}
 
 	.logo-bloom {
@@ -585,6 +585,18 @@ import "../styles/global.css";
 			linear-gradient(135deg, rgba(60, 71, 97, 0.42), rgba(122, 138, 133, 0.26)), var(--charcoal);
 	}
 
+	.image-cover {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.image-cover img {
+		width: 100%;
+		height: 100%;
+		display: block;
+		object-fit: cover;
+	}
+
 	.feature-card .image-placeholder {
 		min-height: 560px;
 	}
@@ -596,7 +608,7 @@ import "../styles/global.css";
 	.card-meta {
 		margin: 0 0 12px;
 		color: var(--sand);
-		font-size: 0.78rem;
+		font-size: 1rem;
 		letter-spacing: 0.12em;
 		text-transform: uppercase;
 	}
