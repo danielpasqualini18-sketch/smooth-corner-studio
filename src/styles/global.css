@@ -1,63 +1,157 @@
+@font-face {
+  font-family: "Nevrada Neue";
+  src: url("/fonts/nevrada-neue.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Trebuchet Custom";
+  src: url("/fonts/trebuchet-ms.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Trebuchet Custom";
+  src: url("/fonts/trebuchet-ms-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --background: #111111;
-  --text: #f4f1ea;
-  --muted: #b8b1a6;
-  --line: rgba(244, 241, 234, 0.16);
+  --lagoon: #7a8a85;
+  --sharky-blue: #3c4761;
+  --sicilia: #b5533f;
+  --sunset: #c6774f;
+  --sand: #d7ae81;
+  --aussie-gold: #a47f54;
+
+  --ink: #1c1c1b;
+  --charcoal: #232321;
+  --deep-blue: #252b3a;
+  --cream: #f4eadc;
+  --soft-cream: #eee0ce;
+
+  --text: var(--cream);
+  --text-soft: rgba(244, 234, 220, 0.78);
+  --text-muted: rgba(244, 234, 220, 0.58);
+  --line: rgba(244, 234, 220, 0.16);
+
+  --font-title: "Nevrada Neue", Georgia, serif;
+  --font-body: "Trebuchet Custom", "Trebuchet MS", Arial, sans-serif;
 }
 
 * {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  background: var(--background);
-  color: var(--text);
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+html {
+  background: var(--ink);
+  color: var(--cream);
+  scroll-behavior: smooth;
 }
 
-.home {
-  min-height: 100vh;
-  padding: clamp(24px, 5vw, 72px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+body {
+  margin: 0;
+  background:
+    var(--ink);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--sand);
+  color: var(--ink);
+}
+
+.site-shell {
+  width: min(100% - 32px, 1180px);
+  margin: 0 auto;
 }
 
 .eyebrow {
-  margin: 0 0 48px;
-  color: var(--muted);
+  margin: 0;
+  font-family: var(--font-body);
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
+  color: var(--sand);
 }
 
-.hero {
-  max-width: 980px;
-}
-
-h1 {
-  margin: 0;
-  max-width: 980px;
-  font-size: clamp(3rem, 8vw, 8rem);
+.display-title {
+  font-family: var(--font-title);
+  font-weight: 400;
   line-height: 0.9;
-  letter-spacing: -0.075em;
+  letter-spacing: -0.02em;
 }
 
-.hero p,
-.intro p {
-  max-width: 680px;
-  color: var(--muted);
-  font-size: clamp(1.05rem, 1.7vw, 1.4rem);
-  line-height: 1.55;
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
 }
 
-.hero p {
-  margin: 36px 0 0;
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 20px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.92rem;
+  color: var(--cream);
+  transition: 180ms ease;
 }
 
-.intro {
-  margin-top: 72px;
-  padding-top: 32px;
+.button:hover {
+  background: var(--cream);
+  color: var(--ink);
+  border-color: var(--cream);
+}
+
+.button.primary {
+  background: var(--sand);
+  color: var(--ink);
+  border-color: var(--sand);
+}
+
+.button.primary:hover {
+  background: var(--aussie-gold);
+  border-color: var(--aussie-gold);
+}
+
+.section {
+  padding: clamp(64px, 10vw, 132px) 0;
+}
+
+.section-line {
   border-top: 1px solid var(--line);
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  width: clamp(190px, 22vw, 340px);
+}
+
+.brand-logo img {
+  width: 100%;
+  height: auto;
 }

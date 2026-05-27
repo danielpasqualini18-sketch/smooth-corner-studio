@@ -1,0 +1,181 @@
+---
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="description"
+			content="Smooth Corner Studio links, contact and social media."
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Smooth Corner Studio Links</title>
+	</head>
+
+	<body>
+		<main class="links-page">
+			<section class="links-card">
+				<div class="logo-wrap">
+					<img
+						src="/images/brand/smooth-corner-logo-extended.png"
+						alt="Smooth Corner Studio"
+					/>
+				</div>
+
+				<p class="eyebrow">Boorloo / Perth, Western Australia</p>
+
+				<h1 class="display-title">Quiet images.<br />Honest films.</h1>
+
+				<p class="intro">
+					Photography, films and visual stories by Daniel Pasqualini.
+				</p>
+
+				<div class="links-stack">
+					<a class="link-button primary" href="/">Visit the website</a>
+					<a class="link-button" href="/#work">View selected work</a>
+					<a class="link-button" href="/#contact">Start a conversation</a>
+					<a
+						class="link-button"
+						href="https://www.instagram.com/danielsmoothcorner/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Instagram
+					</a>
+					<a class="link-button" href="mailto:hello@smoothcornerstudio.com.au">
+						Email Smooth Corner Studio
+					</a>
+				</div>
+
+				<p class="small-note">
+					Smooth Corner Studio creates photography, films and visual stories for people,
+					places and projects with character.
+				</p>
+			</section>
+		</main>
+	</body>
+</html>
+
+<style>
+	.links-page {
+		min-height: 100vh;
+		display: grid;
+		place-items: center;
+		padding: clamp(24px, 5vw, 56px);
+		background:
+			linear-gradient(rgba(28, 28, 27, 0.72), rgba(28, 28, 27, 0.88)),
+			url("/images/title-background.jpg") center center / cover no-repeat;
+	}
+
+	.links-card {
+		width: min(100%, 560px);
+		padding: clamp(28px, 6vw, 56px);
+		border: 1px solid rgba(244, 234, 220, 0.18);
+		border-radius: 42px;
+		background:
+			radial-gradient(circle at top right, rgba(215, 174, 129, 0.18), transparent 18rem),
+			rgba(28, 28, 27, 0.78);
+		backdrop-filter: blur(16px);
+		box-shadow: 0 28px 90px rgba(0, 0, 0, 0.34);
+		text-align: center;
+	}
+
+	.logo-wrap {
+		width: min(340px, 84%);
+		margin: 0 auto 34px;
+	}
+
+	.logo-wrap img {
+		width: 100%;
+		height: auto;
+	}
+
+	.links-card .eyebrow {
+		margin: 0 0 18px;
+		color: var(--sand);
+		font-size: clamp(0.82rem, 1.8vw, 1rem);
+	}
+
+	.links-card h1 {
+		margin: 0;
+		color: var(--sand);
+		font-size: clamp(3.4rem, 13vw, 6.8rem);
+		line-height: 0.88;
+		letter-spacing: 0.015em;
+		text-shadow: 0 8px 32px rgba(0, 0, 0, 0.34);
+	}
+
+	.intro {
+		max-width: 420px;
+		margin: 28px auto 0;
+		color: rgba(244, 234, 220, 0.9);
+		font-size: clamp(1rem, 2.4vw, 1.18rem);
+		line-height: 1.55;
+	}
+
+	.links-stack {
+		display: grid;
+		gap: 12px;
+		margin-top: 34px;
+	}
+
+	.link-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 54px;
+		padding: 14px 20px;
+		border: 1px solid rgba(215, 174, 129, 0.42);
+		border-radius: 999px;
+		color: var(--sand);
+		background: rgba(28, 28, 27, 0.34);
+		font-size: 1rem;
+		transition:
+			transform 180ms ease,
+			background 180ms ease,
+			border-color 180ms ease,
+			color 180ms ease;
+	}
+
+	.link-button:hover {
+		transform: translateY(-1px);
+		color: var(--ink);
+		background: var(--sand);
+		border-color: var(--sand);
+	}
+
+	.link-button.primary {
+		color: var(--ink);
+		background: var(--sand);
+		border-color: var(--sand);
+	}
+
+	.link-button.primary:hover {
+		background: var(--cream);
+		border-color: var(--cream);
+	}
+
+	.small-note {
+		margin: 28px auto 0;
+		max-width: 420px;
+		color: rgba(244, 234, 220, 0.68);
+		font-size: 0.9rem;
+		line-height: 1.55;
+	}
+
+	@media (max-width: 600px) {
+		.links-page {
+			padding: 18px;
+			align-items: stretch;
+		}
+
+		.links-card {
+			min-height: calc(100vh - 36px);
+			display: grid;
+			align-content: center;
+			border-radius: 34px;
+		}
+	}
+</style>
