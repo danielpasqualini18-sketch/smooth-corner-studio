@@ -40,8 +40,8 @@ import "../styles/global.css";
 
 				<div class="hero-intro">
 					<p>
-						I’m Daniel. Smooth Corner Studio is my creative practice: photography, films
-						and visual stories for people, places and projects with character.
+						I’m Daniel. Smooth Corner Studio is my creative practice: films, photography and visual
+						stories for people, places and projects with character.
 					</p>
 
 					<div class="button-row">
@@ -51,7 +51,7 @@ import "../styles/global.css";
 				</div>
 			</section>
 
-			<section id="work" class="section section-line">
+			<section id="work" class="section">
 				<div class="site-shell">
 					<div class="section-heading">
 						<p class="eyebrow">Selected work</p>
@@ -59,47 +59,47 @@ import "../styles/global.css";
 					</div>
 
 					<div class="work-grid">
-						<article class="work-card feature-card">
+						<a class="work-card feature-card" href="/films-stories" aria-label="View films and visual stories work">
 							<div class="image-placeholder">
 								<span>Project image</span>
 							</div>
 							<div class="card-content">
 								<p class="card-meta">Films and visual stories</p>
-								<h3>Story-led films</h3>
+								<h3>Thoughtful films with a human eye</h3>
 								<p>
-									Films with a natural, observational feel, made for organisations, brands and
-									people who want to show the real texture behind what they do.
+									Films shaped around people, atmosphere, rhythm and real moments, for projects with
+									something honest to say.
 								</p>
 							</div>
-						</article>
+						</a>
 
-						<article class="work-card">
+						<a class="work-card" href="/photography" aria-label="View photography work">
 							<div class="image-placeholder warm">
 								<span>Project image</span>
 							</div>
 							<div class="card-content">
 								<p class="card-meta">Photography</p>
-								<h3>Commercial and editorial imagery</h3>
+								<h3>Photography with texture and feeling</h3>
 								<p>
-									Clean, characterful photography for campaigns, websites, portraits, events and
-									stories that need a considered visual language.
+									Brand, lifestyle and portrait images that feel honest, tactile and alive, with a
+									bit of warmth and character.
 								</p>
 							</div>
-						</article>
+						</a>
 
-						<article class="work-card">
+						<a class="work-card" href="/events" aria-label="View people and real life coverage">
 							<div class="image-placeholder blue">
 								<span>Project image</span>
 							</div>
 							<div class="card-content">
-								<p class="card-meta">Events</p>
-								<h3>Natural coverage</h3>
+								<p class="card-meta">Event coverage</p>
+								<h3>People, gathered and alive</h3>
 								<p>
-									Event photography and video that captures people, atmosphere and detail without
-									feeling overly staged.
+									Weddings, engagements, family moments, gatherings and events photographed with a
+									calm eye for real life as it happens.
 								</p>
 							</div>
-						</article>
+						</a>
 					</div>
 				</div>
 			</section>
@@ -134,7 +134,7 @@ import "../styles/global.css";
 				</div>
 			</section>
 
-			<section id="services" class="section section-line">
+			<section id="services" class="section section-line services-section">
 				<div class="site-shell">
 					<div class="section-heading">
 						<p class="eyebrow">Services</p>
@@ -143,29 +143,27 @@ import "../styles/global.css";
 
 					<div class="services-grid">
 						<article>
-							<span class="service-number">01</span>
-							<h3>Story-led films</h3>
-							<p>
-								Story-led films with a natural, human-centred approach. Ideal for organisations,
-								creatives and small brands who want something more grounded than a standard promo
-								video.
-							</p>
-						</article>
-
-						<article>
-							<span class="service-number">02</span>
 							<h3>Photography</h3>
 							<p>
-								Portraits, events, campaigns and editorial imagery with an honest, cinematic eye.
+								Portraits, events, places and brand imagery with a natural, tactile feel. Honest
+								images for people and projects that need to feel warm, useful and alive.
 							</p>
 						</article>
 
 						<article>
-							<span class="service-number">03</span>
-							<h3>Creative direction</h3>
+							<h3>Films and visual stories</h3>
 							<p>
-								Support with story, mood, locations, shot lists and visual structure before the
-								camera comes out.
+								Small films, social pieces and story-led video for projects with something real to
+								say. Built around people, atmosphere, rhythm and moments that do not feel too
+								polished.
+							</p>
+						</article>
+
+						<article>
+							<h3>Creative production</h3>
+							<p>
+								Planning, creative direction, editing and production support to help shape the idea
+								before the shoot, not just make it look good at the end.
 							</p>
 						</article>
 					</div>
@@ -390,10 +388,10 @@ import "../styles/global.css";
 		gap: 24px;
 		padding: 22px clamp(20px, 4vw, 48px);
 		color: var(--cream);
-		background: rgba(28, 28, 27, 0.96);
-		border-bottom: 1px solid rgba(244, 234, 220, 0.1);
+		background: rgba(28, 28, 27, 0.6);
+		border-bottom: 1px solid rgba(244, 234, 220, 0.18);
 		border-radius: 0 0 68px 68px;
-		backdrop-filter: blur(14px);
+		backdrop-filter: blur(18px);
 	}
 
 	section {
@@ -437,36 +435,25 @@ import "../styles/global.css";
 	.hero {
 		position: relative;
 		isolation: isolate;
+		width: 100vw;
+		max-width: none;
+		margin-left: calc(50% - 50vw);
 		min-height: 100vh;
 		display: grid;
 		align-content: center;
-		padding: 220px 0 72px;
-	}
-
-	.hero::before {
-		content: "";
-		position: absolute;
-		inset: 0 calc(50% - 50vw);
-		z-index: -2;
+		padding: 220px max(clamp(20px, 4vw, 48px), calc((100vw - 1440px) / 2)) 72px;
+		overflow: hidden;
+		border-radius: 0 0 68px 68px;
 		background:
 			linear-gradient(
 				90deg,
-				rgba(28, 28, 27, 0.88),
-				rgba(28, 28, 27, 0.52) 48%,
-				rgba(28, 28, 27, 0.26)
+				rgba(38, 29, 24, 0.88),
+				rgba(54, 39, 31, 0.52) 48%,
+				rgba(72, 48, 34, 0.26)
 			),
-			linear-gradient(0deg, var(--ink), rgba(28, 28, 27, 0) 28%),
 			url("/images/title-background.jpg") center center / cover no-repeat;
 	}
 
-	.hero::after {
-		content: "";
-		position: absolute;
-		inset: 0 calc(50% - 50vw);
-		z-index: -1;
-		background: rgba(244, 234, 220, 0.03);
-		pointer-events: none;
-	}
 
 	.hero > * {
 		position: relative;
@@ -555,10 +542,21 @@ import "../styles/global.css";
 	}
 
 	.work-card {
+		display: block;
 		overflow: hidden;
 		border: 1px solid var(--line);
 		border-radius: 28px;
 		background: rgba(244, 234, 220, 0.045);
+		transition:
+			transform 180ms ease,
+			border-color 180ms ease,
+			background 180ms ease;
+	}
+
+	a.work-card:hover {
+		transform: translateY(-3px);
+		border-color: rgba(215, 174, 129, 0.42);
+		background: rgba(244, 234, 220, 0.065);
 	}
 
 	.feature-card {
@@ -632,6 +630,29 @@ import "../styles/global.css";
 		font-size: clamp(1.02rem, 1.5vw, 1.22rem);
 	}
 
+	.services-section {
+		position: relative;
+		isolation: isolate;
+		overflow: hidden;
+		border-radius: 68px;
+	}
+
+	.services-section::before {
+		content: "";
+		position: absolute;
+		inset: 0 calc(50% - 50vw);
+		z-index: -2;
+		background:
+			linear-gradient(rgba(28, 28, 27, 0.5), rgba(28, 28, 27, 0.5)),
+			url("/images/services-background.jpg") center / cover no-repeat;
+		opacity: 0.9;
+	}
+
+	.services-section > .site-shell {
+		position: relative;
+		z-index: 1;
+	}
+
 	.services-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -639,17 +660,14 @@ import "../styles/global.css";
 	}
 
 	.services-grid article {
+		min-height: 260px;
+		display: grid;
+		align-content: center;
 		padding: 28px;
-		border: 1px solid var(--line);
+		border: 1px solid rgba(244, 234, 220, 0.18);
 		border-radius: 28px;
-		background: rgba(244, 234, 220, 0.04);
-	}
-
-	.service-number {
-		display: block;
-		margin-bottom: 36px;
-		color: var(--sunset);
-		font-size: 0.82rem;
+		background: rgba(28, 28, 27, 0.42);
+		backdrop-filter: blur(8px);
 	}
 
 	.contact-section {
@@ -882,7 +900,6 @@ import "../styles/global.css";
 	.footer-bottom p {
 		margin: 0;
 	}
-
 	@media (max-width: 850px) {
 		.site-header {
 			position: fixed;
@@ -894,10 +911,10 @@ import "../styles/global.css";
 			grid-template-columns: 1fr;
 			justify-items: center;
 			gap: 18px;
-			background: var(--ink);
-			border-bottom: 1px solid rgba(244, 234, 220, 0.1);
+			background: rgba(28, 28, 27, 0.6);
+			border-bottom: 1px solid rgba(244, 234, 220, 0.18);
 			border-radius: 0 0 48px 48px;
-			backdrop-filter: none;
+			backdrop-filter: blur(18px);
 			padding: 14px 16px;
 		}
 
@@ -921,11 +938,16 @@ import "../styles/global.css";
 
 		.hero {
 			min-height: auto;
-			padding: 250px 0 72px;
+			padding: 250px 20px 72px;
+			border-radius: 0 0 48px 48px;
 		}
 
 		.hero h1 {
 			font-size: clamp(3.5rem, 18vw, 6.8rem);
+		}
+
+		.services-section {
+			border-radius: 48px;
 		}
 
 		.work-grid,
