@@ -1,27 +1,31 @@
-
---
-import About from "@components/About/About.astro";
-import Button from "@components/Button/Button.astro";
-import Contact from "@components/Contact/Contact.astro";
-import FeatureNumbers from "@components/Feature/FeatureNumbers.astro";
-// components
-import Hero from "@components/Hero/Hero.astro";
-import PortfolioThreeCards from "@components/Portfolio/PortfolioThreeCards.astro";
-import PricingThreeCards from "@components/Pricing/PricingThreeCards.astro";
-import Testimonials from "@components/Testimonials/Testimonials.astro";
-// data
-import siteData from "@config/siteData.json";
-// layout
-import BaseLayout from "@layouts/BaseLayout.astro";
-import { Image } from "astro:assets";
+---
 ---
 
-<BaseLayout title={siteData.title} description={siteData.description} navStartStyle="white">
-	<Hero />
-	<FeatureNumbers />
-	<PortfolioThreeCards />
-	<Testimonials />
-	<PricingThreeCards />
-	<About />
-	<Contact />
-</BaseLayout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Smooth Corner Studio by Daniel Pasqualini. Photography and filmmaking from Perth, Western Australia." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smooth Corner Studio by Daniel Pasqualini</title>
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+  <body>
+    <main class="home">
+      <p class="eyebrow">Smooth Corner Studio by Daniel Pasqualini</p>
+
+      <section class="hero">
+        <h1>Photography and filmmaking for people, places and stories with texture.</h1>
+        <p>
+          A Perth-based creative studio working across documentary, commercial,
+          editorial and event storytelling.
+        </p>
+      </section>
+
+      <section class="intro">
+        <p>
+          This is the start of the full Smooth Corner Studio website.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
