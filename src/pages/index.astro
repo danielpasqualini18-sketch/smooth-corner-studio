@@ -125,9 +125,9 @@ import "../styles/global.css";
 
 							<p>
 								The studio brings together photography, filmmaking, editing, creative direction and
-								production planning, from small intimate shoots to larger brand and organisational
-								stories. The goal is always the same: to make something warm, honest and useful,
-								with a bit of texture and a bit of fun.
+								production planning, from small intimate shoots to larger projects with a bit more
+								shape and intention. The goal is always the same: to make something warm, honest
+								and useful, with texture, care and a clear sense of place.
 							</p>
 						</div>
 					</div>
@@ -553,14 +553,37 @@ import "../styles/global.css";
 			background 180ms ease;
 	}
 
+	.work-card:nth-child(1) {
+		background:
+			radial-gradient(circle at 18% 92%, rgba(198, 119, 79, 0.18), transparent 20rem),
+			radial-gradient(circle at 94% 12%, rgba(215, 174, 129, 0.12), transparent 18rem),
+			rgba(244, 234, 220, 0.045);
+	}
+
+	.work-card:nth-child(2) {
+		background:
+			radial-gradient(circle at 8% 18%, rgba(215, 174, 129, 0.17), transparent 18rem),
+			radial-gradient(circle at 96% 86%, rgba(122, 138, 133, 0.12), transparent 17rem),
+			rgba(244, 234, 220, 0.045);
+	}
+
+	.work-card:nth-child(3) {
+		background:
+			radial-gradient(circle at 92% 78%, rgba(122, 138, 133, 0.17), transparent 18rem),
+			radial-gradient(circle at 10% 10%, rgba(60, 71, 97, 0.16), transparent 19rem),
+			rgba(244, 234, 220, 0.045);
+	}
+
 	a.work-card:hover {
 		transform: translateY(-3px);
 		border-color: rgba(215, 174, 129, 0.42);
-		background: rgba(244, 234, 220, 0.065);
+		background-color: rgba(244, 234, 220, 0.065);
 	}
 
 	.feature-card {
-		grid-row: span 2;
+		grid-row: 1 / span 2;
+		align-self: start;
+		margin-top: 180px;
 	}
 
 	.image-placeholder {
@@ -598,7 +621,7 @@ import "../styles/global.css";
 	}
 
 	.feature-card .image-placeholder {
-		min-height: 560px;
+		min-height: 420px;
 	}
 
 	.card-content {
@@ -680,6 +703,27 @@ import "../styles/global.css";
 		border-radius: 28px;
 		background: rgba(28, 28, 27, 0.42);
 		backdrop-filter: blur(8px);
+	}
+
+	.services-grid article:nth-child(1) {
+		background:
+			radial-gradient(circle at 86% 12%, rgba(215, 174, 129, 0.18), transparent 17rem),
+			radial-gradient(circle at 10% 90%, rgba(198, 119, 79, 0.12), transparent 18rem),
+			rgba(28, 28, 27, 0.42);
+	}
+
+	.services-grid article:nth-child(2) {
+		background:
+			radial-gradient(circle at 14% 18%, rgba(122, 138, 133, 0.16), transparent 17rem),
+			radial-gradient(circle at 92% 88%, rgba(60, 71, 97, 0.14), transparent 18rem),
+			rgba(28, 28, 27, 0.42);
+	}
+
+	.services-grid article:nth-child(3) {
+		background:
+			radial-gradient(circle at 88% 82%, rgba(198, 119, 79, 0.14), transparent 18rem),
+			radial-gradient(circle at 10% 12%, rgba(215, 174, 129, 0.12), transparent 16rem),
+			rgba(28, 28, 27, 0.42);
 	}
 
 	.contact-section {
@@ -976,6 +1020,11 @@ import "../styles/global.css";
 
 		.contact-copy {
 			position: static;
+		}
+
+		.feature-card {
+			grid-row: auto;
+			margin-top: 0;
 		}
 
 		.feature-card .image-placeholder,

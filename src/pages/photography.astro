@@ -132,7 +132,8 @@ import "../styles/global.css";
 					<p class="eyebrow">Need a set of images?</p>
 					<h2 class="display-title">Let’s make it feel real.</h2>
 					<p class="cta-copy">
-						Tell me what you are making, who it is for and what kind of feeling the images need to carry.
+						Tell me what you are making, who it is for and what kind of feeling the images need to
+						carry.
 					</p>
 					<a class="button primary" href="/#contact">Start a conversation</a>
 				</div>
@@ -367,12 +368,10 @@ import "../styles/global.css";
 
 	:global(.pswp__img) {
 		border-radius: 28px;
-		transition: border-radius 320ms ease;
 	}
 
 	:global(.pswp__img--placeholder) {
 		border-radius: 4px;
-		transition: border-radius 320ms ease;
 	}
 
 	:global(.pswp__bg) {
@@ -484,6 +483,15 @@ import "../styles/global.css";
 
 		.gallery-section {
 			border-radius: 48px;
+			background:
+				radial-gradient(circle at 82% 10%, rgba(122, 138, 133, 0.34) 0, rgba(122, 138, 133, 0.12) 12rem, transparent 22rem),
+				radial-gradient(circle at 12% 92%, rgba(60, 71, 97, 0.3) 0, rgba(60, 71, 97, 0.1) 11rem, transparent 21rem),
+				linear-gradient(135deg, rgba(36, 45, 59, 0.98) 0%, rgba(60, 71, 97, 0.94) 48%, rgba(122, 138, 133, 0.86) 100%);
+		}
+
+		.gallery-section .eyebrow,
+		.gallery-section h2 {
+			color: var(--cream);
 		}
 
 		.photo-grid {
@@ -505,6 +513,14 @@ import "../styles/global.css";
 
 		.cta-card .cta-copy {
 			white-space: normal;
+		}
+
+		:global(.pswp__img) {
+			border-radius: 28px;
+		}
+
+		:global(.pswp__img--placeholder) {
+			border-radius: 4px;
 		}
 	}
 </style>
