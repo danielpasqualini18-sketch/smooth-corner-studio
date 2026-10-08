@@ -13,7 +13,7 @@ import SeoHead from "../components/SeoHead.astro";
 	<body>
 		<a class="skip-link" href="#main-content">Skip to content</a>
 		<header class="site-header">
-			<nav class="site-nav" aria-label="Main navigation">
+			<nav class="site-nav desktop-nav" aria-label="Main navigation">
 				<a href="#work">Work</a>
 				<a href="#about">About</a>
 				<a href="#services">Services</a>
@@ -24,6 +24,16 @@ import SeoHead from "../components/SeoHead.astro";
 				<span class="logo-bloom" aria-hidden="true"></span>
 				<img src="/images/brand/smooth-corner-logo-extended.webp" alt="Smooth Corner Studio" width="1866" height="649" loading="eager" decoding="async" />
 			</a>
+
+			<details class="mobile-menu">
+				<summary aria-label="Main menu"><span aria-hidden="true">☰</span><span class="visually-hidden">Menu</span></summary>
+				<nav class="mobile-nav" aria-label="Mobile navigation">
+					<a href="#work">Work</a>
+					<a href="#about">About</a>
+					<a href="#services">Services</a>
+					<a href="#contact">Contact</a>
+				</nav>
+			</details>
 		</header>
 
 		<main id="main-content" tabindex="-1">
@@ -304,6 +314,20 @@ import SeoHead from "../components/SeoHead.astro";
 			</div>
 		</footer>
 		<script>
+			const mobileMenu = document.querySelector<HTMLDetailsElement>(".mobile-menu");
+			mobileMenu?.querySelectorAll("a").forEach((link) => {
+				link.addEventListener("click", () => { mobileMenu.open = false; });
+			});
+			document.addEventListener("keydown", (event) => {
+				if (event.key === "Escape" && mobileMenu?.open) {
+					mobileMenu.open = false;
+					mobileMenu.querySelector("summary")?.focus();
+				}
+			});
+			document.addEventListener("click", (event) => {
+				if (mobileMenu?.open && event.target instanceof Node && !mobileMenu.contains(event.target)) mobileMenu.open = false;
+			});
+
 			import { createModalController } from "../scripts/modal";
 			const contactForm = document.querySelector("#contact-form");
 			const formModal = document.querySelector("#form-modal");
@@ -435,6 +459,8 @@ import SeoHead from "../components/SeoHead.astro";
 	.site-nav a {
 		transition: color 180ms ease;
 	}
+
+	.mobile-menu { display: none; }
 
 	.site-nav a:hover {
 		color: var(--sand);
@@ -965,43 +991,78 @@ import SeoHead from "../components/SeoHead.astro";
 	}
 	@media (max-width: 850px) {
 		.site-header {
-			position: fixed;
-			top: 0;
-			left: 0;
-			z-index: 10;
-			width: 100%;
-			display: grid;
-			grid-template-columns: 1fr;
+			grid-template-columns: 44px minmax(0, 1fr) 44px;
 			justify-items: center;
-			gap: 18px;
-			background: rgba(28, 28, 27, 0.6);
-			border-bottom: 1px solid rgba(244, 234, 220, 0.18);
-			border-radius: 0 0 48px 48px;
-			backdrop-filter: blur(18px);
-			padding: 14px 16px;
+			gap: 0;
+			padding: 10px 16px;
+			border-radius: 0 0 32px 32px;
 		}
 
 		section {
-			scroll-margin-top: 24px;
+			scroll-margin-top: 124px;
 		}
 
 		.brand-logo {
-			grid-column: auto;
-			width: min(320px, 82vw);
-			order: -1;
+			grid-column: 2;
+			grid-row: 1;
+			justify-self: center;
+			width: min(100%, clamp(180px, 56vw, 240px));
 		}
 
-		.site-nav {
-			width: 100%;
-			justify-content: center;
-			flex-wrap: wrap;
-			gap: 18px 26px;
-			font-size: 1rem;
+		.desktop-nav {
+			display: none;
 		}
+
+		.mobile-menu {
+			display: block;
+			grid-column: 1;
+			grid-row: 1;
+			justify-self: start;
+		}
+
+		.mobile-menu summary {
+			display: grid;
+			place-items: center;
+			width: 44px;
+			height: 44px;
+			border: 1px solid var(--line);
+			border-radius: 50%;
+			color: var(--sand);
+			font-size: 1.35rem;
+			cursor: pointer;
+			list-style: none;
+		}
+
+		.mobile-menu summary::-webkit-details-marker { display: none; }
+		.mobile-menu:not([open]) .mobile-nav { display: none; }
+		.mobile-menu[open] summary { background: rgba(215, 174, 129, 0.12); }
+
+		.mobile-nav {
+			position: absolute;
+			top: calc(100% + 8px);
+			left: 16px;
+			right: 16px;
+			display: grid;
+			padding: 12px;
+			border: 1px solid var(--line);
+			border-radius: 24px;
+			background: rgba(28, 28, 27, 0.98);
+			box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+		}
+
+		.mobile-nav a {
+			padding: 14px 16px;
+			border-radius: 14px;
+			color: var(--cream);
+		}
+
+		.mobile-nav a:hover { background: rgba(244, 234, 220, 0.06); }
 
 		.hero {
+			width: 100%;
+			margin-left: 0;
 			min-height: auto;
-			padding: 250px 20px 72px;
+			padding: 170px 20px 72px;
 			border-radius: 0 0 48px 48px;
 		}
 
@@ -1057,71 +1118,10 @@ import SeoHead from "../components/SeoHead.astro";
 	}
 
 	@media (max-width: 850px) {
-		.site-header {
-			background: rgba(28, 28, 27, 0.6);
-		border-bottom: 1px solid rgba(244, 234, 220, 0.18);
-		border-radius: 0 0 68px 68px;
-		backdrop-filter: blur(18px);
-	}
-
-	section {
-		scroll-margin-top: 132px;
-	}
-
-	.brand-logo {
-		grid-column: 2;
-		position: relative;
-		display: block;
-		width: clamp(280px, 30vw, 425px);
-	}
-
-	.logo-bloom {
-		display: none;
-	}
-
-	.brand-logo img {
-		width: 100%;
-		height: auto;
-	}
-
-	.site-nav {
-		grid-column: 1;
-		display: flex;
-		align-items: center;
-		justify-content: flex-start;
-		gap: clamp(20px, 3vw, 42px);
-		font-size: clamp(1rem, 1.15vw, 1.18rem);
-		color: var(--text-soft);
-	}
-
-	.site-nav a {
-		transition: color 180ms ease;
-	}
-
-	.site-nav a:hover {
-		color: var(--sand);
-	}
-
-	.hero {
-		position: relative;
-		isolation: isolate;
-		width: 100vw;
-		max-width: none;
-		margin-left: calc(50% - 50vw);
-		min-height: 100vh;
-		display: grid;
-		align-content: center;
-		padding: 220px max(clamp(20px, 4vw, 48px), calc((100vw - 1440px) / 2)) 72px;
-		overflow: hidden;
-		border-radius: 0 0 68px 68px;
-		background:
-			linear-gradient(
-				90deg,
-				rgba(28, 28, 27, 0.88),
-				rgba(28, 28, 27, 0.52) 48%,
-				rgba(28, 28, 27, 0.26)
-			),
-			url("/images/title-background-800w.webp") center center / cover no-repeat;
+		.hero {
+			background:
+				linear-gradient(90deg, rgba(28, 28, 27, 0.88), rgba(28, 28, 27, 0.52) 48%, rgba(28, 28, 27, 0.26)),
+				url("/images/title-background-800w.webp") center center / cover no-repeat;
 		}
 	}
 	.form-email-note {
