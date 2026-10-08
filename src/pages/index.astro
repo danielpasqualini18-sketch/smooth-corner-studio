@@ -1,20 +1,17 @@
 ---
 import "../styles/global.css";
+
+import SeoHead from "../components/SeoHead.astro";
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="description"
-			content="Smooth Corner Studio by Daniel Pasqualini. Photography, films and visual stories from Perth, Western Australia."
-		/>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Smooth Corner Studio by Daniel Pasqualini</title>
+		<SeoHead title="Perth Photographer &amp; Filmmaker | Smooth Corner Studio" description="Portrait, brand and event photography, documentary films and video production in Perth and regional Western Australia. Smooth Corner Studio by Daniel Pasqualini." path="/" preloadImage="/images/title-background.jpg" />
 	</head>
 
 	<body>
+		<a class="skip-link" href="#main-content">Skip to content</a>
 		<header class="site-header">
 			<nav class="site-nav" aria-label="Main navigation">
 				<a href="#work">Work</a>
@@ -25,11 +22,11 @@ import "../styles/global.css";
 
 			<a href="/" class="brand-logo" aria-label="Smooth Corner Studio home">
 				<span class="logo-bloom" aria-hidden="true"></span>
-				<img src="/images/brand/smooth-corner-logo-extended.png" alt="Smooth Corner Studio" />
+				<img src="/images/brand/smooth-corner-logo-extended.webp" alt="Smooth Corner Studio" width="1866" height="649" loading="eager" decoding="async" />
 			</a>
 		</header>
 
-		<main>
+		<main id="main-content" tabindex="-1">
 			<section class="hero site-shell">
 				<p class="eyebrow">Boorloo / Perth, Western Australia</p>
 
@@ -40,8 +37,9 @@ import "../styles/global.css";
 
 				<div class="hero-intro">
 					<p>
-						I’m Daniel. Smooth Corner Studio is my creative practice: films, photography and visual
-						stories for people, places and projects with character.
+						I’m Daniel, a photographer and filmmaker based in Boorloo / Perth. Smooth Corner Studio
+						creates honest images and thoughtful films for people, brands and communities across
+						Western Australia.
 					</p>
 
 					<div class="button-row">
@@ -61,17 +59,16 @@ import "../styles/global.css";
 					<div class="work-grid">
 						<a
 							class="work-card feature-card"
-							href="/films-stories"
-							aria-label="View films and visual stories work"
+							href="/films"
+							aria-label="View films work"
 						>
 							<div class="image-placeholder image-cover">
 								<img
-									src="/images/films-cover.jpg"
-									alt="Films and visual stories portfolio preview"
-								/>
+									src="/images/films-cover.webp"
+									alt="A surfer riding a breaking ocean wave" width="1600" height="1068" loading="lazy" decoding="async" srcset="/images/films-cover-480w.webp 480w, /images/films-cover-800w.webp 800w, /images/films-cover-1200w.webp 1200w, /images/films-cover.webp 1600w" sizes="(max-width: 850px) calc(100vw - 32px), (max-width: 1180px) 56vw, 660px" />
 							</div>
 							<div class="card-content">
-								<p class="card-meta">Films and visual stories</p>
+								<p class="card-meta">Films</p>
 								<h3>Thoughtful films with a human eye</h3>
 								<p>
 									Films shaped around people, atmosphere, rhythm and real moments, for projects with
@@ -82,7 +79,7 @@ import "../styles/global.css";
 
 						<a class="work-card" href="/photography" aria-label="View photography work">
 							<div class="image-placeholder warm image-cover">
-								<img src="/images/photography-cover.jpg" alt="Photography portfolio preview" />
+								<img src="/images/photography-cover.webp" alt="A woman in a yellow swimsuit relaxing beside coastal dunes" width="1600" height="1061" loading="lazy" decoding="async" srcset="/images/photography-cover-480w.webp 480w, /images/photography-cover-800w.webp 800w, /images/photography-cover-1200w.webp 1200w, /images/photography-cover.webp 1600w" sizes="(max-width: 850px) calc(100vw - 32px), (max-width: 1180px) 56vw, 520px" />
 							</div>
 							<div class="card-content">
 								<p class="card-meta">Photography</p>
@@ -96,7 +93,7 @@ import "../styles/global.css";
 
 						<a class="work-card" href="/events" aria-label="View people and real life coverage">
 							<div class="image-placeholder blue image-cover">
-								<img src="/images/events-cover.jpg" alt="People gathered at an event" />
+								<img src="/images/events-cover.webp" alt="A couple in wedding attire standing beside a vintage car" width="886" height="886" loading="lazy" decoding="async" srcset="/images/events-cover-480w.webp 480w, /images/events-cover-800w.webp 800w, /images/events-cover.webp 886w" sizes="(max-width: 850px) calc(100vw - 32px), (max-width: 1180px) 56vw, 520px" />
 							</div>
 							<div class="card-content">
 								<p class="card-meta">Event coverage</p>
@@ -150,19 +147,18 @@ import "../styles/global.css";
 
 					<div class="services-grid">
 						<article>
-							<h3>Photography</h3>
+							<h3><a href="/photography">Photography</a></h3>
 							<p>
-								Portraits, events, places and brand imagery with a natural, tactile feel. Honest
-								images for people and projects that need to feel warm, useful and alive.
+								Portrait, editorial, lifestyle and brand photography in Perth and across Western
+								Australia. Natural, tactile images for people and projects with character.
 							</p>
 						</article>
 
 						<article>
-							<h3>Films and visual stories</h3>
+							<h3><a href="/films">Films</a></h3>
 							<p>
-								Small films, social pieces and story-led video for projects with something real to
-								say. Built around people, atmosphere, rhythm and moments that do not feel too
-								polished.
+								Documentary films, brand stories and video production, from planning and filming
+								to the final edit. Built around real people, atmosphere and a clear sense of place.
 							</p>
 						</article>
 
@@ -243,9 +239,10 @@ import "../styles/global.css";
 						</div>
 
 						<button class="button primary form-submit" type="submit">Send enquiry</button>
+						<p class="form-email-note">Prefer email? <a href="mailto:hello@smoothcornerstudio.com.au">hello@smoothcornerstudio.com.au</a></p>
 					</form>
 
-					<div id="form-modal" class="form-modal" aria-hidden="true">
+					<div id="form-modal" class="form-modal" aria-hidden="true" inert>
 						<div
 							class="form-modal-card"
 							role="dialog"
@@ -267,9 +264,8 @@ import "../styles/global.css";
 				<div class="site-shell footer-grid">
 					<div class="footer-logo">
 						<img
-							src="/images/brand/smooth-corner-logo-badge-white.png"
-							alt="Smooth Corner Studio"
-						/>
+							src="/images/brand/smooth-corner-logo-badge-white.webp"
+							alt="Smooth Corner Studio" width="854" height="854" loading="lazy" decoding="async" />
 					</div>
 
 					<div class="footer-acknowledgement">
@@ -308,21 +304,21 @@ import "../styles/global.css";
 			</div>
 		</footer>
 		<script>
+			import { createModalController } from "../scripts/modal";
 			const contactForm = document.querySelector("#contact-form");
 			const formModal = document.querySelector("#form-modal");
 			const formModalClose = document.querySelector("#form-modal-close");
 
+			const modalController = createModalController(formModal, formModalClose);
+
 			const openFormModal = () => {
 				if (!formModal) return;
-				formModal.classList.add("visible");
-				formModal.setAttribute("aria-hidden", "false");
-				formModalClose?.focus();
+				modalController.open();
 			};
 
 			const closeFormModal = () => {
 				if (!formModal) return;
-				formModal.classList.remove("visible");
-				formModal.setAttribute("aria-hidden", "true");
+				modalController.close();
 			};
 
 			if (contactForm && formModal && formModalClose) {
@@ -331,9 +327,12 @@ import "../styles/global.css";
 
 					const submitButton = contactForm.querySelector("button[type='submit']");
 					const formData = new FormData(contactForm);
+					const originalButtonText = submitButton?.textContent;
+					contactForm.setAttribute("aria-busy", "true");
 
 					if (submitButton) {
 						submitButton.disabled = true;
+						submitButton.textContent = "Sending…";
 					}
 
 					try {
@@ -358,8 +357,10 @@ import "../styles/global.css";
 							"Sorry, something went wrong. Please email hello@smoothcornerstudio.com.au instead.",
 						);
 					} finally {
+						contactForm.removeAttribute("aria-busy");
 						if (submitButton) {
 							submitButton.disabled = false;
+							submitButton.textContent = originalButtonText ?? "Send enquiry";
 						}
 					}
 				});
@@ -685,7 +686,7 @@ import "../styles/global.css";
 		z-index: -2;
 		background:
 			linear-gradient(rgba(28, 28, 27, 0.5), rgba(28, 28, 27, 0.5)),
-			url("/images/services-background.jpg") center / cover no-repeat;
+			url("/images/services-background.webp") center / cover no-repeat;
 		opacity: 0.9;
 	}
 
@@ -888,7 +889,7 @@ import "../styles/global.css";
 		color: var(--cream);
 		background:
 			linear-gradient(rgba(28, 28, 27, 0.78), rgba(28, 28, 27, 0.9)),
-			url("/images/footer/footer-background.jpg") center / cover;
+			url("/images/footer/footer-background.webp") center / cover;
 		border-radius: 68px 68px 0 0;
 	}
 
@@ -1054,4 +1055,81 @@ import "../styles/global.css";
 			margin-top: 48px;
 		}
 	}
+
+	@media (max-width: 850px) {
+		.site-header {
+			background: rgba(28, 28, 27, 0.6);
+		border-bottom: 1px solid rgba(244, 234, 220, 0.18);
+		border-radius: 0 0 68px 68px;
+		backdrop-filter: blur(18px);
+	}
+
+	section {
+		scroll-margin-top: 132px;
+	}
+
+	.brand-logo {
+		grid-column: 2;
+		position: relative;
+		display: block;
+		width: clamp(280px, 30vw, 425px);
+	}
+
+	.logo-bloom {
+		display: none;
+	}
+
+	.brand-logo img {
+		width: 100%;
+		height: auto;
+	}
+
+	.site-nav {
+		grid-column: 1;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: clamp(20px, 3vw, 42px);
+		font-size: clamp(1rem, 1.15vw, 1.18rem);
+		color: var(--text-soft);
+	}
+
+	.site-nav a {
+		transition: color 180ms ease;
+	}
+
+	.site-nav a:hover {
+		color: var(--sand);
+	}
+
+	.hero {
+		position: relative;
+		isolation: isolate;
+		width: 100vw;
+		max-width: none;
+		margin-left: calc(50% - 50vw);
+		min-height: 100vh;
+		display: grid;
+		align-content: center;
+		padding: 220px max(clamp(20px, 4vw, 48px), calc((100vw - 1440px) / 2)) 72px;
+		overflow: hidden;
+		border-radius: 0 0 68px 68px;
+		background:
+			linear-gradient(
+				90deg,
+				rgba(28, 28, 27, 0.88),
+				rgba(28, 28, 27, 0.52) 48%,
+				rgba(28, 28, 27, 0.26)
+			),
+			url("/images/title-background-800w.webp") center center / cover no-repeat;
+		}
+	}
+	.form-email-note {
+		grid-column: 1 / -1;
+		margin: 0;
+		font-size: 0.85rem;
+		color: var(--text-soft);
+		overflow-wrap: anywhere;
+	}
+	.form-email-note a { text-decoration: underline; text-underline-offset: 3px; }
 </style>

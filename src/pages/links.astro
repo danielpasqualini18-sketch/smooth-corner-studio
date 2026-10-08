@@ -1,27 +1,23 @@
 ---
 import "../styles/global.css";
+
+import SeoHead from "../components/SeoHead.astro";
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="description"
-			content="Smooth Corner Studio links, contact and social media."
-		/>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Smooth Corner Studio Links</title>
+		<SeoHead title="Contact &amp; Links | Smooth Corner Studio Perth" description="Find Smooth Corner Studio’s portfolio, contact details and Instagram. Photography and filmmaking by Daniel Pasqualini in Boorloo / Perth, Western Australia." path="/links" preloadImage="/images/title-background.jpg" />
 	</head>
 
 	<body>
-		<main class="links-page">
+		<a class="skip-link" href="#main-content">Skip to content</a>
+		<main class="links-page" id="main-content" tabindex="-1">
 			<section class="links-card">
 				<div class="logo-wrap">
 					<img
-						src="/images/brand/smooth-corner-logo-extended.png"
-						alt="Smooth Corner Studio"
-					/>
+						src="/images/brand/smooth-corner-logo-extended.webp"
+						alt="Smooth Corner Studio" width="1866" height="649" loading="eager" decoding="async" />
 				</div>
 
 				<p class="eyebrow">Boorloo / Perth, Western Australia</p>
@@ -176,6 +172,13 @@ import "../styles/global.css";
 			display: grid;
 			align-content: center;
 			border-radius: 34px;
+		}
+	}
+
+	@media (max-width: 850px) {
+		.links-page {
+			background: linear-gradient(rgba(28, 28, 27, 0.72), rgba(28, 28, 27, 0.88)),
+			url("/images/title-background-800w.webp") center center / cover no-repeat;
 		}
 	}
 </style>

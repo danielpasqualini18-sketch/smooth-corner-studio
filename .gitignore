@@ -21,3 +21,9 @@ pnpm-debug.log*
 
 # Local Netlify folder
 .netlify
+
+# Local photo exports; only optimised gallery copies belong in the site.
+/Images for website/
+
+# Local audit scratch and dependency backups.
+/work/
