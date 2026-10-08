@@ -1,50 +1,293 @@
 ---
 import "../styles/global.css";
+
+import SeoHead from "../components/SeoHead.astro";
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="description"
-			content="Smooth Corner Studio by Daniel Pasqualini. New website coming soon."
-		/>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Smooth Corner Studio | Coming Soon</title>
+		<SeoHead title="Perth Photographer & Filmmaker | Smooth Corner Studio" description="Portrait, brand and event photography, documentary films and video production in Perth and regional Western Australia. Smooth Corner Studio by Daniel Pasqualini." path="/" preloadImage="/images/title-background.jpg" />
 	</head>
 
 	<body>
-		<main class="wip-page">
-			<section class="wip-hero">
-				<div class="wip-card">
-					<div class="logo-wrap">
-						<img
-							src="/images/brand/smooth-corner-logo-extended.png"
-							alt="Smooth Corner Studio"
+		<a class="skip-link" href="#main-content">Skip to content</a>
+		<header class="site-header">
+			<nav class="site-nav" aria-label="Main navigation">
+				<a href="#work">Work</a>
+				<a href="#about">About</a>
+				<a href="#services">Services</a>
+				<a href="#contact">Contact</a>
+			</nav>
+
+			<a href="/" class="brand-logo" aria-label="Smooth Corner Studio home">
+				<span class="logo-bloom" aria-hidden="true"></span>
+				<img src="/images/brand/smooth-corner-logo-extended.webp" alt="Smooth Corner Studio" width="1866" height="649" loading="eager" decoding="async" />
+			</a>
+		</header>
+
+		<main id="main-content" tabindex="-1">
+			<section class="hero site-shell">
+				<p class="eyebrow">Boorloo / Perth, Western Australia</p>
+
+				<h1 class="display-title">
+					Quiet images.<br />
+					Honest films.
+				</h1>
+
+				<div class="hero-intro">
+					<p>
+						I’m Daniel, a photographer and filmmaker based in Boorloo / Perth. Smooth Corner Studio
+						creates honest images and thoughtful films for people, brands and communities across
+						Western Australia.
+					</p>
+
+					<div class="button-row">
+						<a class="button primary" href="#work">View my work</a>
+						<a class="button" href="#contact">Start a conversation</a>
+					</div>
+				</div>
+			</section>
+
+			<section id="work" class="section">
+				<div class="site-shell">
+					<div class="section-heading">
+						<p class="eyebrow">Selected work</p>
+						<h2 class="display-title">Stories, people, atmosphere.</h2>
+					</div>
+
+					<div class="work-grid">
+						<a
+							class="work-card feature-card"
+							href="/films"
+							aria-label="View films work"
+						>
+							<div class="image-placeholder image-cover">
+								<img
+									src="/images/films-cover.webp"
+									alt="A surfer riding a breaking ocean wave" width="1600" height="1068" loading="lazy" decoding="async" srcset="/images/films-cover-480w.webp 480w, /images/films-cover-800w.webp 800w, /images/films-cover-1200w.webp 1200w, /images/films-cover.webp 1600w" sizes="(max-width: 850px) calc(100vw - 32px), (max-width: 1180px) 56vw, 660px" />
+							</div>
+							<div class="card-content">
+								<p class="card-meta">Films</p>
+								<h3>Thoughtful films with a human eye</h3>
+								<p>
+									Films shaped around people, atmosphere, rhythm and real moments, for projects with
+									something honest to say.
+								</p>
+							</div>
+						</a>
+
+						<a class="work-card" href="/photography" aria-label="View photography work">
+							<div class="image-placeholder warm image-cover">
+								<img src="/images/photography-cover.webp" alt="A woman in a yellow swimsuit relaxing beside coastal dunes" width="1600" height="1061" loading="lazy" decoding="async" srcset="/images/photography-cover-480w.webp 480w, /images/photography-cover-800w.webp 800w, /images/photography-cover-1200w.webp 1200w, /images/photography-cover.webp 1600w" sizes="(max-width: 850px) calc(100vw - 32px), (max-width: 1180px) 56vw, 520px" />
+							</div>
+							<div class="card-content">
+								<p class="card-meta">Photography</p>
+								<h3>Photography with texture and feeling</h3>
+								<p>
+									Brand, lifestyle and portrait images that feel honest, tactile and alive, with a
+									bit of warmth and character.
+								</p>
+							</div>
+						</a>
+
+						<a class="work-card" href="/events" aria-label="View people and real life coverage">
+							<div class="image-placeholder blue image-cover">
+								<img src="/images/events-cover.webp" alt="A couple in wedding attire standing beside a vintage car" width="886" height="886" loading="lazy" decoding="async" srcset="/images/events-cover-480w.webp 480w, /images/events-cover-800w.webp 800w, /images/events-cover.webp 886w" sizes="(max-width: 850px) calc(100vw - 32px), (max-width: 1180px) 56vw, 520px" />
+							</div>
+							<div class="card-content">
+								<p class="card-meta">Event coverage</p>
+								<h3>People, gathered and alive</h3>
+								<p>
+									Weddings, engagements, family moments, gatherings and events photographed with a
+									calm eye for real life as it happens.
+								</p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section id="about" class="section">
+				<div class="site-shell about-layout">
+					<p class="eyebrow">About</p>
+
+					<div class="about-grid">
+						<h2 class="display-title">A small studio with a human eye.</h2>
+
+						<div class="text-stack">
+							<p>
+								Smooth Corner Studio is my way of bringing together the things I care about most:
+								honest images, thoughtful films, tactile details and stories that feel alive.
+							</p>
+
+							<p>
+								I’m drawn to natural light, real people, imperfect moments, old cameras, film grain,
+								handmade things and places with character. I like work that feels considered, but
+								not too polished. Planned, but not stiff. Beautiful, but still human.
+							</p>
+
+							<p>
+								The studio brings together photography, filmmaking, editing, creative direction and
+								production planning, from small intimate shoots to larger projects with a bit more
+								shape and intention. The goal is always the same: to make something warm, honest and
+								useful, with texture, care and a clear sense of place.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="services" class="section section-line services-section">
+				<div class="site-shell">
+					<div class="section-heading">
+						<p class="eyebrow">Services</p>
+						<h2 class="display-title">What I can help with.</h2>
+					</div>
+
+					<div class="services-grid">
+						<article>
+							<h3><a href="/photography">Photography</a></h3>
+							<p>
+								Portrait, editorial, lifestyle and brand photography in Perth and across Western
+								Australia. Natural, tactile images for people and projects with character.
+							</p>
+						</article>
+
+						<article>
+							<h3><a href="/films">Films</a></h3>
+							<p>
+								Documentary films, brand stories and video production, from planning and filming
+								to the final edit. Built around real people, atmosphere and a clear sense of place.
+							</p>
+						</article>
+
+						<article>
+							<h3>Creative production</h3>
+							<p>
+								Planning, creative direction, editing and production support to help shape the idea
+								before the shoot, not just make it look good at the end.
+							</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section id="contact" class="section contact-section">
+				<div class="site-shell contact-card">
+					<div class="contact-copy">
+						<p class="eyebrow">Contact</p>
+						<h2 class="display-title">Have a story, project or idea?</h2>
+						<p>
+							Tell me a little about what you’re making, where it needs to live and what kind of
+							feeling you want it to carry. I’m available for photography, films and visual story
+							projects across Boorloo / Perth, regional Western Australia and beyond.
+						</p>
+					</div>
+
+					<form
+						id="contact-form"
+						class="request-form"
+						action="https://formspree.io/f/xeedpnpj"
+						method="POST"
+					>
+						<input
+							type="hidden"
+							name="_subject"
+							value="New project enquiry from Smooth Corner Studio"
 						/>
+						<div class="form-field">
+							<label for="name">Name</label>
+							<input id="name" name="Name" type="text" autocomplete="name" required />
+						</div>
+
+						<div class="form-field">
+							<label for="email">Email</label>
+							<input id="email" name="email" type="email" autocomplete="email" required />
+						</div>
+
+						<div class="form-field">
+							<label for="project-type">Project type</label>
+							<select id="project-type" name="Project type" required>
+								<option value="">Choose one</option>
+								<option value="Story-led film">Story-led film</option>
+								<option value="Photography">Photography</option>
+								<option value="Event coverage">Event coverage</option>
+								<option value="Creative direction">Creative direction</option>
+								<option value="Something else">Something else</option>
+							</select>
+						</div>
+
+						<div class="form-field">
+							<label for="timeline">Timeline</label>
+							<input
+								id="timeline"
+								name="Timeline"
+								type="text"
+								placeholder="Rough date or timeframe"
+							/>
+						</div>
+
+						<div class="form-field full-width">
+							<label for="message">Project notes</label>
+							<textarea
+								id="message"
+								name="Project notes"
+								rows="6"
+								placeholder="Tell me about the story, people, place, mood or outcome you have in mind."
+								required></textarea>
+						</div>
+
+						<button class="button primary form-submit" type="submit">Send enquiry</button>
+						<p class="form-email-note">Prefer email? <a href="mailto:hello@smoothcornerstudio.com.au">hello@smoothcornerstudio.com.au</a></p>
+					</form>
+
+					<div id="form-modal" class="form-modal" aria-hidden="true" inert>
+						<div
+							class="form-modal-card"
+							role="dialog"
+							aria-modal="true"
+							aria-labelledby="form-modal-title"
+						>
+							<p class="eyebrow">Enquiry sent</p>
+							<h3 id="form-modal-title">Thanks, I got your enquiry.</h3>
+							<p>I’ll have a proper look and get back to you soon.</p>
+							<button id="form-modal-close" class="button primary" type="button">OK</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="footer-overlay">
+				<div class="site-shell footer-grid">
+					<div class="footer-logo">
+						<img
+							src="/images/brand/smooth-corner-logo-badge-white.webp"
+							alt="Smooth Corner Studio" width="854" height="854" loading="lazy" decoding="async" />
 					</div>
 
-					<div class="wip-copy">
-						<p class="eyebrow">Boorloo / Perth, Western Australia</p>
-
-						<h1 class="display-title">
-							Quiet images.<br />
-							Honest films.<br />
-							Coming soon.
-						</h1>
-
+					<div class="footer-acknowledgement">
 						<p>
-							The new Smooth Corner Studio website is currently being shaped, polished and gently overthought.
+							Smooth Corner Studio acknowledges the Whadjuk people of the Noongar nation as the
+							Traditional Custodians of Boorloo and the Derbarl Yerrigan, the land and waters on
+							which we live and work. We pay our respects to Elders past and present, and recognise
+							their continuing connection to culture, community, land and waters.
 						</p>
 
 						<p>
-							In the meantime, I’m still available for photography, films and visual stories across Boorloo / Perth and beyond.
+							We extend that respect to all Aboriginal and Torres Strait Islander people, and
+							acknowledge the care, knowledge and stories that continue to shape this place we are
+							lucky to call home.
 						</p>
 					</div>
 
-					<div class="wip-links">
-						<a href="mailto:hello@smoothcornerstudio.com.au">Email</a>
+					<div class="footer-contact">
+						<p class="eyebrow">Contact</p>
+
+						<a href="mailto:hello@smoothcornerstudio.com.au"> Email </a>
+
 						<a
 							href="https://www.instagram.com/danielpasqualini_/"
 							target="_blank"
@@ -54,20 +297,161 @@ import "../styles/global.css";
 						</a>
 					</div>
 				</div>
-			</section>
-		</main>
+
+				<div class="site-shell footer-bottom">
+					<p>© 2026 Smooth Corner Studio. Photography and filmmaking by Daniel Pasqualini.</p>
+				</div>
+			</div>
+		</footer>
+		<script>
+			import { createModalController } from "../scripts/modal";
+			const contactForm = document.querySelector("#contact-form");
+			const formModal = document.querySelector("#form-modal");
+			const formModalClose = document.querySelector("#form-modal-close");
+
+			const modalController = createModalController(formModal, formModalClose);
+
+			const openFormModal = () => {
+				if (!formModal) return;
+				modalController.open();
+			};
+
+			const closeFormModal = () => {
+				if (!formModal) return;
+				modalController.close();
+			};
+
+			if (contactForm && formModal && formModalClose) {
+				contactForm.addEventListener("submit", async (event) => {
+					event.preventDefault();
+
+					const submitButton = contactForm.querySelector("button[type='submit']");
+					const formData = new FormData(contactForm);
+					const originalButtonText = submitButton?.textContent;
+					contactForm.setAttribute("aria-busy", "true");
+
+					if (submitButton) {
+						submitButton.disabled = true;
+						submitButton.textContent = "Sending…";
+					}
+
+					try {
+						const response = await fetch(contactForm.action, {
+							method: "POST",
+							body: formData,
+							headers: {
+								Accept: "application/json",
+							},
+						});
+
+						if (response.ok) {
+							contactForm.reset();
+							openFormModal();
+						} else {
+							alert(
+								"Sorry, something went wrong. Please email hello@smoothcornerstudio.com.au instead.",
+							);
+						}
+					} catch (error) {
+						alert(
+							"Sorry, something went wrong. Please email hello@smoothcornerstudio.com.au instead.",
+						);
+					} finally {
+						contactForm.removeAttribute("aria-busy");
+						if (submitButton) {
+							submitButton.disabled = false;
+							submitButton.textContent = originalButtonText ?? "Send enquiry";
+						}
+					}
+				});
+
+				formModalClose.addEventListener("click", closeFormModal);
+
+				formModal.addEventListener("click", (event) => {
+					if (event.target === formModal) {
+						closeFormModal();
+					}
+				});
+
+				document.addEventListener("keydown", (event) => {
+					if (event.key === "Escape") {
+						closeFormModal();
+					}
+				});
+			}
+		</script>
 	</body>
 </html>
 
 <style>
-	body {
-		margin: 0;
-		background: var(--ink);
+	.site-header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr auto 1fr;
+		align-items: center;
+		gap: 24px;
+		padding: 22px clamp(20px, 4vw, 48px);
 		color: var(--cream);
+		background: rgba(28, 28, 27, 0.6);
+		border-bottom: 1px solid rgba(244, 234, 220, 0.18);
+		border-radius: 0 0 68px 68px;
+		backdrop-filter: blur(18px);
 	}
 
-	.wip-page {
+	section {
+		scroll-margin-top: 132px;
+	}
+
+	.brand-logo {
+		grid-column: 2;
+		position: relative;
+		display: block;
+		width: clamp(280px, 30vw, 425px);
+	}
+
+	.logo-bloom {
+		display: none;
+	}
+
+	.brand-logo img {
+		width: 100%;
+		height: auto;
+	}
+
+	.site-nav {
+		grid-column: 1;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: clamp(20px, 3vw, 42px);
+		font-size: clamp(1rem, 1.15vw, 1.18rem);
+		color: var(--text-soft);
+	}
+
+	.site-nav a {
+		transition: color 180ms ease;
+	}
+
+	.site-nav a:hover {
+		color: var(--sand);
+	}
+
+	.hero {
+		position: relative;
+		isolation: isolate;
+		width: 100vw;
+		max-width: none;
+		margin-left: calc(50% - 50vw);
 		min-height: 100vh;
+		display: grid;
+		align-content: center;
+		padding: 220px max(clamp(20px, 4vw, 48px), calc((100vw - 1440px) / 2)) 72px;
+		overflow: hidden;
+		border-radius: 0 0 68px 68px;
 		background:
 			linear-gradient(
 				90deg,
@@ -78,127 +462,674 @@ import "../styles/global.css";
 			url("/images/title-background.jpg") center center / cover no-repeat;
 	}
 
-	.wip-hero {
-		min-height: 100vh;
+	.hero > * {
+		position: relative;
+		z-index: 1;
+	}
+
+	.hero .eyebrow {
+		margin: 0 0 28px;
+		font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+	}
+
+	.section-heading .eyebrow,
+	.two-column .eyebrow {
+		font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+	}
+
+	.about-layout {
 		display: grid;
-		place-items: center;
-		padding: clamp(24px, 5vw, 64px);
+		gap: 16px;
 	}
 
-	.wip-card {
-		width: min(100%, 980px);
-		display: grid;
-		gap: clamp(32px, 5vw, 56px);
-		padding: clamp(28px, 6vw, 72px);
-		border: 1px solid rgba(244, 234, 220, 0.18);
-		border-radius: 42px;
-		background:
-			radial-gradient(circle at 86% 12%, rgba(215, 174, 129, 0.18), transparent 20rem),
-			radial-gradient(circle at 10% 90%, rgba(198, 119, 79, 0.12), transparent 22rem),
-			rgba(28, 28, 27, 0.58);
-		backdrop-filter: blur(18px);
-		box-shadow: 0 28px 90px rgba(0, 0, 0, 0.28);
-	}
-
-	.logo-wrap {
-		width: min(100%, 420px);
-	}
-
-	.logo-wrap img {
-		width: 100%;
-		height: auto;
-		display: block;
-	}
-
-	.wip-copy {
-		display: grid;
-		gap: 24px;
-		max-width: 760px;
-	}
-
-	.wip-copy .eyebrow {
+	.about-layout > .eyebrow {
 		margin: 0;
 		font-size: clamp(0.9rem, 1.2vw, 1.05rem);
 	}
 
-	.wip-copy h1 {
+	.about-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+		gap: clamp(32px, 8vw, 100px);
+		align-items: start;
+	}
+
+	.about-grid h2 {
+		margin: 0;
+		font-size: clamp(3rem, 7vw, 7.5rem);
+		color: var(--cream);
+		letter-spacing: 0.015em;
+		padding-left: 0.04em;
+	}
+
+	.hero h1 {
+		max-width: 1100px;
 		margin: 0;
 		color: var(--sand);
-		font-size: clamp(4rem, 10vw, 9.5rem);
+		font-size: clamp(4rem, 9.5vw, 10.8rem);
 		letter-spacing: 0.015em;
-		line-height: 0.88;
 		padding-left: 0.04em;
 		text-shadow: 0 8px 32px rgba(0, 0, 0, 0.34);
 	}
 
-	.wip-copy p:not(.eyebrow) {
-		max-width: 680px;
+	.hero-intro {
+		margin-top: 40px;
+		display: grid;
+		gap: 34px;
+		max-width: 720px;
+	}
+
+	.hero-intro p {
 		margin: 0;
-		color: rgba(244, 234, 220, 0.86);
-		font-size: clamp(1.05rem, 1.6vw, 1.28rem);
-		line-height: 1.6;
+		color: rgba(244, 234, 220, 0.9);
+		font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+		line-height: 1.55;
 	}
 
-	.wip-links {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 14px;
+	.section-heading {
+		display: grid;
+		gap: 16px;
+		margin-bottom: clamp(32px, 6vw, 72px);
 	}
 
-	.wip-links a {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		min-height: 46px;
-		padding: 12px 18px;
-		border: 1px solid rgba(215, 174, 129, 0.42);
-		border-radius: 999px;
+	.section-heading h2,
+	.two-column h2,
+	.contact-card h2 {
+		margin: 0;
+		font-size: clamp(3rem, 7vw, 7.5rem);
+		color: var(--cream);
+		letter-spacing: 0.015em;
+		padding-left: 0.04em;
+	}
+
+	.work-grid {
+		display: grid;
+		grid-template-columns: 1.3fr 1fr;
+		gap: 20px;
+	}
+
+	.work-card {
+		display: block;
+		overflow: hidden;
+		border: 1px solid var(--line);
+		border-radius: 28px;
+		background: rgba(244, 234, 220, 0.045);
+		transition:
+			transform 180ms ease,
+			border-color 180ms ease,
+			background 180ms ease;
+	}
+
+	.work-card:nth-child(1) {
+		background:
+			radial-gradient(circle at 18% 92%, rgba(198, 119, 79, 0.18), transparent 20rem),
+			radial-gradient(circle at 94% 12%, rgba(215, 174, 129, 0.12), transparent 18rem),
+			rgba(244, 234, 220, 0.045);
+	}
+
+	.work-card:nth-child(2) {
+		background:
+			radial-gradient(circle at 8% 18%, rgba(215, 174, 129, 0.17), transparent 18rem),
+			radial-gradient(circle at 96% 86%, rgba(122, 138, 133, 0.12), transparent 17rem),
+			rgba(244, 234, 220, 0.045);
+	}
+
+	.work-card:nth-child(3) {
+		background:
+			radial-gradient(circle at 92% 78%, rgba(122, 138, 133, 0.17), transparent 18rem),
+			radial-gradient(circle at 10% 10%, rgba(60, 71, 97, 0.16), transparent 19rem),
+			rgba(244, 234, 220, 0.045);
+	}
+
+	a.work-card:hover {
+		transform: translateY(-3px);
+		border-color: rgba(215, 174, 129, 0.42);
+		background-color: rgba(244, 234, 220, 0.065);
+	}
+
+	.feature-card {
+		grid-row: 1 / span 2;
+		align-self: start;
+		margin-top: 180px;
+	}
+
+	.image-placeholder {
+		min-height: 340px;
+		display: grid;
+		place-items: center;
+		background:
+			linear-gradient(135deg, rgba(122, 138, 133, 0.35), rgba(60, 71, 97, 0.34)), var(--charcoal);
+		color: rgba(244, 234, 220, 0.52);
+		font-size: 0.82rem;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+	}
+
+	.image-placeholder.warm {
+		background:
+			linear-gradient(135deg, rgba(181, 83, 63, 0.3), rgba(215, 174, 129, 0.24)), var(--charcoal);
+	}
+
+	.image-placeholder.blue {
+		background:
+			linear-gradient(135deg, rgba(60, 71, 97, 0.42), rgba(122, 138, 133, 0.26)), var(--charcoal);
+	}
+
+	.image-cover {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.image-cover img {
+		width: 100%;
+		height: 100%;
+		display: block;
+		object-fit: cover;
+	}
+
+	.feature-card .image-placeholder {
+		min-height: 420px;
+	}
+
+	.card-content {
+		padding: 24px;
+	}
+
+	.card-meta {
+		margin: 0 0 12px;
 		color: var(--sand);
-		background: rgba(28, 28, 27, 0.42);
-		font-size: 0.86rem;
+		font-size: 1rem;
 		letter-spacing: 0.12em;
 		text-transform: uppercase;
-		transition:
-			background 180ms ease,
-			color 180ms ease,
-			border-color 180ms ease,
-			transform 180ms ease;
 	}
 
-	.wip-links a:hover {
+	.card-content h3,
+	.services-grid h3 {
+		margin: 0 0 12px;
 		color: var(--cream);
-		border-color: rgba(215, 174, 129, 0.72);
-		background: rgba(244, 234, 220, 0.08);
-		transform: translateY(-2px);
+		font-size: 1.35rem;
+		letter-spacing: 0.015em;
 	}
 
+	.card-content p,
+	.services-grid p,
+	.text-stack p,
+	.contact-card p {
+		margin: 0;
+		color: var(--text-soft);
+	}
+
+	.two-column {
+		display: grid;
+		grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+		gap: clamp(32px, 8vw, 100px);
+		align-items: start;
+	}
+
+	.text-stack {
+		display: grid;
+		gap: 22px;
+		font-size: clamp(1.02rem, 1.5vw, 1.22rem);
+	}
+
+	.services-section {
+		position: relative;
+		isolation: isolate;
+		overflow: hidden;
+		border-radius: 68px;
+	}
+
+	.services-section::before {
+		content: "";
+		position: absolute;
+		inset: 0 calc(50% - 50vw);
+		z-index: -2;
+		background:
+			linear-gradient(rgba(28, 28, 27, 0.5), rgba(28, 28, 27, 0.5)),
+			url("/images/services-background.webp") center / cover no-repeat;
+		opacity: 0.9;
+	}
+
+	.services-section > .site-shell {
+		position: relative;
+		z-index: 1;
+	}
+
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 18px;
+	}
+
+	.services-grid article {
+		min-height: 260px;
+		display: grid;
+		align-content: center;
+		padding: 28px;
+		border: 1px solid rgba(244, 234, 220, 0.18);
+		border-radius: 28px;
+		background: rgba(28, 28, 27, 0.42);
+		backdrop-filter: blur(8px);
+	}
+
+	.services-grid article:nth-child(1) {
+		background:
+			radial-gradient(circle at 86% 12%, rgba(215, 174, 129, 0.18), transparent 17rem),
+			radial-gradient(circle at 10% 90%, rgba(198, 119, 79, 0.12), transparent 18rem),
+			rgba(28, 28, 27, 0.42);
+	}
+
+	.services-grid article:nth-child(2) {
+		background:
+			radial-gradient(circle at 14% 18%, rgba(122, 138, 133, 0.16), transparent 17rem),
+			radial-gradient(circle at 92% 88%, rgba(60, 71, 97, 0.14), transparent 18rem),
+			rgba(28, 28, 27, 0.42);
+	}
+
+	.services-grid article:nth-child(3) {
+		background:
+			radial-gradient(circle at 88% 82%, rgba(198, 119, 79, 0.14), transparent 18rem),
+			radial-gradient(circle at 10% 12%, rgba(215, 174, 129, 0.12), transparent 16rem),
+			rgba(28, 28, 27, 0.42);
+	}
+
+	.contact-section {
+		padding-bottom: clamp(48px, 8vw, 96px);
+	}
+
+	.contact-card {
+		display: grid;
+		grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1fr);
+		gap: clamp(40px, 7vw, 96px);
+		align-items: start;
+		padding: clamp(32px, 7vw, 82px);
+		border: 1px solid var(--line);
+		border-radius: 36px;
+		background:
+			radial-gradient(circle at top right, rgba(215, 174, 129, 0.16), transparent 30rem),
+			rgba(244, 234, 220, 0.045);
+	}
+
+	.contact-card p {
+		max-width: 640px;
+		font-size: clamp(1.05rem, 1.6vw, 1.28rem);
+	}
+
+	.contact-copy {
+		display: grid;
+		gap: 22px;
+		position: sticky;
+		top: 180px;
+	}
+
+	.request-form {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 18px;
+		padding: clamp(22px, 3vw, 34px);
+		border: 1px solid rgba(244, 234, 220, 0.14);
+		border-radius: 28px;
+		background: rgba(28, 28, 27, 0.32);
+	}
+
+	.form-field {
+		display: grid;
+		gap: 8px;
+	}
+
+	.form-field label {
+		color: var(--sand);
+		font-size: 0.78rem;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+	}
+
+	.form-field input,
+	.form-field select,
+	.form-field textarea {
+		width: 100%;
+		min-height: 52px;
+		border: 1px solid rgba(244, 234, 220, 0.18);
+		border-radius: 16px;
+		background: rgba(28, 28, 27, 0.62);
+		color: var(--cream);
+		font: inherit;
+		font-size: 1rem;
+		padding: 14px 16px;
+		outline: none;
+		appearance: none;
+		transition:
+			border-color 180ms ease,
+			background 180ms ease;
+	}
+
+	.form-field textarea {
+		resize: vertical;
+		min-height: 180px;
+	}
+
+	.form-field input::placeholder,
+	.form-field textarea::placeholder {
+		color: rgba(244, 234, 220, 0.38);
+	}
+
+	.form-field input:focus,
+	.form-field select:focus,
+	.form-field textarea:focus {
+		border-color: rgba(215, 174, 129, 0.72);
+		background: rgba(28, 28, 27, 0.64);
+	}
+
+	.form-submit {
+		width: fit-content;
+		border: none;
+		cursor: pointer;
+		margin-top: 4px;
+	}
+
+	.form-submit:disabled {
+		cursor: wait;
+		opacity: 0.68;
+	}
+
+	.form-modal {
+		position: fixed;
+		inset: 0;
+		z-index: 100;
+		display: grid;
+		place-items: center;
+		padding: 24px;
+		background: rgba(28, 28, 27, 0.62);
+		backdrop-filter: blur(10px);
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 180ms ease;
+	}
+
+	.form-modal.visible {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.form-modal-card {
+		width: min(100%, 420px);
+		padding: clamp(24px, 5vw, 38px);
+		border: 1px solid rgba(244, 234, 220, 0.16);
+		border-radius: 28px;
+		background:
+			radial-gradient(circle at top right, rgba(215, 174, 129, 0.18), transparent 18rem), var(--ink);
+		box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+		text-align: left;
+		transform: translateY(8px);
+		transition: transform 180ms ease;
+	}
+
+	.form-modal.visible .form-modal-card {
+		transform: translateY(0);
+	}
+
+	.form-modal-card h3 {
+		margin: 0 0 12px;
+		color: var(--cream);
+		font-size: clamp(1.8rem, 4vw, 2.6rem);
+		letter-spacing: 0.015em;
+	}
+
+	.form-modal-card p:not(.eyebrow) {
+		margin: 0 0 24px;
+		color: var(--text-soft);
+		font-size: 1.05rem;
+		line-height: 1.55;
+	}
+
+	.site-footer {
+		position: relative;
+		overflow: hidden;
+		margin-top: clamp(48px, 8vw, 96px);
+		color: var(--cream);
+		background:
+			linear-gradient(rgba(28, 28, 27, 0.78), rgba(28, 28, 27, 0.9)),
+			url("/images/footer/footer-background.webp") center / cover;
+		border-radius: 68px 68px 0 0;
+	}
+
+	.footer-overlay {
+		padding: clamp(56px, 9vw, 120px) 0 36px;
+	}
+
+	.footer-grid {
+		display: grid;
+		grid-template-columns: minmax(120px, 0.45fr) minmax(320px, 1.5fr) minmax(220px, 0.75fr);
+		gap: clamp(28px, 5vw, 72px);
+		align-items: start;
+	}
+
+	.footer-logo {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.footer-logo img {
+		width: clamp(90px, 10vw, 140px);
+		height: auto;
+	}
+
+	.footer-acknowledgement {
+		display: grid;
+		gap: 16px;
+		max-width: 780px;
+	}
+
+	.footer-acknowledgement p {
+		margin: 0;
+		color: rgba(244, 234, 220, 0.88);
+		line-height: 1.65;
+		font-size: 0.94rem;
+	}
+
+	.footer-contact {
+		display: grid;
+		gap: 12px;
+		justify-items: start;
+	}
+
+	.footer-contact .eyebrow {
+		color: var(--soft-cream);
+		margin-bottom: 8px;
+	}
+
+	.footer-contact a {
+		color: var(--cream);
+		width: fit-content;
+		border-bottom: 1px solid rgba(244, 234, 220, 0.36);
+		transition:
+			color 180ms ease,
+			border-color 180ms ease;
+	}
+
+	.footer-contact a:hover {
+		color: var(--sand);
+		border-color: rgba(215, 174, 129, 0.72);
+	}
+
+	.footer-bottom {
+		margin-top: clamp(48px, 7vw, 96px);
+		padding-top: 22px;
+		border-top: 1px solid rgba(244, 234, 220, 0.22);
+		color: rgba(244, 234, 220, 0.68);
+		font-size: 0.82rem;
+	}
+
+	.footer-bottom p {
+		margin: 0;
+	}
 	@media (max-width: 850px) {
-		.wip-hero {
-			align-items: start;
-			padding: 24px 18px;
+		.site-header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 10;
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr;
+			justify-items: center;
+			gap: 18px;
+			background: rgba(28, 28, 27, 0.6);
+			border-bottom: 1px solid rgba(244, 234, 220, 0.18);
+			border-radius: 0 0 48px 48px;
+			backdrop-filter: blur(18px);
+			padding: 14px 16px;
 		}
 
-		.wip-card {
-			margin-top: 24px;
-			border-radius: 32px;
-			padding: 26px;
+		section {
+			scroll-margin-top: 24px;
 		}
 
-		.logo-wrap {
-			width: min(100%, 320px);
+		.brand-logo {
+			grid-column: auto;
+			width: min(320px, 82vw);
+			order: -1;
 		}
 
-		.wip-copy h1 {
+		.site-nav {
+			width: 100%;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 18px 26px;
+			font-size: 1rem;
+		}
+
+		.hero {
+			min-height: auto;
+			padding: 250px 20px 72px;
+			border-radius: 0 0 48px 48px;
+		}
+
+		.hero h1 {
 			font-size: clamp(3.5rem, 18vw, 6.8rem);
 		}
 
-		.wip-links {
-			flex-direction: column;
-			align-items: stretch;
+		.services-section {
+			border-radius: 48px;
 		}
 
-		.wip-links a {
-			width: 100%;
+		.work-grid,
+		.two-column,
+		.about-grid,
+		.services-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.contact-card,
+		.request-form {
+			grid-template-columns: 1fr;
+		}
+
+		.contact-copy {
+			position: static;
+		}
+
+		.feature-card {
+			grid-row: auto;
+			margin-top: 0;
+		}
+
+		.feature-card .image-placeholder,
+		.image-placeholder {
+			min-height: 280px;
+		}
+
+		.footer-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.footer-logo img {
+			width: 120px;
+		}
+
+		.footer-contact {
+			justify-items: start;
+		}
+
+		.footer-bottom {
+			margin-top: 48px;
 		}
 	}
+
+	@media (max-width: 850px) {
+		.site-header {
+			background: rgba(28, 28, 27, 0.6);
+		border-bottom: 1px solid rgba(244, 234, 220, 0.18);
+		border-radius: 0 0 68px 68px;
+		backdrop-filter: blur(18px);
+	}
+
+	section {
+		scroll-margin-top: 132px;
+	}
+
+	.brand-logo {
+		grid-column: 2;
+		position: relative;
+		display: block;
+		width: clamp(280px, 30vw, 425px);
+	}
+
+	.logo-bloom {
+		display: none;
+	}
+
+	.brand-logo img {
+		width: 100%;
+		height: auto;
+	}
+
+	.site-nav {
+		grid-column: 1;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: clamp(20px, 3vw, 42px);
+		font-size: clamp(1rem, 1.15vw, 1.18rem);
+		color: var(--text-soft);
+	}
+
+	.site-nav a {
+		transition: color 180ms ease;
+	}
+
+	.site-nav a:hover {
+		color: var(--sand);
+	}
+
+	.hero {
+		position: relative;
+		isolation: isolate;
+		width: 100vw;
+		max-width: none;
+		margin-left: calc(50% - 50vw);
+		min-height: 100vh;
+		display: grid;
+		align-content: center;
+		padding: 220px max(clamp(20px, 4vw, 48px), calc((100vw - 1440px) / 2)) 72px;
+		overflow: hidden;
+		border-radius: 0 0 68px 68px;
+		background:
+			linear-gradient(
+				90deg,
+				rgba(28, 28, 27, 0.88),
+				rgba(28, 28, 27, 0.52) 48%,
+				rgba(28, 28, 27, 0.26)
+			),
+			url("/images/title-background-800w.webp") center center / cover no-repeat;
+		}
+	}
+	.form-email-note {
+		grid-column: 1 / -1;
+		margin: 0;
+		font-size: 0.85rem;
+		color: var(--text-soft);
+		overflow-wrap: anywhere;
+	}
+	.form-email-note a { text-decoration: underline; text-underline-offset: 3px; }
 </style>

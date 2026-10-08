@@ -1,0 +1,83 @@
+---
+import { CONTACT_EMAIL, INSTAGRAM_URL, pageDetails,SITE_URL, STUDIO_NAME } from '../data/site';
+interface Props {
+ title: string;
+ description: string;
+ path: string;
+ preloadImage?: string;
+ noindex?: boolean;
+}
+const { title, description, path, preloadImage, noindex = false } = Astro.props;
+const origin = Astro.site ?? new URL(SITE_URL);
+const canonical = new URL(path === '/' || /\.[a-z0-9]+$/i.test(path) ? path : `${path.replace(/\/$/, '')}/`, origin).href;
+const details = pageDetails[path] ?? pageDetails['/'];
+const image = new URL(details.image, origin).href;
+const studioId = new URL('/#studio', origin).href;
+const websiteId = new URL('/#website', origin).href;
+const pageId = `${canonical}#webpage`;
+const graph: Record<string, unknown>[] = [
+ {
+  '@type': 'Organization', '@id': studioId,
+  name: STUDIO_NAME, url: origin.href,
+  description: 'Photography, filmmaking and visual storytelling by Daniel Pasqualini, based in Boorloo / Perth, Western Australia.',
+  image: new URL(pageDetails['/'].image, origin).href,
+  logo: { '@type': 'ImageObject', url: new URL('/apple-touch-icon.png', origin).href, width: 180, height: 180 },
+  email: CONTACT_EMAIL,
+  location: { '@type': 'Place', name: 'Boorloo / Perth, Western Australia' },
+  sameAs: [INSTAGRAM_URL],
+ },
+ { '@type': 'WebSite', '@id': websiteId, url: origin.href, name: STUDIO_NAME, publisher: { '@id': studioId }, inLanguage: 'en-AU' },
+ {
+  '@type': details.service ? 'CollectionPage' : 'WebPage', '@id': pageId,
+  url: canonical, name: title, description, inLanguage: 'en-AU',
+  isPartOf: { '@id': websiteId }, publisher: { '@id': studioId },
+  primaryImageOfPage: { '@type': 'ImageObject', url: image, width: 1200, height: 630, caption: details.imageAlt },
+  ...(path !== '/' ? { breadcrumb: { '@id': `${canonical}#breadcrumb` } } : {}),
+  ...(details.service ? { about: { '@id': `${canonical}#service` } } : {}),
+ },
+];
+if (path !== '/') graph.push({
+ '@type': 'BreadcrumbList', '@id': `${canonical}#breadcrumb`,
+ itemListElement: [
+  { '@type': 'ListItem', position: 1, name: STUDIO_NAME, item: origin.href },
+  { '@type': 'ListItem', position: 2, name: details.name, item: canonical },
+ ],
+});
+if (details.service) graph.push({
+ '@type': 'Service', '@id': `${canonical}#service`, name: details.name,
+ serviceType: details.service, description, url: canonical, provider: { '@id': studioId },
+ areaServed: [{ '@type': 'City', name: 'Perth' }, { '@type': 'State', name: 'Western Australia' }],
+});
+---
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="author" content="Daniel Pasqualini" />
+<meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large"} />
+<meta name="theme-color" content="#1c1c1b" />
+<link rel="canonical" href={canonical} />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={STUDIO_NAME} />
+<meta property="og:locale" content="en_AU" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={image} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={details.imageAlt} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />
+<meta name="twitter:image:alt" content={details.imageAlt} />
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="sitemap" href="/sitemap-index.xml" />
+<link rel="preload" href="/fonts/nevrada-neue.woff2" as="font" type="font/woff2" crossorigin />
+{preloadImage && <>
+ <link rel="preload" href={preloadImage} as="image" fetchpriority="high" media="(min-width: 851px)" />
+ <link rel="preload" href={preloadImage.replace(/\.(jpg|webp|png)$/, '-800w.webp')} as="image" fetchpriority="high" media="(max-width: 850px)" />
+</>}
+{!noindex && <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c')} />}

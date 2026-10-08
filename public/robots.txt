@@ -1,1 +1,5 @@
-Sitemap: https://smoothcornerstudio.com.au/sitemap-index.xml
+User-agent: *
+Allow: /
+
+Sitemap: https://www.smoothcornerstudio.com.au/sitemap-index.xml
+Sitemap: https://www.smoothcornerstudio.com.au/image-sitemap.xml

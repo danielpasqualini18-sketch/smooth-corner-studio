@@ -1,107 +1,27 @@
-# Welcome to Horizon!
+# Smooth Corner Studio
 
-This is a free photography theme for Astro created by [Cosmic Themes](https://cosmicthemes.com/).
+Astro portfolio with static Cloudflare Pages hosting, PhotoSwipe galleries and a Formspree contact form.
 
-[website demo](https://horizon.cosmicthemes.com/)
+## Local development
 
-## Quickstart
+Use Node.js 22.12 or later; `.node-version` selects Node 22 for Cloudflare Pages. Install with `npm ci`, then run `npm run dev`. The local preview normally uses port 4321.
 
-1. Fork this project to your own repository, and clone it to your local machine
-2. Install all necessary packages with `npm install`
-3. Run `npm run dev` to start the dev server
-4. Now you can setup the site to your liking!
-   - [Style customization](https://cosmicthemes.com/docs/styles/)
-   - [Content editing](https://cosmicthemes.com/docs/content/)
-   - [Forms](https://cosmicthemes.com/docs/contact-form/)
-5. Update the site URL in `astro.config.mjs` and `/public/robots.txt` to match your domain
-6. After you're happy, update your changes to your repo and [deploy to Netlify, Vercel, Cloudflare](https://cosmicthemes.com/deployment/), or other provider of your choice
+- `npm run check:site` builds the site and checks links, image dimensions, responsive variants, metadata, structured data, sitemaps and Cloudflare asset limits.
+- `npm run lint` checks the source.
+- `npm run preview` serves the production build.
 
-## Code Intro
+Stop the development server before building, then restart it afterwards to avoid stale generated styles.
 
-The source files have the following setup. Note that not all files are listed here.
+## Content and images
 
-```
-.
-├── .tours/
-│   └── code-intro.tour
-├── public/
-│   ├── favicons/
-│   │   └── favicon.ico
-│   ├── images/
-│   └── robots.txt
-├── src/
-│   ├── assets/
-│   │   └── images/
-│   │       └── site-logo.png
-│   ├── components/
-│   │   └── Hero/
-│   │       └── Hero.astro
-│   ├── config/
-│   │   └── navData.json.ts
-│   ├── data/
-│   │   ├── portfolios/
-│   │   ├── testimonials/
-│   │   └──otherPages/
-│   │    config.ts
-│   ├── js/
-│   │   └── textUtils.ts
-│   ├── layouts/
-│   │   └── BaseLayout.astro
-│   ├── pages/
-│   │   ├── index.astro
-│   │   ├── portfolio/
-│   │   │   ├── [...slug].astro
-│   │   │   └── index.astro
-│   │   ├── [page].astro
-│   │   ├── 404.astro
-│   │   └── index.astro
-│   ├── styles/
-│   │   └── global.css
-│   └── content.config.ts
-├── .gitignore
-├── .prettierrc.mjs
-├── astro.config.mjs
-├── netlify.toml
-├── package.json
-├── package-lock.json
-├── README.md
-└── tsconfig.json
-```
+The photography and events collections are in `src/data/galleries.json`. Originals in `Images for website/` are ignored by Git. Only selected, optimised images and their responsive variants belong in `public/images/`.
 
-For robots like Google to see the correct sitemap, you will want to edit the `public/robots.txt` file to use your website domain.
+Page metadata and the canonical domain are defined in `src/data/site.ts` and `src/components/SeoHead.astro`. If the canonical domain changes, also update `astro.config.mjs` and `public/robots.txt`.
 
-## Other Resources
+## Deployment
 
-- See my blog post on [recommended Astro web development setup](https://cosmicthemes.com/blog/astro-web-development-setup/).
-- You can learn more information from the [theme docs](https://cosmicthemes.com/docs/) page on the [Cosmic Themes Website](https://cosmicthemes.com/).
+Cloudflare Pages build command: `npm run build`. Output directory: `dist`. The repository includes a single npm lockfile.
 
-## License
+`site-build` is the full website development branch. `main` contains the live temporary website. Verify the actual Cloudflare production branch and preview settings before publishing. Do not commit, push, merge, change production settings or launch without Daniel's explicit approval.
 
-This project is open source and available under the [GPL-3.0 License](https://www.gnu.org/licenses/gpl-3.0.en.html).
-
-However, If you have purchased [All Access](https://cosmicthemes.com/all-access/) from Cosmic Themes, there is a no attribution required license you can view at [License details](https://cosmicthemes.com/license/).
-
-## General Astro Info
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory. I also frequently use `src/assets` for images when using Astro asssets for image optimization.
-
-### Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-### Want to learn more?
-
-Feel free to check out the [Astro documentation](https://docs.astro.build).
+After an approved `site-build` push, review the Cloudflare branch preview. Launch separately after approval by merging the reviewed website into `main`, if Cloudflare is still configured to deploy production from `main`.

@@ -6,7 +6,7 @@ export default {
   tabWidth: 2,
   trailingComma: "all",
   useTabs: true,
-  plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+  plugins: ["prettier-plugin-astro"],
   overrides: [
     {
       files: [".*", "*.md", "*.toml", "*.yml"],

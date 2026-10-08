@@ -1,0 +1,53 @@
+---
+import { mixOrientations } from "../utils/galleryOrder";
+interface Photo {
+ src: string;
+ thumbnail: string;
+ srcset: string;
+ width: number;
+ height: number;
+ alt: string;
+}
+interface Props {
+ id: string;
+ groups: { id: string; title: string; photos: Photo[] }[];
+}
+const { id, groups } = Astro.props;
+const photos = groups.flatMap(group => group.photos.map(photo => ({ ...photo, collection: group.id })));
+const ordered = mixOrientations(photos, photo => photo.width / photo.height);
+---
+<div class="photo-gallery" data-gallery-root>
+ <div class="gallery-nav" role="group" aria-label="Photo collections">
+  <button type="button" data-gallery-filter="all" aria-pressed="true" aria-controls={`${id}-grid`}>All photographs</button>
+  {groups.map(group => <button type="button" data-gallery-filter={group.id} aria-pressed="false" aria-controls={`${id}-grid`}>{group.title}</button>)}
+ </div>
+ <p class="gallery-status" aria-live="polite" aria-atomic="true">{photos.length} photographs</p>
+ <div class="curated-grid" id={`${id}-grid`} data-photo-gallery>
+  {ordered.map(photo => (
+   <figure class="curated-photo" data-collection={photo.collection}>
+    <a href={photo.src} target="_blank" rel="noreferrer" data-pswp-width={photo.width} data-pswp-height={photo.height} data-pswp-srcset={photo.srcset} aria-label={`View photograph: ${photo.alt}`}>
+     <img src={photo.thumbnail} srcset={photo.srcset} sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 58px) / 2), (max-width: 1220px) calc((100vw - 76px) / 3), 382px" width={photo.width} height={photo.height} alt={photo.alt} loading="lazy" decoding="async" />
+    </a>
+   </figure>
+  ))}
+ </div>
+</div>
+<script>
+ import "../scripts/gallery";
+</script>
+<style>
+ .gallery-nav { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; }
+ .gallery-nav button { padding: 12px 18px; border: 1px solid rgba(244,234,220,.35); border-radius: 999px; color: var(--cream); background: rgba(28,28,27,.65); font: inherit; font-size: .9rem; cursor: pointer; }
+ .gallery-nav button:hover, .gallery-nav button[aria-pressed="true"] { background: var(--sand); color: var(--ink); }
+ .gallery-status { margin: 0 0 32px; color: rgba(244,234,220,.78); font-size: .85rem; }
+ .curated-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; align-items: start; }
+ .curated-grid.is-masonry { grid-auto-rows: 1px; }
+ .curated-photo { margin: 0; min-width: 0; border: 1px solid rgba(244,234,220,.18); border-radius: 28px; background: var(--ink); }
+ .curated-photo[hidden] { display: none; }
+ .curated-photo a { display: block; overflow: hidden; border-radius: inherit; }
+ .curated-photo a:focus-visible { outline: 3px solid var(--sand); outline-offset: 5px; }
+ img { display: block; width: 100%; height: auto; border-radius: inherit; transition: opacity 220ms ease; }
+ a:hover img { opacity: .92; }
+ @media(max-width:1000px) { .curated-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+ @media(max-width:600px) { .curated-grid { grid-template-columns: minmax(0,1fr); } .gallery-nav { gap: 8px; } .gallery-nav button { font-size: .85rem; padding: 10px 14px; } }
+</style>

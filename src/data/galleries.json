@@ -1,0 +1,554 @@
+{
+  "photography": [
+    {
+      "id": "portraits-editorial",
+      "title": "Portraits & editorial",
+      "photos": [
+        {
+          "src": "/images/galleries/photography/blue-studio-fashion-portrait.webp",
+          "width": 1600,
+          "height": 2400,
+          "alt": "Fashion portrait with white sunglasses against a vivid blue backdrop",
+          "thumbnail": "/images/galleries/photography/blue-studio-fashion-portrait-800w.webp",
+          "srcset": "/images/galleries/photography/blue-studio-fashion-portrait-480w.webp 480w, /images/galleries/photography/blue-studio-fashion-portrait-800w.webp 800w, /images/galleries/photography/blue-studio-fashion-portrait-1200w.webp 1200w, /images/galleries/photography/blue-studio-fashion-portrait.webp 1600w"
+        },
+        {
+          "src": "/images/galleries/photography/pink-backdrop-editorial-portrait.webp",
+          "width": 1602,
+          "height": 2400,
+          "alt": "Close portrait of a person with short curls against a soft pink backdrop",
+          "thumbnail": "/images/galleries/photography/pink-backdrop-editorial-portrait-800w.webp",
+          "srcset": "/images/galleries/photography/pink-backdrop-editorial-portrait-480w.webp 480w, /images/galleries/photography/pink-backdrop-editorial-portrait-800w.webp 800w, /images/galleries/photography/pink-backdrop-editorial-portrait-1200w.webp 1200w, /images/galleries/photography/pink-backdrop-editorial-portrait.webp 1602w"
+        },
+        {
+          "src": "/images/galleries/photography/green-studio-light-shadow-portrait.webp",
+          "width": 1600,
+          "height": 2400,
+          "alt": "Studio portrait with bands of light and shadow on a lime green backdrop",
+          "thumbnail": "/images/galleries/photography/green-studio-light-shadow-portrait-800w.webp",
+          "srcset": "/images/galleries/photography/green-studio-light-shadow-portrait-480w.webp 480w, /images/galleries/photography/green-studio-light-shadow-portrait-800w.webp 800w, /images/galleries/photography/green-studio-light-shadow-portrait-1200w.webp 1200w, /images/galleries/photography/green-studio-light-shadow-portrait.webp 1600w"
+        },
+        {
+          "src": "/images/galleries/photography/maternity-studio-portrait.webp",
+          "width": 1591,
+          "height": 2400,
+          "alt": "Seated maternity portrait in a black outfit against a white studio backdrop",
+          "thumbnail": "/images/galleries/photography/maternity-studio-portrait-800w.webp",
+          "srcset": "/images/galleries/photography/maternity-studio-portrait-480w.webp 480w, /images/galleries/photography/maternity-studio-portrait-800w.webp 800w, /images/galleries/photography/maternity-studio-portrait-1200w.webp 1200w, /images/galleries/photography/maternity-studio-portrait.webp 1591w"
+        },
+        {
+          "src": "/images/galleries/photography/maternity-yellow-flowers-detail.webp",
+          "width": 2400,
+          "height": 1591,
+          "alt": "Maternity portrait with yellow flowers and an orange studio backdrop",
+          "thumbnail": "/images/galleries/photography/maternity-yellow-flowers-detail-800w.webp",
+          "srcset": "/images/galleries/photography/maternity-yellow-flowers-detail-480w.webp 480w, /images/galleries/photography/maternity-yellow-flowers-detail-800w.webp 800w, /images/galleries/photography/maternity-yellow-flowers-detail-1200w.webp 1200w, /images/galleries/photography/maternity-yellow-flowers-detail.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/crochet-bag-editorial-detail.webp",
+          "width": 2400,
+          "height": 1591,
+          "alt": "Tattooed hands holding a mustard crochet bag against a green backdrop",
+          "thumbnail": "/images/galleries/photography/crochet-bag-editorial-detail-800w.webp",
+          "srcset": "/images/galleries/photography/crochet-bag-editorial-detail-480w.webp 480w, /images/galleries/photography/crochet-bag-editorial-detail-800w.webp 800w, /images/galleries/photography/crochet-bag-editorial-detail-1200w.webp 1200w, /images/galleries/photography/crochet-bag-editorial-detail.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/natural-light-daisy-portrait.webp",
+          "width": 2400,
+          "height": 1602,
+          "alt": "Close portrait with a pink daisy resting beside a closed eye",
+          "thumbnail": "/images/galleries/photography/natural-light-daisy-portrait-800w.webp",
+          "srcset": "/images/galleries/photography/natural-light-daisy-portrait-480w.webp 480w, /images/galleries/photography/natural-light-daisy-portrait-800w.webp 800w, /images/galleries/photography/natural-light-daisy-portrait-1200w.webp 1200w, /images/galleries/photography/natural-light-daisy-portrait.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/natural-light-tattoo-portrait.webp",
+          "width": 1602,
+          "height": 2400,
+          "alt": "Portrait in soft natural light with a tattooed hand resting on the forehead",
+          "thumbnail": "/images/galleries/photography/natural-light-tattoo-portrait-800w.webp",
+          "srcset": "/images/galleries/photography/natural-light-tattoo-portrait-480w.webp 480w, /images/galleries/photography/natural-light-tattoo-portrait-800w.webp 800w, /images/galleries/photography/natural-light-tattoo-portrait-1200w.webp 1200w, /images/galleries/photography/natural-light-tattoo-portrait.webp 1602w"
+        },
+        {
+          "src": "/images/galleries/photography/cactus-film-fashion-portrait.webp",
+          "width": 2400,
+          "height": 2400,
+          "alt": "Fashion portrait in a black hat among prickly pear cactus",
+          "thumbnail": "/images/galleries/photography/cactus-film-fashion-portrait-800w.webp",
+          "srcset": "/images/galleries/photography/cactus-film-fashion-portrait-480w.webp 480w, /images/galleries/photography/cactus-film-fashion-portrait-800w.webp 800w, /images/galleries/photography/cactus-film-fashion-portrait-1200w.webp 1200w, /images/galleries/photography/cactus-film-fashion-portrait.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/wildflower-lifestyle-portrait.webp",
+          "width": 1600,
+          "height": 2400,
+          "alt": "A person laughing among green foliage and yellow wildflowers",
+          "thumbnail": "/images/galleries/photography/wildflower-lifestyle-portrait-800w.webp",
+          "srcset": "/images/galleries/photography/wildflower-lifestyle-portrait-480w.webp 480w, /images/galleries/photography/wildflower-lifestyle-portrait-800w.webp 800w, /images/galleries/photography/wildflower-lifestyle-portrait-1200w.webp 1200w, /images/galleries/photography/wildflower-lifestyle-portrait.webp 1600w"
+        },
+        {
+          "src": "/images/galleries/photography/beach-lifestyle-laughter.webp",
+          "width": 2400,
+          "height": 1591,
+          "alt": "Two friends laughing together on a sunny beach",
+          "thumbnail": "/images/galleries/photography/beach-lifestyle-laughter-800w.webp",
+          "srcset": "/images/galleries/photography/beach-lifestyle-laughter-480w.webp 480w, /images/galleries/photography/beach-lifestyle-laughter-800w.webp 800w, /images/galleries/photography/beach-lifestyle-laughter-1200w.webp 1200w, /images/galleries/photography/beach-lifestyle-laughter.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/summer-beach-portrait.webp",
+          "width": 1591,
+          "height": 2400,
+          "alt": "Smiling beach portrait with a yellow ice lolly",
+          "thumbnail": "/images/galleries/photography/summer-beach-portrait-800w.webp",
+          "srcset": "/images/galleries/photography/summer-beach-portrait-480w.webp 480w, /images/galleries/photography/summer-beach-portrait-800w.webp 800w, /images/galleries/photography/summer-beach-portrait-1200w.webp 1200w, /images/galleries/photography/summer-beach-portrait.webp 1591w"
+        }
+      ]
+    },
+    {
+      "id": "coast-country",
+      "title": "Coast & country",
+      "photos": [
+        {
+          "src": "/images/galleries/photography/turquoise-ocean-aerial.webp",
+          "width": 2400,
+          "height": 1697,
+          "alt": "Aerial view of turquoise waves swirling around dark coastal rocks",
+          "thumbnail": "/images/galleries/photography/turquoise-ocean-aerial-800w.webp",
+          "srcset": "/images/galleries/photography/turquoise-ocean-aerial-480w.webp 480w, /images/galleries/photography/turquoise-ocean-aerial-800w.webp 800w, /images/galleries/photography/turquoise-ocean-aerial-1200w.webp 1200w, /images/galleries/photography/turquoise-ocean-aerial.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/surf-wave-water-level.webp",
+          "width": 2400,
+          "height": 1602,
+          "alt": "A surfer riding a wave beneath a bright sky, photographed from the water",
+          "thumbnail": "/images/galleries/photography/surf-wave-water-level-800w.webp",
+          "srcset": "/images/galleries/photography/surf-wave-water-level-480w.webp 480w, /images/galleries/photography/surf-wave-water-level-800w.webp 800w, /images/galleries/photography/surf-wave-water-level-1200w.webp 1200w, /images/galleries/photography/surf-wave-water-level.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/backlit-surfer-ocean-spray.webp",
+          "width": 2400,
+          "height": 1602,
+          "alt": "Backlit surfer surrounded by sunlit ocean spray",
+          "thumbnail": "/images/galleries/photography/backlit-surfer-ocean-spray-800w.webp",
+          "srcset": "/images/galleries/photography/backlit-surfer-ocean-spray-480w.webp 480w, /images/galleries/photography/backlit-surfer-ocean-spray-800w.webp 800w, /images/galleries/photography/backlit-surfer-ocean-spray-1200w.webp 1200w, /images/galleries/photography/backlit-surfer-ocean-spray.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/sunset-surf-film-photography.webp",
+          "width": 2400,
+          "height": 1697,
+          "alt": "Surfers entering calm water under a warm sunset sky",
+          "thumbnail": "/images/galleries/photography/sunset-surf-film-photography-800w.webp",
+          "srcset": "/images/galleries/photography/sunset-surf-film-photography-480w.webp 480w, /images/galleries/photography/sunset-surf-film-photography-800w.webp 800w, /images/galleries/photography/sunset-surf-film-photography-1200w.webp 1200w, /images/galleries/photography/sunset-surf-film-photography.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/sand-dunes-limestone-landscape.webp",
+          "width": 2400,
+          "height": 1697,
+          "alt": "Pale sand dunes and limestone formations beneath a blue sky",
+          "thumbnail": "/images/galleries/photography/sand-dunes-limestone-landscape-800w.webp",
+          "srcset": "/images/galleries/photography/sand-dunes-limestone-landscape-480w.webp 480w, /images/galleries/photography/sand-dunes-limestone-landscape-800w.webp 800w, /images/galleries/photography/sand-dunes-limestone-landscape-1200w.webp 1200w, /images/galleries/photography/sand-dunes-limestone-landscape.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/flamingos-aerial-shadows.webp",
+          "width": 1697,
+          "height": 2400,
+          "alt": "Aerial view of a flock of pink flamingos casting long shadows",
+          "thumbnail": "/images/galleries/photography/flamingos-aerial-shadows-800w.webp",
+          "srcset": "/images/galleries/photography/flamingos-aerial-shadows-480w.webp 480w, /images/galleries/photography/flamingos-aerial-shadows-800w.webp 800w, /images/galleries/photography/flamingos-aerial-shadows-1200w.webp 1200w, /images/galleries/photography/flamingos-aerial-shadows.webp 1697w"
+        },
+        {
+          "src": "/images/galleries/photography/coastal-rocks-aerial.webp",
+          "width": 2400,
+          "height": 1697,
+          "alt": "White surf breaking over layered red coastal rocks, viewed from above",
+          "thumbnail": "/images/galleries/photography/coastal-rocks-aerial-800w.webp",
+          "srcset": "/images/galleries/photography/coastal-rocks-aerial-480w.webp 480w, /images/galleries/photography/coastal-rocks-aerial-800w.webp 800w, /images/galleries/photography/coastal-rocks-aerial-1200w.webp 1200w, /images/galleries/photography/coastal-rocks-aerial.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/crocodile-clear-water-aerial.webp",
+          "width": 2400,
+          "height": 1600,
+          "alt": "A crocodile swimming through clear pale green water",
+          "thumbnail": "/images/galleries/photography/crocodile-clear-water-aerial-800w.webp",
+          "srcset": "/images/galleries/photography/crocodile-clear-water-aerial-480w.webp 480w, /images/galleries/photography/crocodile-clear-water-aerial-800w.webp 800w, /images/galleries/photography/crocodile-clear-water-aerial-1200w.webp 1200w, /images/galleries/photography/crocodile-clear-water-aerial.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/river-gorge-aerial-landscape.webp",
+          "width": 2400,
+          "height": 1598,
+          "alt": "A river winding through a green landscape and layered rocky gorge",
+          "thumbnail": "/images/galleries/photography/river-gorge-aerial-landscape-800w.webp",
+          "srcset": "/images/galleries/photography/river-gorge-aerial-landscape-480w.webp 480w, /images/galleries/photography/river-gorge-aerial-landscape-800w.webp 800w, /images/galleries/photography/river-gorge-aerial-landscape-1200w.webp 1200w, /images/galleries/photography/river-gorge-aerial-landscape.webp 2400w"
+        }
+      ]
+    },
+    {
+      "id": "travel-details",
+      "title": "Elsewhere & details",
+      "photos": [
+        {
+          "src": "/images/galleries/photography/boat-portrait-conical-hat.webp",
+          "width": 2400,
+          "height": 1800,
+          "alt": "Smiling boat passenger wearing a conical hat beside calm water",
+          "thumbnail": "/images/galleries/photography/boat-portrait-conical-hat-800w.webp",
+          "srcset": "/images/galleries/photography/boat-portrait-conical-hat-480w.webp 480w, /images/galleries/photography/boat-portrait-conical-hat-800w.webp 800w, /images/galleries/photography/boat-portrait-conical-hat-1200w.webp 1200w, /images/galleries/photography/boat-portrait-conical-hat.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/colourful-incense-bundles.webp",
+          "width": 1800,
+          "height": 2400,
+          "alt": "Close view of brightly coloured incense bundles",
+          "thumbnail": "/images/galleries/photography/colourful-incense-bundles-800w.webp",
+          "srcset": "/images/galleries/photography/colourful-incense-bundles-480w.webp 480w, /images/galleries/photography/colourful-incense-bundles-800w.webp 800w, /images/galleries/photography/colourful-incense-bundles-1200w.webp 1200w, /images/galleries/photography/colourful-incense-bundles.webp 1800w"
+        },
+        {
+          "src": "/images/galleries/photography/red-dress-temple-portrait.webp",
+          "width": 1800,
+          "height": 2400,
+          "alt": "A person wearing a long red dress standing in an ornate temple doorway",
+          "thumbnail": "/images/galleries/photography/red-dress-temple-portrait-800w.webp",
+          "srcset": "/images/galleries/photography/red-dress-temple-portrait-480w.webp 480w, /images/galleries/photography/red-dress-temple-portrait-800w.webp 800w, /images/galleries/photography/red-dress-temple-portrait-1200w.webp 1200w, /images/galleries/photography/red-dress-temple-portrait.webp 1800w"
+        },
+        {
+          "src": "/images/galleries/photography/alpine-mountain-landscape.webp",
+          "width": 2400,
+          "height": 2400,
+          "alt": "Rocky mountain peaks rising above green slopes and pine trees",
+          "thumbnail": "/images/galleries/photography/alpine-mountain-landscape-800w.webp",
+          "srcset": "/images/galleries/photography/alpine-mountain-landscape-480w.webp 480w, /images/galleries/photography/alpine-mountain-landscape-800w.webp 800w, /images/galleries/photography/alpine-mountain-landscape-1200w.webp 1200w, /images/galleries/photography/alpine-mountain-landscape.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/modern-building-facade.webp",
+          "width": 1697,
+          "height": 2400,
+          "alt": "Angular white building facade against a clear blue sky",
+          "thumbnail": "/images/galleries/photography/modern-building-facade-800w.webp",
+          "srcset": "/images/galleries/photography/modern-building-facade-480w.webp 480w, /images/galleries/photography/modern-building-facade-800w.webp 800w, /images/galleries/photography/modern-building-facade-1200w.webp 1200w, /images/galleries/photography/modern-building-facade.webp 1697w"
+        },
+        {
+          "src": "/images/galleries/photography/pink-infrared-woodland-path.webp",
+          "width": 1697,
+          "height": 2400,
+          "alt": "Woodland path surrounded by vivid pink foliage in infrared photography",
+          "thumbnail": "/images/galleries/photography/pink-infrared-woodland-path-800w.webp",
+          "srcset": "/images/galleries/photography/pink-infrared-woodland-path-480w.webp 480w, /images/galleries/photography/pink-infrared-woodland-path-800w.webp 800w, /images/galleries/photography/pink-infrared-woodland-path-1200w.webp 1200w, /images/galleries/photography/pink-infrared-woodland-path.webp 1697w"
+        }
+      ]
+    },
+    {
+      "id": "documentary-stories",
+      "title": "People & purpose",
+      "photos": [
+        {
+          "src": "/images/galleries/photography/pastoral-academy-horse-sunrise.webp",
+          "width": 2400,
+          "height": 1600,
+          "alt": "A participant leading a horse beside station gates in warm sunrise light",
+          "thumbnail": "/images/galleries/photography/pastoral-academy-horse-sunrise-800w.webp",
+          "srcset": "/images/galleries/photography/pastoral-academy-horse-sunrise-480w.webp 480w, /images/galleries/photography/pastoral-academy-horse-sunrise-800w.webp 800w, /images/galleries/photography/pastoral-academy-horse-sunrise-1200w.webp 1200w, /images/galleries/photography/pastoral-academy-horse-sunrise.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/pastoral-academy-station-training.webp",
+          "width": 2400,
+          "height": 1600,
+          "alt": "Riders and mentors gathered beside station gates in golden light",
+          "thumbnail": "/images/galleries/photography/pastoral-academy-station-training-800w.webp",
+          "srcset": "/images/galleries/photography/pastoral-academy-station-training-480w.webp 480w, /images/galleries/photography/pastoral-academy-station-training-800w.webp 800w, /images/galleries/photography/pastoral-academy-station-training-1200w.webp 1200w, /images/galleries/photography/pastoral-academy-station-training.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/horse-saddle-station-work.webp",
+          "width": 2400,
+          "height": 1600,
+          "alt": "Close view of hands fastening tack on a horse during station work",
+          "thumbnail": "/images/galleries/photography/horse-saddle-station-work-800w.webp",
+          "srcset": "/images/galleries/photography/horse-saddle-station-work-480w.webp 480w, /images/galleries/photography/horse-saddle-station-work-800w.webp 800w, /images/galleries/photography/horse-saddle-station-work-1200w.webp 1200w, /images/galleries/photography/horse-saddle-station-work.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/fresh-mulberries-harvest.webp",
+          "width": 2400,
+          "height": 1600,
+          "alt": "Hands holding freshly picked mulberries and green leaves",
+          "thumbnail": "/images/galleries/photography/fresh-mulberries-harvest-800w.webp",
+          "srcset": "/images/galleries/photography/fresh-mulberries-harvest-480w.webp 480w, /images/galleries/photography/fresh-mulberries-harvest-800w.webp 800w, /images/galleries/photography/fresh-mulberries-harvest-1200w.webp 1200w, /images/galleries/photography/fresh-mulberries-harvest.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/beekeeper-honey-portrait.webp",
+          "width": 1600,
+          "height": 2400,
+          "alt": "A beekeeper holding a jar of honey up to the sunlight",
+          "thumbnail": "/images/galleries/photography/beekeeper-honey-portrait-800w.webp",
+          "srcset": "/images/galleries/photography/beekeeper-honey-portrait-480w.webp 480w, /images/galleries/photography/beekeeper-honey-portrait-800w.webp 800w, /images/galleries/photography/beekeeper-honey-portrait-1200w.webp 1200w, /images/galleries/photography/beekeeper-honey-portrait.webp 1600w"
+        },
+        {
+          "src": "/images/galleries/photography/honeybees-close-up.webp",
+          "width": 2400,
+          "height": 1600,
+          "alt": "Close view of honeybees gathered on a hive frame",
+          "thumbnail": "/images/galleries/photography/honeybees-close-up-800w.webp",
+          "srcset": "/images/galleries/photography/honeybees-close-up-480w.webp 480w, /images/galleries/photography/honeybees-close-up-800w.webp 800w, /images/galleries/photography/honeybees-close-up-1200w.webp 1200w, /images/galleries/photography/honeybees-close-up.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/crop-research-greenhouse.webp",
+          "width": 2400,
+          "height": 1600,
+          "alt": "A researcher recording observations among plant trays in a greenhouse",
+          "thumbnail": "/images/galleries/photography/crop-research-greenhouse-800w.webp",
+          "srcset": "/images/galleries/photography/crop-research-greenhouse-480w.webp 480w, /images/galleries/photography/crop-research-greenhouse-800w.webp 800w, /images/galleries/photography/crop-research-greenhouse-1200w.webp 1200w, /images/galleries/photography/crop-research-greenhouse.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/fishing-boat-catch.webp",
+          "width": 2400,
+          "height": 1600,
+          "alt": "A fisher holding a catch beside a boat, photographed from water level",
+          "thumbnail": "/images/galleries/photography/fishing-boat-catch-800w.webp",
+          "srcset": "/images/galleries/photography/fishing-boat-catch-480w.webp 480w, /images/galleries/photography/fishing-boat-catch-800w.webp 800w, /images/galleries/photography/fishing-boat-catch-1200w.webp 1200w, /images/galleries/photography/fishing-boat-catch.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/fishing-buoys-rope-detail.webp",
+          "width": 2400,
+          "height": 1602,
+          "alt": "Colourful fishing buoys and tangled ropes on a boat",
+          "thumbnail": "/images/galleries/photography/fishing-buoys-rope-detail-800w.webp",
+          "srcset": "/images/galleries/photography/fishing-buoys-rope-detail-480w.webp 480w, /images/galleries/photography/fishing-buoys-rope-detail-800w.webp 800w, /images/galleries/photography/fishing-buoys-rope-detail-1200w.webp 1200w, /images/galleries/photography/fishing-buoys-rope-detail.webp 2400w"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "weddings-people",
+      "title": "Weddings & people",
+      "photos": [
+        {
+          "src": "/images/galleries/events/wedding-window-light-portrait.webp",
+          "width": 1600,
+          "height": 2400,
+          "alt": "A bride standing beside a window in warm natural light",
+          "thumbnail": "/images/galleries/events/wedding-window-light-portrait-800w.webp",
+          "srcset": "/images/galleries/events/wedding-window-light-portrait-480w.webp 480w, /images/galleries/events/wedding-window-light-portrait-800w.webp 800w, /images/galleries/events/wedding-window-light-portrait-1200w.webp 1200w, /images/galleries/events/wedding-window-light-portrait.webp 1600w"
+        },
+        {
+          "src": "/images/galleries/events/wedding-buttonhole-detail.webp",
+          "width": 1600,
+          "height": 2400,
+          "alt": "Hands attaching a floral buttonhole to a wedding suit",
+          "thumbnail": "/images/galleries/events/wedding-buttonhole-detail-800w.webp",
+          "srcset": "/images/galleries/events/wedding-buttonhole-detail-480w.webp 480w, /images/galleries/events/wedding-buttonhole-detail-800w.webp 800w, /images/galleries/events/wedding-buttonhole-detail-1200w.webp 1200w, /images/galleries/events/wedding-buttonhole-detail.webp 1600w"
+        },
+        {
+          "src": "/images/galleries/events/intimate-wedding-vows.webp",
+          "width": 2400,
+          "height": 1600,
+          "alt": "A couple exchanging wedding vows beside a sunlit window",
+          "thumbnail": "/images/galleries/events/intimate-wedding-vows-800w.webp",
+          "srcset": "/images/galleries/events/intimate-wedding-vows-480w.webp 480w, /images/galleries/events/intimate-wedding-vows-800w.webp 800w, /images/galleries/events/intimate-wedding-vows-1200w.webp 1200w, /images/galleries/events/intimate-wedding-vows.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/events/wedding-guests-reactions.webp",
+          "width": 2400,
+          "height": 1600,
+          "alt": "Wedding guests smiling during an intimate ceremony",
+          "thumbnail": "/images/galleries/events/wedding-guests-reactions-800w.webp",
+          "srcset": "/images/galleries/events/wedding-guests-reactions-480w.webp 480w, /images/galleries/events/wedding-guests-reactions-800w.webp 800w, /images/galleries/events/wedding-guests-reactions-1200w.webp 1200w, /images/galleries/events/wedding-guests-reactions.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/events/wedding-vintage-car-portrait.webp",
+          "width": 2400,
+          "height": 2400,
+          "alt": "A wedding couple standing beside a vintage car beneath autumn trees",
+          "thumbnail": "/images/galleries/events/wedding-vintage-car-portrait-800w.webp",
+          "srcset": "/images/galleries/events/wedding-vintage-car-portrait-480w.webp 480w, /images/galleries/events/wedding-vintage-car-portrait-800w.webp 800w, /images/galleries/events/wedding-vintage-car-portrait-1200w.webp 1200w, /images/galleries/events/wedding-vintage-car-portrait.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/events/wedding-hands-detail.webp",
+          "width": 2400,
+          "height": 1600,
+          "alt": "Close view of a wedding couple holding hands beneath autumn leaves",
+          "thumbnail": "/images/galleries/events/wedding-hands-detail-800w.webp",
+          "srcset": "/images/galleries/events/wedding-hands-detail-480w.webp 480w, /images/galleries/events/wedding-hands-detail-800w.webp 800w, /images/galleries/events/wedding-hands-detail-1200w.webp 1200w, /images/galleries/events/wedding-hands-detail.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/events/autumn-wedding-couple-portrait.webp",
+          "width": 2400,
+          "height": 1600,
+          "alt": "A smiling wedding couple in warm autumn light",
+          "thumbnail": "/images/galleries/events/autumn-wedding-couple-portrait-800w.webp",
+          "srcset": "/images/galleries/events/autumn-wedding-couple-portrait-480w.webp 480w, /images/galleries/events/autumn-wedding-couple-portrait-800w.webp 800w, /images/galleries/events/autumn-wedding-couple-portrait-1200w.webp 1200w, /images/galleries/events/autumn-wedding-couple-portrait.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/events/wedding-confetti-celebration.webp",
+          "width": 1600,
+          "height": 2400,
+          "alt": "A wedding couple celebrating under a shower of colourful confetti",
+          "thumbnail": "/images/galleries/events/wedding-confetti-celebration-800w.webp",
+          "srcset": "/images/galleries/events/wedding-confetti-celebration-480w.webp 480w, /images/galleries/events/wedding-confetti-celebration-800w.webp 800w, /images/galleries/events/wedding-confetti-celebration-1200w.webp 1200w, /images/galleries/events/wedding-confetti-celebration.webp 1600w"
+        },
+        {
+          "src": "/images/galleries/events/beach-wedding-family-moment.webp",
+          "width": 1600,
+          "height": 2400,
+          "alt": "A bride walking along the beach while holding hands with two children",
+          "thumbnail": "/images/galleries/events/beach-wedding-family-moment-800w.webp",
+          "srcset": "/images/galleries/events/beach-wedding-family-moment-480w.webp 480w, /images/galleries/events/beach-wedding-family-moment-800w.webp 800w, /images/galleries/events/beach-wedding-family-moment-1200w.webp 1200w, /images/galleries/events/beach-wedding-family-moment.webp 1600w"
+        },
+        {
+          "src": "/images/galleries/events/beach-wedding-couple-laughter.webp",
+          "width": 1600,
+          "height": 2400,
+          "alt": "A groom carrying a laughing bride beside the ocean",
+          "thumbnail": "/images/galleries/events/beach-wedding-couple-laughter-800w.webp",
+          "srcset": "/images/galleries/events/beach-wedding-couple-laughter-480w.webp 480w, /images/galleries/events/beach-wedding-couple-laughter-800w.webp 800w, /images/galleries/events/beach-wedding-couple-laughter-1200w.webp 1200w, /images/galleries/events/beach-wedding-couple-laughter.webp 1600w"
+        },
+        {
+          "src": "/images/galleries/events/wedding-couple-quiet-moment.webp",
+          "width": 1600,
+          "height": 2400,
+          "alt": "A wedding couple sharing a quiet moment on a bench against a timber wall",
+          "thumbnail": "/images/galleries/events/wedding-couple-quiet-moment-800w.webp",
+          "srcset": "/images/galleries/events/wedding-couple-quiet-moment-480w.webp 480w, /images/galleries/events/wedding-couple-quiet-moment-800w.webp 800w, /images/galleries/events/wedding-couple-quiet-moment-1200w.webp 1200w, /images/galleries/events/wedding-couple-quiet-moment.webp 1600w"
+        },
+        {
+          "src": "/images/galleries/events/wedding-reception-dance-floor.webp",
+          "width": 2400,
+          "height": 1600,
+          "alt": "Wedding guests raising their arms and dancing together at a reception",
+          "thumbnail": "/images/galleries/events/wedding-reception-dance-floor-800w.webp",
+          "srcset": "/images/galleries/events/wedding-reception-dance-floor-480w.webp 480w, /images/galleries/events/wedding-reception-dance-floor-800w.webp 800w, /images/galleries/events/wedding-reception-dance-floor-1200w.webp 1200w, /images/galleries/events/wedding-reception-dance-floor.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/events/couple-beach-evening.webp",
+          "width": 2400,
+          "height": 1600,
+          "alt": "A couple standing together on the beach beneath a soft evening sky",
+          "thumbnail": "/images/galleries/events/couple-beach-evening-800w.webp",
+          "srcset": "/images/galleries/events/couple-beach-evening-480w.webp 480w, /images/galleries/events/couple-beach-evening-800w.webp 800w, /images/galleries/events/couple-beach-evening-1200w.webp 1200w, /images/galleries/events/couple-beach-evening.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/events/couple-dancing-sunset.webp",
+          "width": 1598,
+          "height": 2400,
+          "alt": "A couple dancing on the beach in golden sunset light",
+          "thumbnail": "/images/galleries/events/couple-dancing-sunset-800w.webp",
+          "srcset": "/images/galleries/events/couple-dancing-sunset-480w.webp 480w, /images/galleries/events/couple-dancing-sunset-800w.webp 800w, /images/galleries/events/couple-dancing-sunset-1200w.webp 1200w, /images/galleries/events/couple-dancing-sunset.webp 1598w"
+        },
+        {
+          "src": "/images/galleries/events/family-wedding-candid.webp",
+          "width": 1600,
+          "height": 2400,
+          "alt": "A wedding couple kissing while holding a child in a cosy room",
+          "thumbnail": "/images/galleries/events/family-wedding-candid-800w.webp",
+          "srcset": "/images/galleries/events/family-wedding-candid-480w.webp 480w, /images/galleries/events/family-wedding-candid-800w.webp 800w, /images/galleries/events/family-wedding-candid-1200w.webp 1200w, /images/galleries/events/family-wedding-candid.webp 1600w"
+        },
+        {
+          "src": "/images/galleries/events/couple-celebration-toast.webp",
+          "width": 1600,
+          "height": 2400,
+          "alt": "A couple sharing a joyful toast indoors",
+          "thumbnail": "/images/galleries/events/couple-celebration-toast-800w.webp",
+          "srcset": "/images/galleries/events/couple-celebration-toast-480w.webp 480w, /images/galleries/events/couple-celebration-toast-800w.webp 800w, /images/galleries/events/couple-celebration-toast-1200w.webp 1200w, /images/galleries/events/couple-celebration-toast.webp 1600w"
+        },
+        {
+          "src": "/images/galleries/events/family-beach-portrait.webp",
+          "width": 1600,
+          "height": 2400,
+          "alt": "Two family members smiling together beside the ocean",
+          "thumbnail": "/images/galleries/events/family-beach-portrait-800w.webp",
+          "srcset": "/images/galleries/events/family-beach-portrait-480w.webp 480w, /images/galleries/events/family-beach-portrait-800w.webp 800w, /images/galleries/events/family-beach-portrait-1200w.webp 1200w, /images/galleries/events/family-beach-portrait.webp 1600w"
+        }
+      ]
+    },
+    {
+      "id": "community-live",
+      "title": "Community & live events",
+      "photos": [
+        {
+          "src": "/images/galleries/events/community-market-gathering.webp",
+          "width": 2400,
+          "height": 1600,
+          "alt": "Visitors browsing colourful stalls at an outdoor community market",
+          "thumbnail": "/images/galleries/events/community-market-gathering-800w.webp",
+          "srcset": "/images/galleries/events/community-market-gathering-480w.webp 480w, /images/galleries/events/community-market-gathering-800w.webp 800w, /images/galleries/events/community-market-gathering-1200w.webp 1200w, /images/galleries/events/community-market-gathering.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/events/festive-community-market.webp",
+          "width": 1600,
+          "height": 2400,
+          "alt": "A family meeting Santa at a sunny outdoor market",
+          "thumbnail": "/images/galleries/events/festive-community-market-800w.webp",
+          "srcset": "/images/galleries/events/festive-community-market-480w.webp 480w, /images/galleries/events/festive-community-market-800w.webp 800w, /images/galleries/events/festive-community-market-1200w.webp 1200w, /images/galleries/events/festive-community-market.webp 1600w"
+        },
+        {
+          "src": "/images/galleries/events/live-music-trumpet-performance.webp",
+          "width": 1591,
+          "height": 2400,
+          "alt": "A trumpet player performing on stage under colourful lights",
+          "thumbnail": "/images/galleries/events/live-music-trumpet-performance-800w.webp",
+          "srcset": "/images/galleries/events/live-music-trumpet-performance-480w.webp 480w, /images/galleries/events/live-music-trumpet-performance-800w.webp 800w, /images/galleries/events/live-music-trumpet-performance-1200w.webp 1200w, /images/galleries/events/live-music-trumpet-performance.webp 1591w"
+        },
+        {
+          "src": "/images/galleries/events/snowboard-event-action.webp",
+          "width": 1920,
+          "height": 2400,
+          "alt": "A snowboarder airborne above a snow park during a mountain event",
+          "thumbnail": "/images/galleries/events/snowboard-event-action-800w.webp",
+          "srcset": "/images/galleries/events/snowboard-event-action-480w.webp 480w, /images/galleries/events/snowboard-event-action-800w.webp 800w, /images/galleries/events/snowboard-event-action-1200w.webp 1200w, /images/galleries/events/snowboard-event-action.webp 1920w"
+        },
+        {
+          "src": "/images/galleries/events/snowboard-event-start-line.webp",
+          "width": 2400,
+          "height": 1600,
+          "alt": "Snowboarders gathering beneath an inflatable event arch in the mountains",
+          "thumbnail": "/images/galleries/events/snowboard-event-start-line-800w.webp",
+          "srcset": "/images/galleries/events/snowboard-event-start-line-480w.webp 480w, /images/galleries/events/snowboard-event-start-line-800w.webp 800w, /images/galleries/events/snowboard-event-start-line-1200w.webp 1200w, /images/galleries/events/snowboard-event-start-line.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/events/snowboard-event-group.webp",
+          "width": 1920,
+          "height": 2400,
+          "alt": "Snowboarders celebrating together on a snowy mountain",
+          "thumbnail": "/images/galleries/events/snowboard-event-group-800w.webp",
+          "srcset": "/images/galleries/events/snowboard-event-group-480w.webp 480w, /images/galleries/events/snowboard-event-group-800w.webp 800w, /images/galleries/events/snowboard-event-group-1200w.webp 1200w, /images/galleries/events/snowboard-event-group.webp 1920w"
+        },
+        {
+          "src": "/images/galleries/events/community-market-food-truck.webp",
+          "width": 2400,
+          "height": 1600,
+          "alt": "Visitors gathering beside a colourful food truck at an outdoor market",
+          "thumbnail": "/images/galleries/events/community-market-food-truck-800w.webp",
+          "srcset": "/images/galleries/events/community-market-food-truck-480w.webp 480w, /images/galleries/events/community-market-food-truck-800w.webp 800w, /images/galleries/events/community-market-food-truck-1200w.webp 1200w, /images/galleries/events/community-market-food-truck.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/events/community-market-candid.webp",
+          "width": 1600,
+          "height": 2400,
+          "alt": "Market visitors talking among outdoor stalls beneath tall trees",
+          "thumbnail": "/images/galleries/events/community-market-candid-800w.webp",
+          "srcset": "/images/galleries/events/community-market-candid-480w.webp 480w, /images/galleries/events/community-market-candid-800w.webp 800w, /images/galleries/events/community-market-candid-1200w.webp 1200w, /images/galleries/events/community-market-candid.webp 1600w"
+        },
+        {
+          "src": "/images/galleries/events/live-music-audience-silhouettes.webp",
+          "width": 1591,
+          "height": 2400,
+          "alt": "A musician performing under warm stage lights beyond audience silhouettes",
+          "thumbnail": "/images/galleries/events/live-music-audience-silhouettes-800w.webp",
+          "srcset": "/images/galleries/events/live-music-audience-silhouettes-480w.webp 480w, /images/galleries/events/live-music-audience-silhouettes-800w.webp 800w, /images/galleries/events/live-music-audience-silhouettes-1200w.webp 1200w, /images/galleries/events/live-music-audience-silhouettes.webp 1591w"
+        },
+        {
+          "src": "/images/galleries/events/snowboard-competition-jump.webp",
+          "width": 1920,
+          "height": 2400,
+          "alt": "A snowboarder in yellow clothing jumping above a snowy competition course",
+          "thumbnail": "/images/galleries/events/snowboard-competition-jump-800w.webp",
+          "srcset": "/images/galleries/events/snowboard-competition-jump-480w.webp 480w, /images/galleries/events/snowboard-competition-jump-800w.webp 800w, /images/galleries/events/snowboard-competition-jump-1200w.webp 1200w, /images/galleries/events/snowboard-competition-jump.webp 1920w"
+        },
+        {
+          "src": "/images/galleries/events/snowboard-airborne-blue-sky.webp",
+          "width": 1920,
+          "height": 2400,
+          "alt": "An airborne snowboarder silhouetted against a blue mountain sky",
+          "thumbnail": "/images/galleries/events/snowboard-airborne-blue-sky-800w.webp",
+          "srcset": "/images/galleries/events/snowboard-airborne-blue-sky-480w.webp 480w, /images/galleries/events/snowboard-airborne-blue-sky-800w.webp 800w, /images/galleries/events/snowboard-airborne-blue-sky-1200w.webp 1200w, /images/galleries/events/snowboard-airborne-blue-sky.webp 1920w"
+        }
+      ]
+    }
+  ]
+}

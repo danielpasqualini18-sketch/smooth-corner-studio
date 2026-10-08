@@ -1,20 +1,33 @@
 ---
-// main layout
-// components
-import Button from "@components/Button/Button.astro";
-import BaseLayout from "@layouts/BaseLayout.astro";
----
+import '../styles/global.css';
 
-<BaseLayout title="404" description="Error 404 page not found." noindex={true}>
-	<section class="site-container pt-36 text-center md:pt-44">
-		<div class="mx-auto max-w-xl px-4 text-center">
-			<h1 class="h1">Page not found!</h1>
-			<p class="description mt-4">
-				Apologies, one of our links must have broken. Please try again or go back to the homepage.
-			</p>
-			<div class="mt-8 flex justify-center">
-				<Button variant="primary" href="/">Go to homepage</Button>
-			</div>
-		</div>
-	</section>
-</BaseLayout>
+import SeoHead from '../components/SeoHead.astro';
+---
+<!doctype html>
+<html lang="en">
+ <head>
+  <SeoHead title="Page not found | Smooth Corner Studio" description="This page is no longer here. Explore Smooth Corner Studio’s photography, films and event coverage." path="/404.html" noindex />
+ </head>
+ <body>
+  <main>
+   <p class="eyebrow">Smooth Corner Studio · 404</p>
+   <h1 class="display-title">A frame<br />out of place.</h1>
+   <p>This page may have moved. Let’s get you back to the stories.</p>
+   <a class="button primary" href="/">Back to the studio</a>
+   <nav aria-label="Explore our work">
+    <a href="/photography">Photography</a>
+    <a href="/films">Films</a>
+    <a href="/events">Weddings &amp; events</a>
+   </nav>
+  </main>
+ </body>
+</html>
+<style>
+ body { background: linear-gradient(135deg, var(--ink), var(--deep-blue)); }
+ main { min-height: 100vh; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; width: min(100% - 40px, 900px); margin: auto; padding: 80px 0; }
+ h1 { color: var(--sand); margin: 12px 0 24px; font-size: clamp(4rem, 12vw, 9rem); line-height: .9; }
+ p { max-width: 540px; color: var(--text-soft); }
+ .button { margin-top: 18px; }
+ nav { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 38px; }
+ nav a { color: var(--sand); text-decoration: underline; text-underline-offset: 4px; }
+</style>
