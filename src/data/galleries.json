@@ -21,6 +21,14 @@
           "srcset": "/images/galleries/photography/pink-backdrop-editorial-portrait-480w.webp 480w, /images/galleries/photography/pink-backdrop-editorial-portrait-800w.webp 800w, /images/galleries/photography/pink-backdrop-editorial-portrait-1200w.webp 1200w, /images/galleries/photography/pink-backdrop-editorial-portrait.webp 1602w"
         },
         {
+          "src": "/images/galleries/photography/green-studio-yarn-portrait.webp",
+          "width": 1602,
+          "height": 2400,
+          "alt": "A tattooed person with pink hair and a raised arm framed by white yarn against a green studio backdrop",
+          "thumbnail": "/images/galleries/photography/green-studio-yarn-portrait-800w.webp",
+          "srcset": "/images/galleries/photography/green-studio-yarn-portrait-480w.webp 480w, /images/galleries/photography/green-studio-yarn-portrait-800w.webp 800w, /images/galleries/photography/green-studio-yarn-portrait-1200w.webp 1200w, /images/galleries/photography/green-studio-yarn-portrait.webp 1602w"
+        },
+        {
           "src": "/images/galleries/photography/green-studio-light-shadow-portrait.webp",
           "width": 1600,
           "height": 2400,
@@ -35,6 +43,14 @@
           "alt": "Seated maternity portrait in a black outfit against a white studio backdrop",
           "thumbnail": "/images/galleries/photography/maternity-studio-portrait-800w.webp",
           "srcset": "/images/galleries/photography/maternity-studio-portrait-480w.webp 480w, /images/galleries/photography/maternity-studio-portrait-800w.webp 800w, /images/galleries/photography/maternity-studio-portrait-1200w.webp 1200w, /images/galleries/photography/maternity-studio-portrait.webp 1591w"
+        },
+        {
+          "src": "/images/galleries/photography/sunflower-tattoo-lace-detail.webp",
+          "width": 1602,
+          "height": 2400,
+          "alt": "Close-up of tattooed hands and a sunflower tattoo beside a white lace sleeve",
+          "thumbnail": "/images/galleries/photography/sunflower-tattoo-lace-detail-800w.webp",
+          "srcset": "/images/galleries/photography/sunflower-tattoo-lace-detail-480w.webp 480w, /images/galleries/photography/sunflower-tattoo-lace-detail-800w.webp 800w, /images/galleries/photography/sunflower-tattoo-lace-detail-1200w.webp 1200w, /images/galleries/photography/sunflower-tattoo-lace-detail.webp 1602w"
         },
         {
           "src": "/images/galleries/photography/maternity-yellow-flowers-detail.webp",
@@ -53,6 +69,14 @@
           "srcset": "/images/galleries/photography/crochet-bag-editorial-detail-480w.webp 480w, /images/galleries/photography/crochet-bag-editorial-detail-800w.webp 800w, /images/galleries/photography/crochet-bag-editorial-detail-1200w.webp 1200w, /images/galleries/photography/crochet-bag-editorial-detail.webp 2400w"
         },
         {
+          "src": "/images/galleries/photography/orange-swimwear-beach-portrait.webp",
+          "width": 2400,
+          "height": 1591,
+          "alt": "A person in orange swimwear sitting beside dune grass and turquoise water, shading their face from the sun",
+          "thumbnail": "/images/galleries/photography/orange-swimwear-beach-portrait-800w.webp",
+          "srcset": "/images/galleries/photography/orange-swimwear-beach-portrait-480w.webp 480w, /images/galleries/photography/orange-swimwear-beach-portrait-800w.webp 800w, /images/galleries/photography/orange-swimwear-beach-portrait-1200w.webp 1200w, /images/galleries/photography/orange-swimwear-beach-portrait.webp 2400w"
+        },
+        {
           "src": "/images/galleries/photography/natural-light-daisy-portrait.webp",
           "width": 2400,
           "height": 1602,
@@ -61,20 +85,20 @@
           "srcset": "/images/galleries/photography/natural-light-daisy-portrait-480w.webp 480w, /images/galleries/photography/natural-light-daisy-portrait-800w.webp 800w, /images/galleries/photography/natural-light-daisy-portrait-1200w.webp 1200w, /images/galleries/photography/natural-light-daisy-portrait.webp 2400w"
         },
         {
-          "src": "/images/galleries/photography/natural-light-tattoo-portrait.webp",
-          "width": 1602,
-          "height": 2400,
-          "alt": "Portrait in soft natural light with a tattooed hand resting on the forehead",
-          "thumbnail": "/images/galleries/photography/natural-light-tattoo-portrait-800w.webp",
-          "srcset": "/images/galleries/photography/natural-light-tattoo-portrait-480w.webp 480w, /images/galleries/photography/natural-light-tattoo-portrait-800w.webp 800w, /images/galleries/photography/natural-light-tattoo-portrait-1200w.webp 1200w, /images/galleries/photography/natural-light-tattoo-portrait.webp 1602w"
-        },
-        {
           "src": "/images/galleries/photography/cactus-film-fashion-portrait.webp",
           "width": 2400,
           "height": 2400,
           "alt": "Fashion portrait in a black hat among prickly pear cactus",
           "thumbnail": "/images/galleries/photography/cactus-film-fashion-portrait-800w.webp",
           "srcset": "/images/galleries/photography/cactus-film-fashion-portrait-480w.webp 480w, /images/galleries/photography/cactus-film-fashion-portrait-800w.webp 800w, /images/galleries/photography/cactus-film-fashion-portrait-1200w.webp 1200w, /images/galleries/photography/cactus-film-fashion-portrait.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/pink-swimwear-beach-detail.webp",
+          "width": 1591,
+          "height": 2400,
+          "alt": "Close-up of hands adjusting pink and white patterned swimwear beside the sea",
+          "thumbnail": "/images/galleries/photography/pink-swimwear-beach-detail-800w.webp",
+          "srcset": "/images/galleries/photography/pink-swimwear-beach-detail-480w.webp 480w, /images/galleries/photography/pink-swimwear-beach-detail-800w.webp 800w, /images/galleries/photography/pink-swimwear-beach-detail-1200w.webp 1200w, /images/galleries/photography/pink-swimwear-beach-detail.webp 1591w"
         },
         {
           "src": "/images/galleries/photography/wildflower-lifestyle-portrait.webp",
@@ -93,12 +117,28 @@
           "srcset": "/images/galleries/photography/beach-lifestyle-laughter-480w.webp 480w, /images/galleries/photography/beach-lifestyle-laughter-800w.webp 800w, /images/galleries/photography/beach-lifestyle-laughter-1200w.webp 1200w, /images/galleries/photography/beach-lifestyle-laughter.webp 2400w"
         },
         {
+          "src": "/images/galleries/photography/sunlit-bucket-hat-portrait.webp",
+          "width": 1600,
+          "height": 2400,
+          "alt": "A smiling person holding the brim of a brown corduroy bucket hat beneath a bright blue sky",
+          "thumbnail": "/images/galleries/photography/sunlit-bucket-hat-portrait-800w.webp",
+          "srcset": "/images/galleries/photography/sunlit-bucket-hat-portrait-480w.webp 480w, /images/galleries/photography/sunlit-bucket-hat-portrait-800w.webp 800w, /images/galleries/photography/sunlit-bucket-hat-portrait-1200w.webp 1200w, /images/galleries/photography/sunlit-bucket-hat-portrait.webp 1600w"
+        },
+        {
           "src": "/images/galleries/photography/summer-beach-portrait.webp",
           "width": 1591,
           "height": 2400,
           "alt": "Smiling beach portrait with a yellow ice lolly",
           "thumbnail": "/images/galleries/photography/summer-beach-portrait-800w.webp",
           "srcset": "/images/galleries/photography/summer-beach-portrait-480w.webp 480w, /images/galleries/photography/summer-beach-portrait-800w.webp 800w, /images/galleries/photography/summer-beach-portrait-1200w.webp 1200w, /images/galleries/photography/summer-beach-portrait.webp 1591w"
+        },
+        {
+          "src": "/images/galleries/photography/green-studio-red-top-portrait.webp",
+          "width": 1602,
+          "height": 2400,
+          "alt": "A person in a red top and blue jeans seated with arms raised against a green studio backdrop",
+          "thumbnail": "/images/galleries/photography/green-studio-red-top-portrait-800w.webp",
+          "srcset": "/images/galleries/photography/green-studio-red-top-portrait-480w.webp 480w, /images/galleries/photography/green-studio-red-top-portrait-800w.webp 800w, /images/galleries/photography/green-studio-red-top-portrait-1200w.webp 1200w, /images/galleries/photography/green-studio-red-top-portrait.webp 1602w"
         }
       ]
     },
@@ -131,6 +171,14 @@
           "srcset": "/images/galleries/photography/backlit-surfer-ocean-spray-480w.webp 480w, /images/galleries/photography/backlit-surfer-ocean-spray-800w.webp 800w, /images/galleries/photography/backlit-surfer-ocean-spray-1200w.webp 1200w, /images/galleries/photography/backlit-surfer-ocean-spray.webp 2400w"
         },
         {
+          "src": "/images/galleries/photography/red-jeep-rocky-coast.webp",
+          "width": 2400,
+          "height": 1600,
+          "alt": "A red Jeep parked beside waves breaking over a rocky coastline",
+          "thumbnail": "/images/galleries/photography/red-jeep-rocky-coast-800w.webp",
+          "srcset": "/images/galleries/photography/red-jeep-rocky-coast-480w.webp 480w, /images/galleries/photography/red-jeep-rocky-coast-800w.webp 800w, /images/galleries/photography/red-jeep-rocky-coast-1200w.webp 1200w, /images/galleries/photography/red-jeep-rocky-coast.webp 2400w"
+        },
+        {
           "src": "/images/galleries/photography/sunset-surf-film-photography.webp",
           "width": 2400,
           "height": 1697,
@@ -155,6 +203,14 @@
           "srcset": "/images/galleries/photography/flamingos-aerial-shadows-480w.webp 480w, /images/galleries/photography/flamingos-aerial-shadows-800w.webp 800w, /images/galleries/photography/flamingos-aerial-shadows-1200w.webp 1200w, /images/galleries/photography/flamingos-aerial-shadows.webp 1697w"
         },
         {
+          "src": "/images/galleries/photography/coastal-track-red-jeep.webp",
+          "width": 1878,
+          "height": 2348,
+          "alt": "A red Jeep travelling along a sandy coastal track beneath a cliff and pale blue sky",
+          "thumbnail": "/images/galleries/photography/coastal-track-red-jeep-800w.webp",
+          "srcset": "/images/galleries/photography/coastal-track-red-jeep-480w.webp 480w, /images/galleries/photography/coastal-track-red-jeep-800w.webp 800w, /images/galleries/photography/coastal-track-red-jeep-1200w.webp 1200w, /images/galleries/photography/coastal-track-red-jeep.webp 1878w"
+        },
+        {
           "src": "/images/galleries/photography/coastal-rocks-aerial.webp",
           "width": 2400,
           "height": 1697,
@@ -177,6 +233,14 @@
           "alt": "A river winding through a green landscape and layered rocky gorge",
           "thumbnail": "/images/galleries/photography/river-gorge-aerial-landscape-800w.webp",
           "srcset": "/images/galleries/photography/river-gorge-aerial-landscape-480w.webp 480w, /images/galleries/photography/river-gorge-aerial-landscape-800w.webp 800w, /images/galleries/photography/river-gorge-aerial-landscape-1200w.webp 1200w, /images/galleries/photography/river-gorge-aerial-landscape.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/coastal-lookout-surfers.webp",
+          "width": 2400,
+          "height": 1600,
+          "alt": "Two people watching surfers from a grassy coastal lookout, with the ocean in focus behind them",
+          "thumbnail": "/images/galleries/photography/coastal-lookout-surfers-800w.webp",
+          "srcset": "/images/galleries/photography/coastal-lookout-surfers-480w.webp 480w, /images/galleries/photography/coastal-lookout-surfers-800w.webp 800w, /images/galleries/photography/coastal-lookout-surfers-1200w.webp 1200w, /images/galleries/photography/coastal-lookout-surfers.webp 2400w"
         }
       ]
     },
@@ -231,6 +295,14 @@
           "alt": "Woodland path surrounded by vivid pink foliage in infrared photography",
           "thumbnail": "/images/galleries/photography/pink-infrared-woodland-path-800w.webp",
           "srcset": "/images/galleries/photography/pink-infrared-woodland-path-480w.webp 480w, /images/galleries/photography/pink-infrared-woodland-path-800w.webp 800w, /images/galleries/photography/pink-infrared-woodland-path-1200w.webp 1200w, /images/galleries/photography/pink-infrared-woodland-path.webp 1697w"
+        },
+        {
+          "src": "/images/galleries/photography/infrared-cockatoo-foliage.webp",
+          "width": 2400,
+          "height": 1449,
+          "alt": "A pink cockatoo perched on a building, framed by vivid orange foliage against a cyan sky",
+          "thumbnail": "/images/galleries/photography/infrared-cockatoo-foliage-800w.webp",
+          "srcset": "/images/galleries/photography/infrared-cockatoo-foliage-480w.webp 480w, /images/galleries/photography/infrared-cockatoo-foliage-800w.webp 800w, /images/galleries/photography/infrared-cockatoo-foliage-1200w.webp 1200w, /images/galleries/photography/infrared-cockatoo-foliage.webp 2400w"
         }
       ]
     },
@@ -263,6 +335,14 @@
           "srcset": "/images/galleries/photography/horse-saddle-station-work-480w.webp 480w, /images/galleries/photography/horse-saddle-station-work-800w.webp 800w, /images/galleries/photography/horse-saddle-station-work-1200w.webp 1200w, /images/galleries/photography/horse-saddle-station-work.webp 2400w"
         },
         {
+          "src": "/images/galleries/photography/fish-filleting-hands-detail.webp",
+          "width": 1602,
+          "height": 2400,
+          "alt": "Hands filleting a fish with an orange-handled knife on a white cutting board",
+          "thumbnail": "/images/galleries/photography/fish-filleting-hands-detail-800w.webp",
+          "srcset": "/images/galleries/photography/fish-filleting-hands-detail-480w.webp 480w, /images/galleries/photography/fish-filleting-hands-detail-800w.webp 800w, /images/galleries/photography/fish-filleting-hands-detail-1200w.webp 1200w, /images/galleries/photography/fish-filleting-hands-detail.webp 1602w"
+        },
+        {
           "src": "/images/galleries/photography/fresh-mulberries-harvest.webp",
           "width": 2400,
           "height": 1600,
@@ -279,6 +359,14 @@
           "srcset": "/images/galleries/photography/beekeeper-honey-portrait-480w.webp 480w, /images/galleries/photography/beekeeper-honey-portrait-800w.webp 800w, /images/galleries/photography/beekeeper-honey-portrait-1200w.webp 1200w, /images/galleries/photography/beekeeper-honey-portrait.webp 1600w"
         },
         {
+          "src": "/images/galleries/photography/greenhouse-plant-research-wide.webp",
+          "width": 2400,
+          "height": 1600,
+          "alt": "A researcher examining rows of young plants in a warm, backlit greenhouse",
+          "thumbnail": "/images/galleries/photography/greenhouse-plant-research-wide-800w.webp",
+          "srcset": "/images/galleries/photography/greenhouse-plant-research-wide-480w.webp 480w, /images/galleries/photography/greenhouse-plant-research-wide-800w.webp 800w, /images/galleries/photography/greenhouse-plant-research-wide-1200w.webp 1200w, /images/galleries/photography/greenhouse-plant-research-wide.webp 2400w"
+        },
+        {
           "src": "/images/galleries/photography/honeybees-close-up.webp",
           "width": 2400,
           "height": 1600,
@@ -287,28 +375,20 @@
           "srcset": "/images/galleries/photography/honeybees-close-up-480w.webp 480w, /images/galleries/photography/honeybees-close-up-800w.webp 800w, /images/galleries/photography/honeybees-close-up-1200w.webp 1200w, /images/galleries/photography/honeybees-close-up.webp 2400w"
         },
         {
-          "src": "/images/galleries/photography/crop-research-greenhouse.webp",
-          "width": 2400,
-          "height": 1600,
-          "alt": "A researcher recording observations among plant trays in a greenhouse",
-          "thumbnail": "/images/galleries/photography/crop-research-greenhouse-800w.webp",
-          "srcset": "/images/galleries/photography/crop-research-greenhouse-480w.webp 480w, /images/galleries/photography/crop-research-greenhouse-800w.webp 800w, /images/galleries/photography/crop-research-greenhouse-1200w.webp 1200w, /images/galleries/photography/crop-research-greenhouse.webp 2400w"
-        },
-        {
-          "src": "/images/galleries/photography/fishing-boat-catch.webp",
-          "width": 2400,
-          "height": 1600,
-          "alt": "A fisher holding a catch beside a boat, photographed from water level",
-          "thumbnail": "/images/galleries/photography/fishing-boat-catch-800w.webp",
-          "srcset": "/images/galleries/photography/fishing-boat-catch-480w.webp 480w, /images/galleries/photography/fishing-boat-catch-800w.webp 800w, /images/galleries/photography/fishing-boat-catch-1200w.webp 1200w, /images/galleries/photography/fishing-boat-catch.webp 2400w"
-        },
-        {
           "src": "/images/galleries/photography/fishing-buoys-rope-detail.webp",
           "width": 2400,
           "height": 1602,
           "alt": "Colourful fishing buoys and tangled ropes on a boat",
           "thumbnail": "/images/galleries/photography/fishing-buoys-rope-detail-800w.webp",
           "srcset": "/images/galleries/photography/fishing-buoys-rope-detail-480w.webp 480w, /images/galleries/photography/fishing-buoys-rope-detail-800w.webp 800w, /images/galleries/photography/fishing-buoys-rope-detail-1200w.webp 1200w, /images/galleries/photography/fishing-buoys-rope-detail.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/photography/backlit-fisher-rod-portrait.webp",
+          "width": 1600,
+          "height": 2400,
+          "alt": "Low-angle portrait of a fisher in a bucket hat and sunglasses holding a rod in soft backlight",
+          "thumbnail": "/images/galleries/photography/backlit-fisher-rod-portrait-800w.webp",
+          "srcset": "/images/galleries/photography/backlit-fisher-rod-portrait-480w.webp 480w, /images/galleries/photography/backlit-fisher-rod-portrait-800w.webp 800w, /images/galleries/photography/backlit-fisher-rod-portrait-1200w.webp 1200w, /images/galleries/photography/backlit-fisher-rod-portrait.webp 1600w"
         }
       ]
     }
