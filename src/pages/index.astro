@@ -164,8 +164,8 @@ import SiteFooter from "../components/SiteFooter.astro";
 						<a class="service-card" href="#contact" aria-label="Enquire about photography">
 							<h3>Photography</h3>
 							<p>
-								Portrait, editorial, lifestyle and brand photography in Perth and across Western
-								Australia. Natural, tactile images for people and projects with character.
+								Portrait, editorial, lifestyle and brand photography. Natural, tactile images for
+								people and projects with character.
 							</p>
 						</a>
 
@@ -213,12 +213,12 @@ import SiteFooter from "../components/SiteFooter.astro";
 						/>
 						<div class="form-field">
 							<label for="name">Name</label>
-							<input id="name" name="Name" type="text" autocomplete="name" required />
+							<input id="name" name="Name" type="text" autocomplete="name" placeholder="Your name" required />
 						</div>
 
 						<div class="form-field">
 							<label for="email">Email</label>
-							<input id="email" name="email" type="email" autocomplete="email" required />
+							<input id="email" name="email" type="email" autocomplete="email" placeholder="Your email address" required />
 						</div>
 
 						<div class="form-field">
@@ -274,7 +274,7 @@ import SiteFooter from "../components/SiteFooter.astro";
 			</section>
 		</main>
 
-		<SiteFooter />
+		<SiteFooter compactGap />
 		<script>
 			const mobileMenu = document.querySelector<HTMLDetailsElement>(".mobile-menu");
 			const mobileNav = mobileMenu?.querySelector<HTMLElement>(".mobile-nav");
@@ -502,6 +502,18 @@ import SiteFooter from "../components/SiteFooter.astro";
 	.section-heading .eyebrow,
 	.two-column .eyebrow {
 		font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+	}
+
+	#work {
+		padding-bottom: clamp(32px, 5vw, 66px);
+	}
+
+	#about {
+		padding-top: clamp(32px, 5vw, 66px);
+	}
+
+	#contact {
+		padding-bottom: clamp(30.72px, 5.12vw, 61.44px);
 	}
 
 	.about-layout {

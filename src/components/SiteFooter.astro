@@ -1,10 +1,11 @@
 ---
 interface Props {
 	afterSection?: boolean;
+	compactGap?: boolean;
 }
-const { afterSection = false } = Astro.props;
+const { afterSection = false, compactGap = false } = Astro.props;
 ---
-		<footer class:list={["site-footer", { "after-section": afterSection }]}>
+		<footer class:list={["site-footer", { "after-section": afterSection, "compact-gap": compactGap }]}>
 			<div class="footer-overlay">
 				<div class="site-shell footer-grid">
 					<div class="footer-logo">
@@ -56,6 +57,10 @@ const { afterSection = false } = Astro.props;
 		margin-top: clamp(48px, 8vw, 96px);
 		color: var(--cream);
 		border-radius: 68px 68px 0 0;
+	}
+
+	.site-footer.compact-gap {
+		margin-top: clamp(30.72px, 5.12vw, 61.44px);
 	}
 
 	.site-footer.after-section {
