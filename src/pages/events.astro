@@ -3,6 +3,7 @@ import "../styles/global.css";
 
 import PhotoGallery from "../components/PhotoGallery.astro";
 import SeoHead from "../components/SeoHead.astro";
+import SiteFooter from "../components/SiteFooter.astro";
 import galleries from "../data/galleries.json";
 ---
 
@@ -34,20 +35,7 @@ import galleries from "../data/galleries.json";
 				</div>
 			</section>
 
-			<section class="project-section gallery-section">
-				<div class="project-shell">
-					<div class="section-heading">
-						<p class="eyebrow">Selected coverage</p>
-						<h2 class="display-title">A few real moments.</h2>
-					</div>
-
-					<PhotoGallery id="events" groups={galleries.events} />
-
-				</div>
-			</section>
-			</div>
-
-			<section class="project-section">
+			<section class="project-section craft-section">
 				<div class="project-shell story-grid">
 					<h2 class="display-title">Real life, gently observed.</h2>
 
@@ -73,6 +61,16 @@ import galleries from "../data/galleries.json";
 				</div>
 			</section>
 
+			<section class="project-section gallery-section">
+				<div class="project-shell">
+					<PhotoGallery id="events" groups={galleries.events} />
+
+				</div>
+			</section>
+			</div>
+
+
+
 			<section class="project-section cta-section">
 				<div class="project-shell cta-card">
 					<p class="eyebrow">Something happening?</p>
@@ -84,6 +82,8 @@ import galleries from "../data/galleries.json";
 				</div>
 			</section>
 		</main>
+
+		<SiteFooter afterSection />
 
 	</body>
 </html>
@@ -164,6 +164,15 @@ import galleries from "../data/galleries.json";
 		padding: clamp(72px, 10vw, 130px) 0;
 	}
 
+	.craft-section {
+		padding-top: clamp(45.54px, 6.325vw, 82.225px);
+		padding-bottom: 0;
+	}
+
+	.gallery-section {
+		padding-top: clamp(45.54px, 6.325vw, 82.225px);
+	}
+
 	.story-grid {
 		display: grid;
 		grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
@@ -196,6 +205,8 @@ import galleries from "../data/galleries.json";
 	}
 
 	.portfolio-stage {
+		border-radius: 0 0 68px 68px;
+		overflow: hidden;
 		background:
 			radial-gradient(ellipse at 90% 0%, rgba(122, 138, 133, 0.16), transparent 40rem),
 			linear-gradient(145deg, #242d3b, #202628 70%, #1c1c1b);
@@ -291,6 +302,9 @@ import galleries from "../data/galleries.json";
 	}
 
 	@media (max-width: 850px) {
+		.portfolio-stage {
+			border-radius: 0 0 48px 48px;
+		}
 		.page-header {
 			padding: 14px 16px;
 			border-radius: 0 0 48px 48px;

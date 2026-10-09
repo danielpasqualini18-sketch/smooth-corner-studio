@@ -7,6 +7,9 @@ export default defineConfig({
   integrations: [sitemap({ filter: (page) => !page.includes('films-stories') && !page.endsWith('.xml') && !page.includes('/404') })],
   redirects: { '/films-stories': '/films' },
   vite: {
+    optimizeDeps: {
+      exclude: ['photoswipe'],
+    },
     server: {
       watch: { usePolling: true },
     },

@@ -2,6 +2,7 @@
 import "../styles/global.css";
 
 import SeoHead from "../components/SeoHead.astro";
+import SiteFooter from "../components/SiteFooter.astro";
 ---
 
 <!doctype html>
@@ -10,10 +11,11 @@ import SeoHead from "../components/SeoHead.astro";
 		<SeoHead title="Perth Photographer & Filmmaker | Smooth Corner Studio" description="Portrait, brand and event photography, documentary films and video production in Perth and regional Western Australia. Smooth Corner Studio by Daniel Pasqualini." path="/" preloadImage="/images/title-background.jpg" />
 	</head>
 
-	<body>
+	<body id="top">
 		<a class="skip-link" href="#main-content">Skip to content</a>
 		<header class="site-header">
 			<nav class="site-nav desktop-nav" aria-label="Main navigation">
+				<a href="#top">Home</a>
 				<a href="#work">Work</a>
 				<a href="#about">About</a>
 				<a href="#services">Services</a>
@@ -22,17 +24,20 @@ import SeoHead from "../components/SeoHead.astro";
 
 			<a href="/" class="brand-logo" aria-label="Smooth Corner Studio home">
 				<span class="logo-bloom" aria-hidden="true"></span>
-				<img src="/images/brand/smooth-corner-logo-extended.webp" alt="Smooth Corner Studio" width="1866" height="649" loading="eager" decoding="async" />
+				<img src="/images/brand/smooth-corner-header-badge-600w.webp" srcset="/images/brand/smooth-corner-header-badge-240w.webp 240w, /images/brand/smooth-corner-header-badge-600w.webp 600w" sizes="(max-width: 850px) 92px, 140px" alt="Smooth Corner Studio" width="600" height="503" loading="eager" decoding="async" />
 			</a>
 
 			<details class="mobile-menu">
-				<summary aria-label="Main menu"><span aria-hidden="true">☰</span><span class="visually-hidden">Menu</span></summary>
+				<summary aria-label="Main menu"><span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span><span class="visually-hidden">Menu</span></summary>
+				<div class="mobile-menu-panel">
 				<nav class="mobile-nav" aria-label="Mobile navigation">
+					<a href="#top">Home</a>
 					<a href="#work">Work</a>
 					<a href="#about">About</a>
 					<a href="#services">Services</a>
 					<a href="#contact">Contact</a>
 				</nav>
+				</div>
 			</details>
 		</header>
 
@@ -103,7 +108,7 @@ import SeoHead from "../components/SeoHead.astro";
 
 						<a class="work-card" href="/events" aria-label="View people and real life coverage">
 							<div class="image-placeholder blue image-cover">
-								<img src="/images/events-cover.webp" alt="A couple in wedding attire standing beside a vintage car" width="886" height="886" loading="lazy" decoding="async" srcset="/images/events-cover-480w.webp 480w, /images/events-cover-800w.webp 800w, /images/events-cover.webp 886w" sizes="(max-width: 850px) calc(100vw - 32px), (max-width: 1180px) 56vw, 520px" />
+								<img src="/images/events-cover-landscape.webp" alt="A couple in wedding attire standing beside a vintage car" width="886" height="591" loading="lazy" decoding="async" srcset="/images/events-cover-landscape-480w.webp 480w, /images/events-cover-landscape-800w.webp 800w, /images/events-cover-landscape.webp 886w" sizes="(max-width: 850px) calc(100vw - 32px), (max-width: 1180px) 56vw, 520px" />
 							</div>
 							<div class="card-content">
 								<p class="card-meta">Event coverage</p>
@@ -156,29 +161,29 @@ import SeoHead from "../components/SeoHead.astro";
 					</div>
 
 					<div class="services-grid">
-						<article>
-							<h3><a href="/photography">Photography</a></h3>
+						<a class="service-card" href="#contact" aria-label="Enquire about photography">
+							<h3>Photography</h3>
 							<p>
 								Portrait, editorial, lifestyle and brand photography in Perth and across Western
 								Australia. Natural, tactile images for people and projects with character.
 							</p>
-						</article>
+						</a>
 
-						<article>
-							<h3><a href="/films">Films</a></h3>
+						<a class="service-card" href="#contact" aria-label="Enquire about films">
+							<h3>Films</h3>
 							<p>
 								Documentary films, brand stories and video production, from planning and filming
 								to the final edit. Built around real people, atmosphere and a clear sense of place.
 							</p>
-						</article>
+						</a>
 
-						<article>
+						<a class="service-card" href="#contact" aria-label="Enquire about creative production">
 							<h3>Creative production</h3>
 							<p>
 								Planning, creative direction, editing and production support to help shape the idea
 								before the shoot, not just make it look good at the end.
 							</p>
-						</article>
+						</a>
 					</div>
 				</div>
 			</section>
@@ -269,63 +274,58 @@ import SeoHead from "../components/SeoHead.astro";
 			</section>
 		</main>
 
-		<footer class="site-footer">
-			<div class="footer-overlay">
-				<div class="site-shell footer-grid">
-					<div class="footer-logo">
-						<img
-							src="/images/brand/smooth-corner-logo-badge-white.webp"
-							alt="Smooth Corner Studio" width="854" height="854" loading="lazy" decoding="async" />
-					</div>
-
-					<div class="footer-acknowledgement">
-						<p>
-							Smooth Corner Studio acknowledges the Whadjuk people of the Noongar nation as the
-							Traditional Custodians of Boorloo and the Derbarl Yerrigan, the land and waters on
-							which we live and work. We pay our respects to Elders past and present, and recognise
-							their continuing connection to culture, community, land and waters.
-						</p>
-
-						<p>
-							We extend that respect to all Aboriginal and Torres Strait Islander people, and
-							acknowledge the care, knowledge and stories that continue to shape this place we are
-							lucky to call home.
-						</p>
-					</div>
-
-					<div class="footer-contact">
-						<p class="eyebrow">Contact</p>
-
-						<a href="mailto:hello@smoothcornerstudio.com.au"> Email </a>
-
-						<a
-							href="https://www.instagram.com/danielpasqualini_/"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							Instagram
-						</a>
-					</div>
-				</div>
-
-				<div class="site-shell footer-bottom">
-					<p>© 2026 Smooth Corner Studio. Photography and filmmaking by Daniel Pasqualini.</p>
-				</div>
-			</div>
-		</footer>
+		<SiteFooter />
 		<script>
 			const mobileMenu = document.querySelector<HTMLDetailsElement>(".mobile-menu");
+			const mobileNav = mobileMenu?.querySelector<HTMLElement>(".mobile-nav");
+			let menuAnimation: Animation | undefined;
+			const setMobileMenu = (open: boolean) => {
+				if (!mobileMenu || !mobileNav || (!open && (!mobileMenu.open || mobileMenu.hasAttribute("data-closing")))) return;
+				const from = mobileMenu.open ? getComputedStyle(mobileNav).transform : "translateY(calc(-100% - 8px))";
+				menuAnimation?.cancel();
+				mobileMenu.open = true;
+				mobileMenu.toggleAttribute("data-closing", !open);
+				mobileNav.inert = !open;
+				const animation = mobileNav.animate([
+					{ transform: from },
+					{ transform: open ? "translateY(0)" : "translateY(calc(-100% - 8px))" },
+				], {
+					duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 380,
+					easing: "cubic-bezier(0.25, 0.1, 0.25, 1)",
+					fill: "both",
+				});
+				menuAnimation = animation;
+				animation.finished.then(() => {
+					if (menuAnimation !== animation) return;
+					if (!open) mobileMenu.open = false;
+					mobileMenu.removeAttribute("data-closing");
+					animation.cancel();
+					menuAnimation = undefined;
+				}).catch(() => {});
+			};
+			mobileMenu?.querySelector("summary")?.addEventListener("click", (event) => {
+				event.preventDefault();
+				setMobileMenu(!mobileMenu.open || mobileMenu.hasAttribute("data-closing"));
+			});
+			document.querySelectorAll<HTMLAnchorElement>('.site-header a[href="#top"]').forEach((link) => {
+				link.addEventListener("click", (event) => {
+					event.preventDefault();
+					setMobileMenu(false);
+					history.replaceState(null, "", `${location.pathname}${location.search}#top`);
+					window.scrollTo({ top: 0, left: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
+				});
+			});
 			mobileMenu?.querySelectorAll("a").forEach((link) => {
-				link.addEventListener("click", () => { mobileMenu.open = false; });
+				link.addEventListener("click", () => { setMobileMenu(false); });
 			});
 			document.addEventListener("keydown", (event) => {
 				if (event.key === "Escape" && mobileMenu?.open) {
-					mobileMenu.open = false;
+					setMobileMenu(false);
 					mobileMenu.querySelector("summary")?.focus();
 				}
 			});
 			document.addEventListener("click", (event) => {
-				if (mobileMenu?.open && event.target instanceof Node && !mobileMenu.contains(event.target)) mobileMenu.open = false;
+				if (mobileMenu?.open && event.target instanceof Node && !mobileMenu.contains(event.target)) setMobileMenu(false);
 			});
 
 			import { createModalController } from "../scripts/modal";
@@ -434,7 +434,8 @@ import SeoHead from "../components/SeoHead.astro";
 		grid-column: 2;
 		position: relative;
 		display: block;
-		width: clamp(280px, 30vw, 425px);
+		width: clamp(100px, 10vw, 140px);
+		margin-bottom: 4px;
 	}
 
 	.logo-bloom {
@@ -727,7 +728,8 @@ import SeoHead from "../components/SeoHead.astro";
 		gap: 18px;
 	}
 
-	.services-grid article {
+	.services-grid .service-card {
+		cursor: pointer;
 		min-height: 260px;
 		display: grid;
 		align-content: center;
@@ -738,21 +740,21 @@ import SeoHead from "../components/SeoHead.astro";
 		backdrop-filter: blur(8px);
 	}
 
-	.services-grid article:nth-child(1) {
+	.services-grid .service-card:nth-child(1) {
 		background:
 			radial-gradient(circle at 86% 12%, rgba(215, 174, 129, 0.18), transparent 17rem),
 			radial-gradient(circle at 10% 90%, rgba(198, 119, 79, 0.12), transparent 18rem),
 			rgba(28, 28, 27, 0.42);
 	}
 
-	.services-grid article:nth-child(2) {
+	.services-grid .service-card:nth-child(2) {
 		background:
 			radial-gradient(circle at 14% 18%, rgba(122, 138, 133, 0.16), transparent 17rem),
 			radial-gradient(circle at 92% 88%, rgba(60, 71, 97, 0.14), transparent 18rem),
 			rgba(28, 28, 27, 0.42);
 	}
 
-	.services-grid article:nth-child(3) {
+	.services-grid .service-card:nth-child(3) {
 		background:
 			radial-gradient(circle at 88% 82%, rgba(198, 119, 79, 0.14), transparent 18rem),
 			radial-gradient(circle at 10% 12%, rgba(215, 174, 129, 0.12), transparent 16rem),
@@ -784,11 +786,10 @@ import SeoHead from "../components/SeoHead.astro";
 	.contact-copy {
 		display: grid;
 		gap: 22px;
-		position: sticky;
-		top: 180px;
 	}
 
 	.request-form {
+		container-type: inline-size;
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 18px;
@@ -908,87 +909,6 @@ import SeoHead from "../components/SeoHead.astro";
 		line-height: 1.55;
 	}
 
-	.site-footer {
-		position: relative;
-		overflow: hidden;
-		margin-top: clamp(48px, 8vw, 96px);
-		color: var(--cream);
-		background:
-			linear-gradient(rgba(28, 28, 27, 0.78), rgba(28, 28, 27, 0.9)),
-			url("/images/footer/footer-background.webp") center / cover;
-		border-radius: 68px 68px 0 0;
-	}
-
-	.footer-overlay {
-		padding: clamp(56px, 9vw, 120px) 0 36px;
-	}
-
-	.footer-grid {
-		display: grid;
-		grid-template-columns: minmax(120px, 0.45fr) minmax(320px, 1.5fr) minmax(220px, 0.75fr);
-		gap: clamp(28px, 5vw, 72px);
-		align-items: start;
-	}
-
-	.footer-logo {
-		display: flex;
-		justify-content: flex-start;
-	}
-
-	.footer-logo img {
-		width: clamp(90px, 10vw, 140px);
-		height: auto;
-	}
-
-	.footer-acknowledgement {
-		display: grid;
-		gap: 16px;
-		max-width: 780px;
-	}
-
-	.footer-acknowledgement p {
-		margin: 0;
-		color: rgba(244, 234, 220, 0.88);
-		line-height: 1.65;
-		font-size: 0.94rem;
-	}
-
-	.footer-contact {
-		display: grid;
-		gap: 12px;
-		justify-items: start;
-	}
-
-	.footer-contact .eyebrow {
-		color: var(--soft-cream);
-		margin-bottom: 8px;
-	}
-
-	.footer-contact a {
-		color: var(--cream);
-		width: fit-content;
-		border-bottom: 1px solid rgba(244, 234, 220, 0.36);
-		transition:
-			color 180ms ease,
-			border-color 180ms ease;
-	}
-
-	.footer-contact a:hover {
-		color: var(--sand);
-		border-color: rgba(215, 174, 129, 0.72);
-	}
-
-	.footer-bottom {
-		margin-top: clamp(48px, 7vw, 96px);
-		padding-top: 22px;
-		border-top: 1px solid rgba(244, 234, 220, 0.22);
-		color: rgba(244, 234, 220, 0.68);
-		font-size: 0.82rem;
-	}
-
-	.footer-bottom p {
-		margin: 0;
-	}
 	@media (max-width: 850px) {
 		.site-header {
 			grid-template-columns: 44px minmax(0, 1fr) 44px;
@@ -1006,7 +926,7 @@ import SeoHead from "../components/SeoHead.astro";
 			grid-column: 2;
 			grid-row: 1;
 			justify-self: center;
-			width: min(100%, clamp(180px, 56vw, 240px));
+			width: min(100%, 92px);
 		}
 
 		.desktop-nav {
@@ -1025,30 +945,58 @@ import SeoHead from "../components/SeoHead.astro";
 			place-items: center;
 			width: 44px;
 			height: 44px;
-			border: 1px solid var(--line);
-			border-radius: 50%;
+			border: 0;
+			background: transparent;
 			color: var(--sand);
-			font-size: 1.35rem;
 			cursor: pointer;
 			list-style: none;
 		}
 
 		.mobile-menu summary::-webkit-details-marker { display: none; }
-		.mobile-menu:not([open]) .mobile-nav { display: none; }
-		.mobile-menu[open] summary { background: rgba(215, 174, 129, 0.12); }
+		.mobile-menu:not([open]) .mobile-menu-panel { display: none; }
+		.menu-icon {
+			position: relative;
+			width: 24px;
+			height: 20px;
+		}
 
-		.mobile-nav {
+		.menu-icon span {
 			position: absolute;
-			top: calc(100% + 8px);
+			left: 0;
+			top: 9px;
+			width: 24px;
+			height: 2px;
+			border-radius: 2px;
+			background: currentColor;
+			transition: transform 220ms ease, opacity 160ms ease;
+		}
+
+		.menu-icon span:first-child { transform: translateY(-7px); }
+		.menu-icon span:last-child { transform: translateY(7px); }
+		.mobile-menu[open]:not([data-closing]) .menu-icon span:first-child { transform: rotate(45deg); }
+		.mobile-menu[open]:not([data-closing]) .menu-icon span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+		.mobile-menu[open]:not([data-closing]) .menu-icon span:last-child { transform: rotate(-45deg); }
+
+		.mobile-menu-panel {
+			position: absolute;
+			top: 100%;
 			left: 16px;
 			right: 16px;
+			overflow: hidden;
+			padding: 8px 0 24px;
+			pointer-events: none;
+		}
+
+		.mobile-nav {
 			display: grid;
 			padding: 12px;
 			border: 1px solid var(--line);
 			border-radius: 24px;
 			background: rgba(28, 28, 27, 0.98);
 			box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+			pointer-events: auto;
 		}
+
 
 		.mobile-nav a {
 			padding: 14px 16px;
@@ -1100,21 +1048,7 @@ import SeoHead from "../components/SeoHead.astro";
 			min-height: 280px;
 		}
 
-		.footer-grid {
-			grid-template-columns: 1fr;
-		}
 
-		.footer-logo img {
-			width: 120px;
-		}
-
-		.footer-contact {
-			justify-items: start;
-		}
-
-		.footer-bottom {
-			margin-top: 48px;
-		}
 	}
 
 	@media (max-width: 850px) {
@@ -1131,5 +1065,11 @@ import SeoHead from "../components/SeoHead.astro";
 		color: var(--text-soft);
 		overflow-wrap: anywhere;
 	}
-	.form-email-note a { text-decoration: underline; text-underline-offset: 3px; }
+	.form-email-note a {
+		font-size: min(1em, 6cqi);
+		white-space: nowrap;
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+
 </style>

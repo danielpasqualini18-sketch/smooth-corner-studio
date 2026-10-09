@@ -1,0 +1,208 @@
+---
+interface Props {
+	afterSection?: boolean;
+}
+const { afterSection = false } = Astro.props;
+---
+		<footer class:list={["site-footer", { "after-section": afterSection }]}>
+			<div class="footer-overlay">
+				<div class="site-shell footer-grid">
+					<div class="footer-logo">
+						<img
+							src="/images/brand/smooth-corner-logo-badge-white.webp"
+							alt="Smooth Corner Studio" width="854" height="854" loading="lazy" decoding="async" />
+					</div>
+
+					<div class="footer-acknowledgement">
+						<p>
+							Smooth Corner Studio acknowledges the Whadjuk people of the Noongar nation as the
+							Traditional Custodians of Boorloo and the Derbarl Yerrigan, the land and waters on
+							which we live and work. We pay our respects to Elders past and present, and recognise
+							their continuing connection to culture, community, land and waters.
+						</p>
+
+						<p>
+							We extend that respect to all Aboriginal and Torres Strait Islander people, and
+							acknowledge the care, knowledge and stories that continue to shape this place we are
+							lucky to call home.
+						</p>
+					</div>
+
+					<div class="footer-contact">
+						<p class="eyebrow">Contact</p>
+
+						<a href="mailto:hello@smoothcornerstudio.com.au"> Email </a>
+
+						<a
+							href="https://www.instagram.com/danielpasqualini_/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Instagram
+						</a>
+					</div>
+				</div>
+
+				<div class="site-shell footer-bottom">
+					<p>© 2026 Smooth Corner Studio. Photography and filmmaking by Daniel Pasqualini.</p>
+				</div>
+			</div>
+		</footer>
+
+<style>
+	.site-footer {
+		position: relative;
+		overflow: hidden;
+		margin-top: clamp(48px, 8vw, 96px);
+		color: var(--cream);
+		border-radius: 68px 68px 0 0;
+	}
+
+	.site-footer.after-section {
+		margin-top: 0;
+	}
+
+	.site-footer::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background:
+			linear-gradient(rgba(28, 28, 27, 0.78), rgba(28, 28, 27, 0.9)),
+			url("/images/footer/footer-background.webp") center / cover;
+		transform: scale(1.155);
+		pointer-events: none;
+	}
+
+	.footer-overlay {
+		position: relative;
+		padding: clamp(56px, 9vw, 120px) 0 36px;
+	}
+
+	.footer-grid {
+		display: grid;
+		grid-template-columns: minmax(140px, 1fr) minmax(320px, 3fr) minmax(140px, 1fr);
+		gap: clamp(28px, 5vw, 72px);
+		align-items: start;
+	}
+
+	.footer-logo {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.footer-logo img {
+		width: clamp(90px, 10vw, 140px);
+		height: auto;
+	}
+
+	.footer-acknowledgement {
+		display: grid;
+		gap: 16px;
+		max-width: 780px;
+	}
+
+	.footer-acknowledgement p {
+		margin: 0;
+		color: rgba(244, 234, 220, 0.88);
+		line-height: 1.65;
+		font-size: 0.94rem;
+	}
+
+	.footer-contact {
+		display: grid;
+		gap: 12px;
+		justify-items: start;
+	}
+
+	.footer-contact .eyebrow {
+		color: var(--soft-cream);
+		margin-bottom: 8px;
+	}
+
+	.footer-contact a {
+		color: var(--cream);
+		width: fit-content;
+		border-bottom: 1px solid rgba(244, 234, 220, 0.36);
+		transition:
+			color 180ms ease,
+			border-color 180ms ease;
+	}
+
+	.footer-contact a:hover {
+		color: var(--sand);
+		border-color: rgba(215, 174, 129, 0.72);
+	}
+
+	.footer-bottom {
+		margin-top: clamp(48px, 7vw, 96px);
+		padding-top: 22px;
+		border-top: 1px solid rgba(244, 234, 220, 0.22);
+		color: rgba(244, 234, 220, 0.68);
+		font-size: 0.82rem;
+	}
+
+	.footer-bottom p {
+		margin: 0;
+	}
+
+	@media (min-width: 851px) {
+		.footer-grid {
+			width: min(100% - 96px, 1040px);
+			grid-template-columns: 140px minmax(0, 1fr) 140px;
+			gap: clamp(24px, 3vw, 40px);
+		}
+
+		.footer-contact {
+			justify-self: end;
+			justify-items: end;
+		}
+
+		.footer-acknowledgement {
+			justify-self: center;
+			text-align: left;
+		}
+
+		.footer-bottom {
+			text-align: center;
+		}
+	}
+	@media (max-width: 850px) {
+		.footer-grid {
+			width: min(100% - 48px, 620px);
+			grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+			grid-template-areas: "logo contact" "acknowledgement acknowledgement";
+			gap: 36px clamp(80px, 30vw, 120px);
+			align-items: center;
+		}
+
+		.footer-logo {
+			grid-area: logo;
+			justify-self: end;
+			width: 100%;
+			justify-content: flex-end;
+		}
+
+		.footer-logo img {
+			width: min(120px, 100%);
+		}
+
+		.footer-contact {
+			grid-area: contact;
+			justify-self: start;
+			justify-items: end;
+		}
+
+		.footer-acknowledgement {
+			grid-area: acknowledgement;
+			width: 100%;
+			justify-self: center;
+			text-align: left;
+		}
+
+		.footer-bottom {
+			width: min(100% - 48px, 620px);
+			margin-top: 48px;
+			text-align: center;
+		}
+	}
+</style>
