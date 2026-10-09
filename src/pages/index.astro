@@ -24,7 +24,7 @@ import SiteFooter from "../components/SiteFooter.astro";
 
 			<a href="/" class="brand-logo" aria-label="Smooth Corner Studio home">
 				<span class="logo-bloom" aria-hidden="true"></span>
-				<img src="/images/brand/smooth-corner-header-badge-600w.webp" srcset="/images/brand/smooth-corner-header-badge-240w.webp 240w, /images/brand/smooth-corner-header-badge-600w.webp 600w" sizes="(max-width: 850px) 92px, 140px" alt="Smooth Corner Studio" width="600" height="503" loading="eager" decoding="async" />
+				<img src="/images/brand/smooth-corner-header-badge-600w.webp" srcset="/images/brand/smooth-corner-header-badge-240w.webp 240w, /images/brand/smooth-corner-header-badge-600w.webp 600w" sizes="(max-width: 850px) 92px, 112px" alt="Smooth Corner Studio" width="600" height="503" loading="eager" decoding="async" />
 			</a>
 
 			<details class="mobile-menu">
@@ -161,29 +161,29 @@ import SiteFooter from "../components/SiteFooter.astro";
 					</div>
 
 					<div class="services-grid">
-						<a class="service-card" href="#contact" aria-label="Enquire about photography">
+						<div class="service-text">
 							<h3>Photography</h3>
 							<p>
 								Portrait, editorial, lifestyle and brand photography. Natural, tactile images for
 								people and projects with character.
 							</p>
-						</a>
+						</div>
 
-						<a class="service-card" href="#contact" aria-label="Enquire about films">
+						<div class="service-text">
 							<h3>Films</h3>
 							<p>
 								Documentary films, brand stories and video production, from planning and filming
 								to the final edit. Built around real people, atmosphere and a clear sense of place.
 							</p>
-						</a>
+						</div>
 
-						<a class="service-card" href="#contact" aria-label="Enquire about creative production">
+						<div class="service-text">
 							<h3>Creative production</h3>
 							<p>
 								Planning, creative direction, editing and production support to help shape the idea
 								before the shoot, not just make it look good at the end.
 							</p>
-						</a>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -434,7 +434,7 @@ import SiteFooter from "../components/SiteFooter.astro";
 		grid-column: 2;
 		position: relative;
 		display: block;
-		width: clamp(100px, 10vw, 140px);
+		width: clamp(80px, 8vw, 112px);
 		margin-bottom: 4px;
 	}
 
@@ -736,41 +736,65 @@ import SiteFooter from "../components/SiteFooter.astro";
 
 	.services-grid {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 18px;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 24px;
+		max-width: 1040px;
+		margin: 0 auto;
 	}
 
-	.services-grid .service-card {
-		cursor: pointer;
-		min-height: 260px;
-		display: grid;
-		align-content: center;
-		padding: 28px;
-		border: 1px solid rgba(244, 234, 220, 0.18);
-		border-radius: 28px;
-		background: rgba(28, 28, 27, 0.42);
-		backdrop-filter: blur(8px);
+	.service-text h3 {
+		margin: 0 0 12px;
 	}
 
-	.services-grid .service-card:nth-child(1) {
-		background:
-			radial-gradient(circle at 86% 12%, rgba(215, 174, 129, 0.18), transparent 17rem),
-			radial-gradient(circle at 10% 90%, rgba(198, 119, 79, 0.12), transparent 18rem),
-			rgba(28, 28, 27, 0.42);
+	.service-text p {
+		margin: 0;
+		color: var(--text-soft);
 	}
 
-	.services-grid .service-card:nth-child(2) {
-		background:
-			radial-gradient(circle at 14% 18%, rgba(122, 138, 133, 0.16), transparent 17rem),
-			radial-gradient(circle at 92% 88%, rgba(60, 71, 97, 0.14), transparent 18rem),
-			rgba(28, 28, 27, 0.42);
+	.services-section {
+		padding-block: clamp(48px, 6vw, 80px);
 	}
 
-	.services-grid .service-card:nth-child(3) {
-		background:
-			radial-gradient(circle at 88% 82%, rgba(198, 119, 79, 0.14), transparent 18rem),
-			radial-gradient(circle at 10% 12%, rgba(215, 174, 129, 0.12), transparent 16rem),
-			rgba(28, 28, 27, 0.42);
+	.services-section .section-heading {
+		margin-bottom: 32px;
+	}
+
+	@media (min-width: 851px) {
+		.services-grid {
+			gap: 18px;
+			max-width: none;
+		}
+
+		.service-text {
+			min-height: 260px;
+			display: grid;
+			align-content: center;
+			padding: 28px;
+			border: 1px solid rgba(244, 234, 220, 0.18);
+			border-radius: 28px;
+			backdrop-filter: blur(8px);
+		}
+
+		.service-text:nth-child(1) {
+			background:
+				radial-gradient(circle at 86% 12%, rgba(215, 174, 129, 0.18), transparent 17rem),
+				radial-gradient(circle at 10% 90%, rgba(198, 119, 79, 0.12), transparent 18rem),
+				rgba(28, 28, 27, 0.42);
+		}
+
+		.service-text:nth-child(2) {
+			background:
+				radial-gradient(circle at 14% 18%, rgba(122, 138, 133, 0.16), transparent 17rem),
+				radial-gradient(circle at 92% 88%, rgba(60, 71, 97, 0.14), transparent 18rem),
+				rgba(28, 28, 27, 0.42);
+		}
+
+		.service-text:nth-child(3) {
+			background:
+				radial-gradient(circle at 88% 82%, rgba(198, 119, 79, 0.14), transparent 18rem),
+				radial-gradient(circle at 10% 12%, rgba(215, 174, 129, 0.12), transparent 16rem),
+				rgba(28, 28, 27, 0.42);
+		}
 	}
 
 	.contact-section {
@@ -1032,6 +1056,10 @@ import SiteFooter from "../components/SiteFooter.astro";
 
 		.services-section {
 			border-radius: 48px;
+		}
+
+		.services-section > .site-shell {
+			padding-inline: 20px;
 		}
 
 		.work-grid,
