@@ -477,6 +477,14 @@
           "srcset": "/images/galleries/events/festive-community-market-480w.webp 480w, /images/galleries/events/festive-community-market-800w.webp 800w, /images/galleries/events/festive-community-market-1200w.webp 1200w, /images/galleries/events/festive-community-market.webp 1600w"
         },
         {
+          "src": "/images/galleries/events/community-art-exhibition-speeches.webp",
+          "width": 2400,
+          "height": 1598,
+          "alt": "A woman speaking into a microphone beside a man at an art exhibition, framed by guests",
+          "thumbnail": "/images/galleries/events/community-art-exhibition-speeches-800w.webp",
+          "srcset": "/images/galleries/events/community-art-exhibition-speeches-480w.webp 480w, /images/galleries/events/community-art-exhibition-speeches-800w.webp 800w, /images/galleries/events/community-art-exhibition-speeches-1200w.webp 1200w, /images/galleries/events/community-art-exhibition-speeches.webp 2400w"
+        },
+        {
           "src": "/images/galleries/events/live-music-trumpet-performance.webp",
           "width": 1591,
           "height": 2400,
@@ -499,6 +507,14 @@
           "alt": "Snowboarders gathering beneath an inflatable event arch in the mountains",
           "thumbnail": "/images/galleries/events/snowboard-event-start-line-800w.webp",
           "srcset": "/images/galleries/events/snowboard-event-start-line-480w.webp 480w, /images/galleries/events/snowboard-event-start-line-800w.webp 800w, /images/galleries/events/snowboard-event-start-line-1200w.webp 1200w, /images/galleries/events/snowboard-event-start-line.webp 2400w"
+        },
+        {
+          "src": "/images/galleries/events/community-art-exhibition-portrait.webp",
+          "width": 1598,
+          "height": 2400,
+          "alt": "An exhibition guest standing beside a colourful painted portrait",
+          "thumbnail": "/images/galleries/events/community-art-exhibition-portrait-800w.webp",
+          "srcset": "/images/galleries/events/community-art-exhibition-portrait-480w.webp 480w, /images/galleries/events/community-art-exhibition-portrait-800w.webp 800w, /images/galleries/events/community-art-exhibition-portrait-1200w.webp 1200w, /images/galleries/events/community-art-exhibition-portrait.webp 1598w"
         },
         {
           "src": "/images/galleries/events/snowboard-event-group.webp",
@@ -525,9 +541,17 @@
           "srcset": "/images/galleries/events/community-market-candid-480w.webp 480w, /images/galleries/events/community-market-candid-800w.webp 800w, /images/galleries/events/community-market-candid-1200w.webp 1200w, /images/galleries/events/community-market-candid.webp 1600w"
         },
         {
+          "src": "/images/galleries/events/community-football-shared-moment.webp",
+          "width": 1456,
+          "height": 2400,
+          "alt": "Two women laughing while holding a football together on a sunny training field",
+          "thumbnail": "/images/galleries/events/community-football-shared-moment-800w.webp",
+          "srcset": "/images/galleries/events/community-football-shared-moment-480w.webp 480w, /images/galleries/events/community-football-shared-moment-800w.webp 800w, /images/galleries/events/community-football-shared-moment-1200w.webp 1200w, /images/galleries/events/community-football-shared-moment.webp 1456w"
+        },
+        {
           "src": "/images/galleries/events/live-music-audience-silhouettes.webp",
           "width": 1591,
-          "height": 2400,
+          "height": 1920,
           "alt": "A musician performing under warm stage lights beyond audience silhouettes",
           "thumbnail": "/images/galleries/events/live-music-audience-silhouettes-800w.webp",
           "srcset": "/images/galleries/events/live-music-audience-silhouettes-480w.webp 480w, /images/galleries/events/live-music-audience-silhouettes-800w.webp 800w, /images/galleries/events/live-music-audience-silhouettes-1200w.webp 1200w, /images/galleries/events/live-music-audience-silhouettes.webp 1591w"
@@ -547,6 +571,14 @@
           "alt": "An airborne snowboarder silhouetted against a blue mountain sky",
           "thumbnail": "/images/galleries/events/snowboard-airborne-blue-sky-800w.webp",
           "srcset": "/images/galleries/events/snowboard-airborne-blue-sky-480w.webp 480w, /images/galleries/events/snowboard-airborne-blue-sky-800w.webp 800w, /images/galleries/events/snowboard-airborne-blue-sky-1200w.webp 1200w, /images/galleries/events/snowboard-airborne-blue-sky.webp 1920w"
+        },
+        {
+          "src": "/images/galleries/events/community-football-training-visit.webp",
+          "width": 2400,
+          "height": 1598,
+          "alt": "A visitor watching football players in a blue and yellow training gym from an upstairs window",
+          "thumbnail": "/images/galleries/events/community-football-training-visit-800w.webp",
+          "srcset": "/images/galleries/events/community-football-training-visit-480w.webp 480w, /images/galleries/events/community-football-training-visit-800w.webp 800w, /images/galleries/events/community-football-training-visit-1200w.webp 1200w, /images/galleries/events/community-football-training-visit.webp 2400w"
         }
       ]
     }

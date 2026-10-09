@@ -2,6 +2,7 @@
 import "../styles/global.css";
 
 import SeoHead from "../components/SeoHead.astro";
+import SiteFooter from "../components/SiteFooter.astro";
 ---
 
 <!doctype html>
@@ -17,6 +18,7 @@ import SeoHead from "../components/SeoHead.astro";
 		</header>
 
 		<main id="main-content" tabindex="-1">
+			<div class="portfolio-stage">
 			<section class="project-hero">
 				<div class="project-shell">
 					<p class="eyebrow">Films</p>
@@ -30,7 +32,7 @@ import SeoHead from "../components/SeoHead.astro";
 				</div>
 			</section>
 
-			<section class="project-section">
+			<section class="project-section craft-section">
 				<div class="project-shell story-grid">
 					<h2 class="display-title">A story first approach.</h2>
 
@@ -60,10 +62,7 @@ import SeoHead from "../components/SeoHead.astro";
 
 			<section class="project-section video-section">
 				<div class="project-shell">
-					<div class="section-heading">
-						<p class="eyebrow">Selected films</p>
-						<h2 class="display-title">A few stories.</h2>
-					</div>
+
 
 					<div class="video-grid">
 						<article class="video-card">
@@ -149,6 +148,8 @@ import SeoHead from "../components/SeoHead.astro";
 				</div>
 			</section>
 
+			</div>
+
 			<div class="video-modal" id="video-modal" aria-hidden="true" inert>
 				<div class="video-modal-card" role="dialog" aria-modal="true" aria-label="Video player">
 					<button class="video-modal-close" id="video-modal-close" type="button" aria-label="Close video">×</button>
@@ -172,6 +173,8 @@ import SeoHead from "../components/SeoHead.astro";
 				</div>
 			</section>
 		</main>
+
+		<SiteFooter afterSection />
 		<script>
 			import { createModalController } from "../scripts/modal";
 			const videoPosters = document.querySelectorAll("[data-youtube-id]");
@@ -300,6 +303,27 @@ import SeoHead from "../components/SeoHead.astro";
 		padding: clamp(72px, 10vw, 130px) 0;
 	}
 
+
+	.craft-section {
+		padding-top: clamp(45.54px, 6.325vw, 82.225px);
+		padding-bottom: 0;
+	}
+
+	.portfolio-stage {
+		border-radius: 0 0 68px 68px;
+		overflow: hidden;
+		background:
+			radial-gradient(ellipse at 90% 0%, rgba(122, 138, 133, 0.16), transparent 40rem),
+			linear-gradient(145deg, #242d3b, #202628 70%, #1c1c1b);
+	}
+
+	.video-section {
+		padding-top: clamp(45.54px, 6.325vw, 82.225px);
+		position: relative;
+		isolation: isolate;
+		overflow: hidden;
+	}
+
 	.story-grid {
 		display: grid;
 		grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
@@ -332,15 +356,6 @@ import SeoHead from "../components/SeoHead.astro";
 		line-height: 1.7;
 	}
 
-	.video-section {
-		position: relative;
-		isolation: isolate;
-		overflow: hidden;
-		border-radius: 68px;
-		background:
-			linear-gradient(rgba(28, 28, 27, 0.5), rgba(28, 28, 27, 0.5)),
-			url("/images/generic-background-1.webp") center / cover no-repeat;
-	}
 
 	.section-heading {
 		display: grid;
@@ -486,6 +501,7 @@ import SeoHead from "../components/SeoHead.astro";
 	}
 
 	@media (max-width: 850px) {
+		.portfolio-stage { border-radius: 0 0 48px 48px; }
 		.page-header {
 			padding: 14px 16px;
 			border-radius: 0 0 48px 48px;
@@ -506,9 +522,6 @@ import SeoHead from "../components/SeoHead.astro";
 			grid-template-columns: 1fr;
 		}
 
-		.video-section {
-			border-radius: 48px;
-		}
 		.video-modal {
 			padding: 18px;
 		}
