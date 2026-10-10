@@ -1,9 +1,13 @@
 ---
-interface Props {
+import { type Locale,translate } from "../utils/i18n";
+
+interface Props { locale?: Locale;
 	afterSection?: boolean;
 	compactGap?: boolean;
 }
-const { afterSection = false, compactGap = false } = Astro.props;
+const { locale = "en", afterSection = false, compactGap = false } = Astro.props;
+
+const t = (text: string) => translate(locale, text);
 ---
 		<footer class:list={["site-footer", { "after-section": afterSection, "compact-gap": compactGap }]}>
 			<div class="footer-overlay">
@@ -15,22 +19,13 @@ const { afterSection = false, compactGap = false } = Astro.props;
 					</div>
 
 					<div class="footer-acknowledgement">
-						<p>
-							Smooth Corner Studio acknowledges the Whadjuk people of the Noongar nation as the
-							Traditional Custodians of Boorloo and the Derbarl Yerrigan, the land and waters on
-							which we live and work. We pay our respects to Elders past and present, and recognise
-							their continuing connection to culture, community, land and waters.
-						</p>
+						<p>{t("Smooth Corner Studio acknowledges the Whadjuk people of the Noongar nation as the Traditional Custodians of Boorloo and the Derbarl Yerrigan, the land and waters on which we live and work. We pay our respects to Elders past and present, and recognise their continuing connection to culture, community, land and waters.")}</p>
 
-						<p>
-							We extend that respect to all Aboriginal and Torres Strait Islander people, and
-							acknowledge the care, knowledge and stories that continue to shape this place we are
-							lucky to call home.
-						</p>
+						<p>{t("We extend that respect to all Aboriginal and Torres Strait Islander people, and acknowledge the care, knowledge and stories that continue to shape this place we are lucky to call home.")}</p>
 					</div>
 
 					<div class="footer-contact">
-						<p class="eyebrow">Contact</p>
+						<p class="eyebrow">{t("Contact")}</p>
 
 						<a href="mailto:hello@smoothcornerstudio.com.au"> Email </a>
 
@@ -45,7 +40,7 @@ const { afterSection = false, compactGap = false } = Astro.props;
 				</div>
 
 				<div class="site-shell footer-bottom">
-					<p>© 2026 Smooth Corner Studio. Photography and filmmaking by Daniel Pasqualini.</p>
+					<p>{t("© 2026 Smooth Corner Studio. Photography and filmmaking by Daniel Pasqualini.")}</p>
 				</div>
 			</div>
 		</footer>

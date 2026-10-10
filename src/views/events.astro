@@ -1,0 +1,349 @@
+---
+import "../styles/global.css";
+
+import LanguageControls from "../components/LanguageControls.astro";
+import LanguageSwitch from "../components/LanguageSwitch.astro";
+import PhotoGallery from "../components/PhotoGallery.astro";
+import SeoHead from "../components/SeoHead.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import galleries from "../data/galleries.json";
+import { type Locale,localizedPath, translate } from "../utils/i18n";
+interface Props { locale?: Locale; }
+const { locale = "en" } = Astro.props;
+const t = (text: string) => translate(locale, text);
+const url = (path: string) => localizedPath(path, locale);
+---
+
+<!doctype html>
+<html lang={locale}>
+	<head>
+		<SeoHead locale={locale} title={t("Wedding & Event Photographer Perth | Smooth Corner Studio")} description={t("Natural wedding, people and event photography in Perth and Western Australia. Explore celebrations, community gatherings and live events by Smooth Corner Studio.")} path="/events" preloadImage="/images/events-background.webp" />
+	</head>
+
+	<body>
+		<a class="skip-link" href="#main-content">{t("Skip to content")}</a>
+		<header class="page-header">
+			<a class="back-link" href={url("/#work")}>{t("Back to Smooth Corner Studio")}</a>
+		<LanguageSwitch locale={locale} path="/events" />
+		</header>
+
+		<main id="main-content" tabindex="-1">
+			<div class="portfolio-stage">
+			<section class="project-hero">
+				<div class="project-shell">
+					<p class="eyebrow">{t("Event coverage")}</p>
+					<h1 class="display-title">{t("People, gathered and alive.")}</h1>
+					<p class="hero-copy">{t("Wedding and event photography in Boorloo / Perth and across Western Australia. I like photographing people as they really are: moving, laughing, arriving, holding each other, getting emotional, getting distracted, being themselves. Whether it is a wedding, an engagement, a family morning by the sea or a room full of people coming together, the best images feel true to the moment.")}</p>
+				</div>
+			</section>
+
+			<section class="project-section craft-section">
+				<div class="project-shell story-grid">
+					<h2 class="display-title">{t("Real life, gently observed.")}</h2>
+
+					<div class="text-stack">
+						<p>{t("This is coverage for people and real life, not just formal events. I look for the pulse of what is happening: hands moving, faces reacting, people connecting, kids running off, quiet pauses, messy details and the moments that would be easy to miss.")}</p>
+
+						<p>{t("The approach is calm, observant and unobtrusive. I can guide when it helps, but I am more interested in images that feel natural, honest and full of atmosphere than in forcing everything to look perfect.")}</p>
+
+						<p>{t("That might mean weddings, engagements, family shoots, small celebrations, beach mornings, community gatherings or corporate events with a bit more life in them. The goal is to create photographs that feel warm, useful and true to the people in them.")}</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="project-section gallery-section">
+				<div class="project-shell">
+					<PhotoGallery locale={locale} id="events" groups={galleries.events} />
+
+				</div>
+			</section>
+			</div>
+
+
+
+			<section class="project-section cta-section">
+				<div class="project-shell cta-card">
+					<p class="eyebrow">{t("Something happening?")}</p>
+					<h2 class="display-title">{t("Let’s keep it honest.")}</h2>
+					<p class="cta-copy">{t("Tell me what is happening, who will be there and what kind of feeling you want to remember when the day has passed.")}</p>
+					<a class="button primary" href={url("/#contact")}>{t("Start a conversation")}</a>
+				</div>
+			</section>
+		</main>
+
+		<SiteFooter locale={locale} afterSection />
+
+	<LanguageControls locale={locale} path="/events" />
+	</body>
+</html>
+
+<style>
+	body {
+		background: var(--ink);
+		color: var(--cream);
+	}
+
+	.page-header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		padding: 22px clamp(20px, 4vw, 48px);
+		background: rgba(28, 28, 27, 0.42);
+		border-bottom: 1px solid rgba(244, 234, 220, 0.18);
+		border-radius: 0 0 68px 68px;
+		backdrop-filter: blur(8px);
+	}
+
+	.back-link {
+		color: var(--sand);
+		font-size: 0.84rem;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+	}
+
+	.project-shell {
+		width: min(100% - 40px, 1180px);
+		margin: 0 auto;
+	}
+
+	.project-hero {
+		position: relative;
+		isolation: isolate;
+		min-height: 86vh;
+		display: grid;
+		align-content: center;
+		padding: 180px 0 96px;
+		overflow: hidden;
+		border-radius: 0 0 68px 68px;
+		background:
+			linear-gradient(90deg, rgba(28, 28, 27, 0.9), rgba(28, 28, 27, 0.56) 52%, rgba(28, 28, 27, 0.28)),
+			url("/images/events-background.webp") center center / cover no-repeat;
+	}
+
+	.project-hero .eyebrow,
+	.section-heading .eyebrow,
+	.cta-card .eyebrow {
+		font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+	}
+
+	.project-hero h1 {
+		max-width: 1080px;
+		margin: 0;
+		color: var(--sand);
+		font-size: clamp(4rem, 10vw, 10rem);
+		letter-spacing: 0.015em;
+		line-height: 0.88;
+		padding-left: 0.04em;
+		text-shadow: 0 8px 32px rgba(0, 0, 0, 0.34);
+	}
+
+	.hero-copy {
+		max-width: 680px;
+		margin: 32px 0 0;
+		color: rgba(244, 234, 220, 0.9);
+		font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+		line-height: 1.55;
+	}
+
+	.project-section {
+		padding: clamp(72px, 10vw, 130px) 0;
+	}
+
+	.craft-section {
+		padding-top: clamp(45.54px, 6.325vw, 82.225px);
+		padding-bottom: 0;
+	}
+
+	.gallery-section {
+		padding-top: clamp(45.54px, 6.325vw, 82.225px);
+	}
+
+	.story-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+		gap: clamp(32px, 8vw, 100px);
+		align-items: start;
+	}
+
+	.story-grid h2,
+	.section-heading h2,
+	.cta-card h2 {
+		margin: 0;
+		color: var(--cream);
+		font-size: clamp(3rem, 7vw, 7.5rem);
+		letter-spacing: 0.015em;
+		line-height: 0.9;
+		padding-left: 0.04em;
+	}
+
+	.text-stack {
+		display: grid;
+		gap: 22px;
+	}
+
+	.text-stack p,
+	.cta-card p {
+		margin: 0;
+		color: rgba(244, 234, 220, 0.78);
+		font-size: 1.04rem;
+		line-height: 1.7;
+	}
+
+	.portfolio-stage {
+		border-radius: 0 0 68px 68px;
+		overflow: hidden;
+		background:
+			radial-gradient(ellipse at 90% 0%, rgba(122, 138, 133, 0.16), transparent 40rem),
+			linear-gradient(145deg, #242d3b, #202628 70%, #1c1c1b);
+	}
+
+	.gallery-section {
+		position: relative;
+		isolation: isolate;
+		overflow: hidden;
+	}
+
+	.section-heading {
+		display: grid;
+		gap: 14px;
+		margin-bottom: clamp(34px, 5vw, 58px);
+	}
+
+
+	:global(.pswp__img) {
+		border-radius: 28px;
+		transition: border-radius 320ms ease;
+	}
+
+	:global(.pswp__img--placeholder) {
+		border-radius: 4px;
+		transition: border-radius 320ms ease;
+	}
+
+	:global(.pswp__bg) {
+		background: rgba(28, 28, 27, 0.92);
+	}
+
+
+	.cta-card {
+		display: grid;
+		gap: 22px;
+		padding: clamp(32px, 6vw, 64px);
+		border: 1px solid rgba(244, 234, 220, 0.18);
+		border-radius: 42px;
+		background:
+			radial-gradient(circle at top right, rgba(215, 174, 129, 0.18), transparent 18rem),
+			rgba(244, 234, 220, 0.04);
+	}
+
+	.cta-card p {
+		max-width: 640px;
+	}
+
+	.cta-card .cta-copy {
+		max-width: none;
+		white-space: nowrap;
+	}
+
+	.cta-card .button {
+		width: fit-content;
+		justify-self: center;
+		margin-top: 20px;
+	}
+
+	:global(.pswp) {
+		--pswp-icon-color: var(--sand);
+		--pswp-icon-color-secondary: rgba(28, 28, 27, 0.72);
+		--pswp-bg: rgba(28, 28, 27, 0.92);
+	}
+
+	:global(.pswp__button) {
+		color: var(--sand) !important;
+		opacity: 0.92;
+	}
+
+	:global(.pswp__button:hover) {
+		color: var(--cream) !important;
+		opacity: 1;
+	}
+
+	:global(.pswp__counter) {
+		color: var(--sand) !important;
+		opacity: 0.78;
+	}
+
+	:global(.pswp__button svg),
+	:global(.pswp__icn) {
+		color: var(--sand) !important;
+		fill: var(--sand) !important;
+		stroke: var(--sand) !important;
+	}
+
+	:global(.pswp__button:hover svg),
+	:global(.pswp__button:hover .pswp__icn) {
+		color: var(--cream) !important;
+		fill: var(--cream) !important;
+		stroke: var(--cream) !important;
+	}
+
+	@media (max-width: 850px) {
+		.portfolio-stage {
+			border-radius: 0 0 48px 48px;
+		}
+		.page-header {
+			padding: 14px 16px;
+			border-radius: 0 0 48px 48px;
+		}
+
+		.project-hero {
+			min-height: auto;
+			padding: 170px 0 72px;
+			border-radius: 0 0 48px 48px;
+		}
+
+		.project-hero h1 {
+			font-size: clamp(3.5rem, 18vw, 6.8rem);
+		}
+
+		.story-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.portfolio-stage {
+			background:
+				radial-gradient(circle at 82% 10%, rgba(122, 138, 133, 0.34) 0, rgba(122, 138, 133, 0.12) 12rem, transparent 22rem),
+				radial-gradient(circle at 12% 92%, rgba(60, 71, 97, 0.3) 0, rgba(60, 71, 97, 0.1) 11rem, transparent 21rem),
+				linear-gradient(135deg, rgba(36, 45, 59, 0.98) 0%, rgba(60, 71, 97, 0.94) 48%, rgba(122, 138, 133, 0.86) 100%);
+		}
+
+		.gallery-section .eyebrow,
+		.gallery-section h2 {
+			color: var(--cream);
+		}
+
+
+		.cta-card .cta-copy {
+			white-space: normal;
+		}
+
+		:global(.pswp__img) {
+			border-radius: 28px;
+		}
+
+		:global(.pswp__img--placeholder) {
+			border-radius: 4px;
+		}
+	}
+
+	@media (max-width: 850px) {
+		.project-hero {
+			background:
+				linear-gradient(90deg, rgba(28, 28, 27, 0.9), rgba(28, 28, 27, 0.56) 52%, rgba(28, 28, 27, 0.28)),
+				url("/images/events-background-800w.webp") center center / cover no-repeat;
+		}
+	}
+</style>
