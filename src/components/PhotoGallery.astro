@@ -1,5 +1,7 @@
 ---
+import italianAlt from "../data/galleryItalian.json";
 import { mixOrientations } from "../utils/galleryOrder";
+import { categoryTitles, type Locale } from "../utils/i18n";
 interface Photo {
  src: string;
  thumbnail: string;
@@ -9,23 +11,25 @@ interface Photo {
  alt: string;
 }
 interface Props {
+ locale?: Locale;
  id: string;
  groups: { id: string; title: string; photos: Photo[] }[];
 }
-const { id, groups } = Astro.props;
-const photos = groups.flatMap(group => group.photos.map(photo => ({ ...photo, collection: group.id })));
+const { id, groups, locale = "en" } = Astro.props;
+const italian = locale === "it";
+const photos = groups.flatMap(group => group.photos.map(photo => ({ ...photo, alt: italian ? (italianAlt as Record<string,string>)[photo.src] ?? photo.alt : photo.alt, collection: group.id })));
 const ordered = mixOrientations(photos, photo => photo.width / photo.height);
 ---
-<div class="photo-gallery" data-gallery-root>
- <div class="gallery-nav" role="group" aria-label="Photo collections">
-  <button type="button" data-gallery-filter="all" aria-pressed="true" aria-controls={`${id}-grid`}>All photographs</button>
-  {groups.map(group => <button type="button" data-gallery-filter={group.id} aria-pressed="false" aria-controls={`${id}-grid`}>{group.title}</button>)}
+<div class="photo-gallery" data-gallery-root data-photo-word={italian ? "fotografie" : "photographs"}>
+ <div class="gallery-nav" role="group" aria-label={italian ? "Raccolte fotografiche" : "Photo collections"}>
+  <button type="button" data-gallery-filter="all" aria-pressed="true" aria-controls={`${id}-grid`}>{italian ? "Tutte le fotografie" : "All photographs"}</button>
+  {groups.map(group => <button type="button" data-gallery-filter={group.id} aria-pressed="false" aria-controls={`${id}-grid`}>{italian ? categoryTitles[group.id] : group.title}</button>)}
  </div>
- <p class="gallery-status" aria-live="polite" aria-atomic="true">{photos.length} photographs</p>
+ <p class="gallery-status" aria-live="polite" aria-atomic="true">{photos.length} {italian ? "fotografie" : "photographs"}</p>
  <div class="curated-grid" id={`${id}-grid`} data-photo-gallery>
   {ordered.map(photo => (
    <figure class="curated-photo" data-collection={photo.collection}>
-    <a href={photo.src} target="_blank" rel="noreferrer" data-pswp-width={photo.width} data-pswp-height={photo.height} data-pswp-srcset={photo.srcset} aria-label={`View photograph: ${photo.alt}`}>
+    <a href={photo.src} target="_blank" rel="noreferrer" data-pswp-width={photo.width} data-pswp-height={photo.height} data-pswp-srcset={photo.srcset} aria-label={`${italian ? "Apri fotografia" : "View photograph"}: ${photo.alt}`}>
      <img src={photo.thumbnail} srcset={photo.srcset} sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 58px) / 2), (max-width: 1220px) calc((100vw - 76px) / 3), 382px" width={photo.width} height={photo.height} alt={photo.alt} loading="lazy" decoding="async" />
     </a>
    </figure>

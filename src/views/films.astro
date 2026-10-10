@@ -1,0 +1,521 @@
+---
+import "../styles/global.css";
+
+import LanguageControls from "../components/LanguageControls.astro";
+import LanguageSwitch from "../components/LanguageSwitch.astro";
+import SeoHead from "../components/SeoHead.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import { type Locale,localizedPath, translate } from "../utils/i18n";
+interface Props { locale?: Locale; }
+const { locale = "en" } = Astro.props;
+const t = (text: string) => translate(locale, text);
+const url = (path: string) => localizedPath(path, locale);
+---
+
+<!doctype html>
+<html lang={locale}>
+	<head>
+		<SeoHead locale={locale} title={t("Documentary & Brand Films Perth | Smooth Corner Studio")} description={t("Documentary films, brand stories and video production in Perth and regional Western Australia. Explore people-led filmmaking by Smooth Corner Studio.")} path="/films" preloadImage="/images/generic-background-5.webp" />
+	</head>
+
+	<body>
+		<a class="skip-link" href="#main-content">{t("Skip to content")}</a>
+		<header class="page-header">
+			<a class="back-link" href={url("/#work")}>{t("Back to Smooth Corner Studio")}</a>
+		<LanguageSwitch locale={locale} path="/films" />
+		</header>
+
+		<main id="main-content" tabindex="-1">
+			<div class="portfolio-stage">
+			<section class="project-hero">
+				<div class="project-shell">
+					<p class="eyebrow">{t("Films")}</p>
+					<h1 class="display-title">{t("Thoughtful films with a human eye.")}</h1>
+					<p class="hero-copy">{t("Documentary films, brand stories and video production in Boorloo / Perth and regional Western Australia. I like films that feel honest, warm and alive: planned properly, but still leaves enough room for real people, quiet details, strange little moments and the feeling of being there.")}</p>
+				</div>
+			</section>
+
+			<section class="project-section craft-section">
+				<div class="project-shell story-grid">
+					<h2 class="display-title">{t("A story first approach.")}</h2>
+
+					<div class="text-stack">
+						<p>{t("For me, filmmaking starts before the camera comes out. It starts with the feeling: what the story should carry, who it is for, where it needs to live and what should stay with people after they watch it.")}</p>
+
+						<p>{t("The work sits somewhere between documentary, brand film and visual storytelling. It is considered and well shaped, but not too polished. I am interested in real voices, natural light, texture, rhythm, atmosphere and the small details that make a place or person feel specific.")}</p>
+
+						<p>{t("That might be a short film for a project, a social piece with a bit more care, a brand story, an event film, or a small portrait of a person doing something they care about. The goal is always to make something useful, honest and a little more memorable than a standard promo video.")}</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="project-section video-section">
+				<div class="project-shell">
+
+
+					<div class="video-grid">
+						<article class="video-card">
+							<h3 class="visually-hidden">Loinnir</h3>
+							<button
+								class="video-placeholder video-poster"
+								type="button"
+								data-youtube-id="2elP5uCIB9c"
+								data-youtube-title="Loinnir"
+								aria-label={t("Open Loinnir film")}
+							>
+								<img
+									src="/images/films/loinnir.webp"
+									alt={t("Loinnir — an interview being filmed in a sunlit room")} width="1600" height="900" loading="lazy" decoding="async" srcset="/images/films/loinnir-480w.webp 480w, /images/films/loinnir-800w.webp 800w, /images/films/loinnir-1200w.webp 1200w, /images/films/loinnir.webp 1600w" sizes="(max-width: 850px) calc(100vw - 76px), 543px" />
+							</button>
+							<p>{t("Loinnir is a film shaped around atmosphere, rhythm and the small details that linger. A considered piece of visual storytelling, with room for quiet moments and a feeling that stays beyond the final frame.")}</p>
+						</article>
+
+						<article class="video-card">
+							<h3 class="visually-hidden">Pathway to Purpose</h3>
+							<button
+								class="video-placeholder video-poster"
+								type="button"
+								data-youtube-id="9BHvhDwwQFo"
+								data-youtube-title="Pathway to Purpose"
+								aria-label={t("Open Pathway to Purpose film")}
+							>
+								<img
+									src="/images/films/pathway-to-purpose.webp"
+									alt={t("Pathway to Purpose — trainees and mentors with motorcycles at sunset")} width="1600" height="900" loading="lazy" decoding="async" srcset="/images/films/pathway-to-purpose-480w.webp 480w, /images/films/pathway-to-purpose-800w.webp 800w, /images/films/pathway-to-purpose-1200w.webp 1200w, /images/films/pathway-to-purpose.webp 1600w" sizes="(max-width: 850px) calc(100vw - 76px), 543px" />
+							</button>
+							<p>{t("A short documentary following young Aboriginal people, mentors and trainers in the Aboriginal Pastoral Academy. Filmed across the Kimberley, it explores Country, culture, confidence and the pathways taking shape through pastoral work.")}</p>
+						</article>
+
+						<article class="video-card">
+							<h3 class="visually-hidden">Soulty Sisters</h3>
+							<button
+								class="video-placeholder video-poster"
+								type="button"
+								data-youtube-id="mKWNz7GBMqY"
+								data-youtube-title={t("Soulty Sisters short film trailer")}
+								aria-label={t("Open Soulty Sisters short film trailer")}
+							>
+								<img src="/images/films/soulty-sisters-project.webp" alt={t("Soulty Sisters — women gathering beside the ocean")} width="1600" height="900" loading="lazy" decoding="async" srcset="/images/films/soulty-sisters-project-480w.webp 480w, /images/films/soulty-sisters-project-800w.webp 800w, /images/films/soulty-sisters-project-1200w.webp 1200w, /images/films/soulty-sisters-project.webp 1600w" sizes="(max-width: 850px) calc(100vw - 76px), 543px" />
+							</button>
+							<p>{t("A film shaped from event footage, still images and raw voice notes, capturing the soul of Soulty Sisters: warmth, confidence, community and women finding themselves in the water.")}</p>
+						</article>
+
+						<article class="video-card">
+							<h3 class="visually-hidden">Carers for Land and Sea</h3>
+							<button
+								class="video-placeholder video-poster"
+								type="button"
+								data-youtube-id="BUcQZa4VlrQ"
+								data-youtube-title="Carers for Land and Sea"
+								aria-label={t("Open Carers for Land and Sea video")}
+							>
+								<img src="/images/films/carers-land-sea.webp" alt={t("Carers for Land and Sea — a researcher tending plants in a greenhouse")} width="1600" height="900" loading="lazy" decoding="async" srcset="/images/films/carers-land-sea-480w.webp 480w, /images/films/carers-land-sea-800w.webp 800w, /images/films/carers-land-sea-1200w.webp 1200w, /images/films/carers-land-sea.webp 1600w" sizes="(max-width: 850px) calc(100vw - 76px), 543px" />
+							</button>
+							<p>{t("A purposeful video for the Department of Primary Industries and Regional Development, explaining who DPIRD is, what it does and why its work matters across Western Australia.")}</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			</div>
+
+			<div class="video-modal" id="video-modal" aria-hidden="true" inert>
+				<div class="video-modal-card" role="dialog" aria-modal="true" aria-label={t("Video player")}>
+					<button class="video-modal-close" id="video-modal-close" type="button" aria-label={t("Close video")}>×</button>
+					<iframe
+						id="video-modal-iframe"
+						title={t("Selected film")}
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowfullscreen
+					></iframe>
+				</div>
+			</div>
+
+			<section class="project-section cta-section">
+				<div class="project-shell cta-card">
+					<p class="eyebrow">{t("Have something in mind?")}</p>
+					<h2 class="display-title">{t("Let’s shape the story properly.")}</h2>
+					<p class="cta-copy">{t("Tell me what you are making, where it needs to live and what kind of feeling you want it to carry.")}</p>
+					<a class="button primary" href={url("/#contact")}>{t("Start a conversation")}</a>
+				</div>
+			</section>
+		</main>
+
+		<SiteFooter locale={locale} afterSection />
+		<script>
+			import { createModalController } from "../scripts/modal";
+			const videoPosters = document.querySelectorAll("[data-youtube-id]");
+			const videoModal = document.querySelector("#video-modal");
+			const videoModalIframe = document.querySelector("#video-modal-iframe");
+			const videoModalClose = document.querySelector("#video-modal-close");
+
+			const modalController = createModalController(videoModal, videoModalClose);
+
+			const openVideoModal = (poster) => {
+				if (!videoModal || !videoModalIframe) return;
+				const videoId = poster.getAttribute("data-youtube-id");
+				const videoTitle = poster.getAttribute("data-youtube-title") || "Selected film";
+				if (!videoId) return;
+
+				videoModalIframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+				videoModalIframe.title = videoTitle;
+				modalController.open();
+			};
+
+			const closeVideoModal = () => {
+				if (!videoModal || !videoModalIframe) return;
+				modalController.close();
+				videoModalIframe.src = "";
+			};
+
+			videoPosters.forEach((poster) => {
+				poster.addEventListener("click", () => openVideoModal(poster));
+			});
+
+			videoModalClose?.addEventListener("click", closeVideoModal);
+
+			videoModal?.addEventListener("click", (event) => {
+				if (event.target === videoModal) {
+					closeVideoModal();
+				}
+			});
+
+			document.addEventListener("keydown", (event) => {
+				if (event.key === "Escape") {
+					closeVideoModal();
+				}
+			});
+		</script>
+	<LanguageControls locale={locale} path="/films" />
+	</body>
+</html>
+
+<style>
+	body {
+		background: var(--ink);
+		color: var(--cream);
+	}
+
+	.page-header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		padding: 22px clamp(20px, 4vw, 48px);
+		background: rgba(28, 28, 27, 0.42);
+		border-bottom: 1px solid rgba(244, 234, 220, 0.18);
+		border-radius: 0 0 68px 68px;
+		backdrop-filter: blur(8px);
+	}
+
+	.back-link {
+		color: var(--sand);
+		font-size: 0.84rem;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+	}
+
+	.project-shell {
+		width: min(100% - 40px, 1180px);
+		margin: 0 auto;
+	}
+
+	.project-hero {
+		position: relative;
+		isolation: isolate;
+		min-height: 86vh;
+		display: grid;
+		align-content: center;
+		padding: 180px 0 96px;
+		overflow: hidden;
+		border-radius: 0 0 68px 68px;
+		background:
+			linear-gradient(
+				90deg,
+				rgba(28, 28, 27, 0.9),
+				rgba(28, 28, 27, 0.56) 52%,
+				rgba(28, 28, 27, 0.28)
+			),
+			url("/images/generic-background-5.webp") center center / cover no-repeat;
+	}
+
+	.project-hero .eyebrow,
+	.section-heading .eyebrow,
+	.cta-card .eyebrow {
+		font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+	}
+
+	.project-hero h1 {
+		max-width: 980px;
+		margin: 0;
+		color: var(--sand);
+		font-size: clamp(4rem, 10vw, 10rem);
+		letter-spacing: 0.015em;
+		line-height: 0.88;
+		padding-left: 0.04em;
+		text-shadow: 0 8px 32px rgba(0, 0, 0, 0.34);
+	}
+
+	.hero-copy {
+		max-width: 680px;
+		margin: 32px 0 0;
+		color: rgba(244, 234, 220, 0.9);
+		font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+		line-height: 1.55;
+	}
+
+	.project-section {
+		padding: clamp(72px, 10vw, 130px) 0;
+	}
+
+
+	.craft-section {
+		padding-top: clamp(45.54px, 6.325vw, 82.225px);
+		padding-bottom: 0;
+	}
+
+	.portfolio-stage {
+		border-radius: 0 0 68px 68px;
+		overflow: hidden;
+		background:
+			radial-gradient(ellipse at 90% 0%, rgba(122, 138, 133, 0.16), transparent 40rem),
+			linear-gradient(145deg, #242d3b, #202628 70%, #1c1c1b);
+	}
+
+	.video-section {
+		padding-top: clamp(45.54px, 6.325vw, 82.225px);
+		position: relative;
+		isolation: isolate;
+		overflow: hidden;
+	}
+
+	.story-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+		gap: clamp(32px, 8vw, 100px);
+		align-items: start;
+	}
+
+	.story-grid h2,
+	.section-heading h2,
+	.cta-card h2 {
+		margin: 0;
+		color: var(--cream);
+		font-size: clamp(3rem, 7vw, 7.5rem);
+		letter-spacing: 0.015em;
+		line-height: 0.9;
+		padding-left: 0.04em;
+	}
+
+	.text-stack {
+		display: grid;
+		gap: 22px;
+	}
+
+	.text-stack p,
+	.video-card p,
+	.cta-card p {
+		margin: 0;
+		color: rgba(244, 234, 220, 0.78);
+		font-size: 1.04rem;
+		line-height: 1.7;
+	}
+
+
+	.section-heading {
+		display: grid;
+		gap: 14px;
+		margin-bottom: clamp(34px, 5vw, 58px);
+	}
+
+	.video-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 18px;
+	}
+
+	.video-card {
+		display: grid;
+		gap: 18px;
+		padding: 18px;
+		border: 1px solid rgba(244, 234, 220, 0.18);
+		border-radius: 28px;
+		background: rgba(28, 28, 27, 0.42);
+		backdrop-filter: blur(8px);
+	}
+
+	.video-placeholder {
+		aspect-ratio: 16 / 9;
+		display: grid;
+		place-items: center;
+		border: 1px solid rgba(244, 234, 220, 0.18);
+		border-radius: 20px;
+		background:
+			radial-gradient(circle at top right, rgba(215, 174, 129, 0.18), transparent 16rem),
+			rgba(244, 234, 220, 0.05);
+		color: var(--sand);
+		font-size: 0.82rem;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		text-align: center;
+		overflow: hidden;
+	}
+
+	.video-poster {
+		position: relative;
+		width: 100%;
+		padding: 0;
+		appearance: none;
+		cursor: pointer;
+	}
+
+	.video-poster img,
+	.video-image img {
+		width: 100%;
+		height: 100%;
+		display: block;
+		object-fit: cover;
+		transition: transform 220ms ease, opacity 220ms ease;
+	}
+
+	.video-poster:hover img {
+		transform: scale(1.025);
+		opacity: 0.92;
+	}
+
+	.video-modal {
+		position: fixed;
+		inset: 0;
+		z-index: 100;
+		display: grid;
+		place-items: center;
+		padding: 24px;
+		background: rgba(28, 28, 27, 0.78);
+		backdrop-filter: blur(12px);
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 180ms ease;
+	}
+
+	.video-modal.visible {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.video-modal-card {
+		position: relative;
+		width: min(calc(100vw - 48px), 1120px);
+		aspect-ratio: 16 / 9;
+		overflow: visible;
+		border-radius: 34px;
+		background: rgba(28, 28, 27, 0.72);
+		box-shadow: 0 28px 90px rgba(0, 0, 0, 0.34);
+	}
+
+	.video-modal-card iframe {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
+		border-radius: inherit;
+	}
+
+	.video-modal-close {
+		position: absolute;
+		top: -58px;
+		right: 0;
+		z-index: 2;
+		width: 44px;
+		height: 44px;
+		display: grid;
+		place-items: center;
+		border: 1px solid rgba(215, 174, 129, 0.42);
+		border-radius: 999px;
+		padding: 0;
+		color: var(--sand);
+		background: rgba(28, 28, 27, 0.64);
+		font-size: 1.6rem;
+		line-height: 1;
+		cursor: pointer;
+	}
+
+	.cta-card {
+		display: grid;
+		gap: 22px;
+		padding: clamp(32px, 6vw, 64px);
+		border: 1px solid rgba(244, 234, 220, 0.18);
+		border-radius: 42px;
+		background:
+			radial-gradient(circle at top right, rgba(215, 174, 129, 0.18), transparent 18rem),
+			rgba(244, 234, 220, 0.04);
+	}
+
+	.cta-card p {
+		max-width: 640px;
+	}
+
+	.cta-card .cta-copy {
+		max-width: none;
+		white-space: nowrap;
+	}
+
+	.cta-card .button {
+		width: fit-content;
+		margin-top: 20px;
+	}
+
+	@media (max-width: 850px) {
+		.portfolio-stage { border-radius: 0 0 48px 48px; }
+		.page-header {
+			padding: 14px 16px;
+			border-radius: 0 0 48px 48px;
+		}
+
+		.project-hero {
+			min-height: auto;
+			padding: 170px 0 72px;
+			border-radius: 0 0 48px 48px;
+		}
+
+		.project-hero h1 {
+			font-size: clamp(3.5rem, 18vw, 6.8rem);
+		}
+
+		.story-grid,
+		.video-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.video-modal {
+			padding: 18px;
+		}
+
+		.video-modal-card {
+			border-radius: 24px;
+		}
+
+		.video-modal-close {
+			top: -56px;
+			right: 0;
+		}
+		.cta-card .cta-copy {
+			white-space: normal;
+		}
+	}
+
+	@media (max-width: 850px) {
+		.project-hero {
+			background: linear-gradient(
+				90deg,
+				rgba(28, 28, 27, 0.9),
+				rgba(28, 28, 27, 0.56) 52%,
+				rgba(28, 28, 27, 0.28)
+			),
+			url("/images/generic-background-5-800w.webp") center center / cover no-repeat;
+		}
+	}
+</style>

@@ -1,0 +1,30 @@
+---
+import { type Locale,localizedPath } from '../utils/i18n';
+interface Props { locale: Locale; path: string; }
+const { locale, path } = Astro.props;
+const devPreview = import.meta.env.DEV ? "true" : undefined;
+---
+{locale === 'en' && <dialog class="language-prompt" data-language-prompt data-dev-preview={devPreview} aria-labelledby="language-prompt-title" aria-describedby="language-prompt-description">
+ <p class="eyebrow" lang="it">Benvenuto · Welcome</p>
+ <h2 id="language-prompt-title" lang="it">Preferisci l’italiano?</h2>
+ <p id="language-prompt-description" lang="it">Il sito è disponibile anche in italiano. Vuoi cambiare lingua?</p>
+ <p class="english-note">This website is also available in Italian.</p>
+ <div class="prompt-actions">
+  <a class="button primary" href={localizedPath(path, 'it')} lang="it" data-language-choice="it">Vai alla versione italiana</a>
+  <button class="button" type="button" data-language-dismiss>Continue in English</button>
+ </div>
+</dialog>}
+<script>
+ import '../scripts/language';
+</script>
+<style>
+ .language-prompt { width:min(540px, calc(100vw - 32px)); max-height:calc(100dvh - 40px); overflow:auto; padding:clamp(24px,5vw,40px); border:1px solid rgba(244,234,220,.25); border-radius:32px; color:var(--cream); background:linear-gradient(140deg,#38332d,#232b34); box-shadow:0 24px 80px rgba(0,0,0,.4); }
+ .language-prompt::backdrop { background:rgba(28,28,27,.6); backdrop-filter:blur(4px); }
+ h2 { font-family:var(--font-title); font-size:clamp(2.2rem,7vw,3.2rem); line-height:1.1; margin:12px 0 20px; font-weight:400; }
+ p { line-height:1.6; }
+ .english-note { font-size:.85rem; color:var(--text-soft); }
+ .prompt-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
+ .button { font:inherit; text-align:center; cursor:pointer; }
+ button.button { background:transparent; color:var(--cream); }
+ @media(max-width:600px) { .prompt-actions { flex-direction:column; } }
+</style>

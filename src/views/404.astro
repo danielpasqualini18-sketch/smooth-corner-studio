@@ -1,0 +1,42 @@
+---
+import '../styles/global.css';
+
+import LanguageControls from "../components/LanguageControls.astro";
+import LanguageSwitch from "../components/LanguageSwitch.astro";
+import SeoHead from '../components/SeoHead.astro';
+import { type Locale,localizedPath, translate } from "../utils/i18n";
+interface Props { locale?: Locale; }
+const { locale = "en" } = Astro.props;
+const t = (text: string) => translate(locale, text);
+const url = (path: string) => localizedPath(path, locale);
+---
+<!doctype html>
+<html lang={locale}>
+ <head>
+  <SeoHead locale={locale} title={t("Page not found | Smooth Corner Studio")} description={t("This page is no longer here. Explore Smooth Corner Studio’s photography, films and event coverage.")} path="/404.html" noindex />
+ </head>
+ <body>
+  <main>
+<LanguageSwitch locale={locale} path="/404.html" />
+   <p class="eyebrow">Smooth Corner Studio · 404</p>
+   <h1 class="display-title">{t("A frame")}<br />{t("out of place.")}</h1>
+   <p>{t("This page may have moved. Let’s get you back to the stories.")}</p>
+   <a class="button primary" href={url("/")}>{t("Back to the studio")}</a>
+   <nav aria-label={t("Explore our work")}>
+    <a href={url("/photography")}>{t("Photography")}</a>
+    <a href={url("/films")}>{t("Films")}</a>
+    <a href={url("/events")}>{t("Weddings &amp; events")}</a>
+   </nav>
+  </main>
+ <LanguageControls locale={locale} path="/404.html" />
+	</body>
+</html>
+<style>
+ body { background: linear-gradient(135deg, var(--ink), var(--deep-blue)); }
+ main { min-height: 100vh; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; width: min(100% - 40px, 900px); margin: auto; padding: 80px 0; }
+ h1 { color: var(--sand); margin: 12px 0 24px; font-size: clamp(4rem, 12vw, 9rem); line-height: .9; }
+ p { max-width: 540px; color: var(--text-soft); }
+ .button { margin-top: 18px; }
+ nav { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 38px; }
+ nav a { color: var(--sand); text-decoration: underline; text-underline-offset: 4px; }
+</style>

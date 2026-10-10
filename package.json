@@ -10,7 +10,7 @@
     "astro": "astro",
     "format": "eslint . --fix && prettier -w \"**/*\" --ignore-unknown --cache",
     "lint": "eslint .",
-    "check:site": "npm run build && node scripts/verify-site.mjs"
+    "check:site": "npm run build && node scripts/verify-site.mjs && node --experimental-strip-types scripts/verify-language.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.4",

@@ -1,0 +1,224 @@
+---
+import "../styles/global.css";
+
+import LanguageControls from "../components/LanguageControls.astro";
+import LanguageSwitch from "../components/LanguageSwitch.astro";
+import SeoHead from "../components/SeoHead.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import { type Locale,localizedPath, translate } from "../utils/i18n";
+interface Props { locale?: Locale; }
+const { locale = "en" } = Astro.props;
+const t = (text: string) => translate(locale, text);
+const url = (path: string) => localizedPath(path, locale);
+---
+
+<!doctype html>
+<html lang={locale}>
+	<head>
+		<SeoHead locale={locale} title={t("Contact & Links | Smooth Corner Studio Perth")} description={t("Find Smooth Corner Studio’s portfolio, contact details and Instagram. Photography and filmmaking by Daniel Pasqualini in Boorloo / Perth, Western Australia.")} path="/links" preloadImage="/images/title-background.jpg" />
+	</head>
+
+	<body>
+		<a class="skip-link" href="#main-content">{t("Skip to content")}</a>
+		<main class="links-page" id="main-content" tabindex="-1">
+			<section class="links-card">
+<LanguageSwitch locale={locale} path="/links" />
+				<div class="logo-wrap">
+					<img
+						src="/images/brand/smooth-corner-header-badge-600w.webp" srcset="/images/brand/smooth-corner-header-badge-240w.webp 240w, /images/brand/smooth-corner-header-badge-600w.webp 600w" sizes="(max-width: 600px) min(180px, 63vw), 180px"
+						alt="Smooth Corner Studio" width="600" height="503" loading="eager" decoding="async" />
+				</div>
+
+				<p class="eyebrow">{t("Boorloo / Perth, Western Australia")}</p>
+
+				<h1 class="display-title">{t("Quiet images.")}<br />{t("Honest films.")}</h1>
+
+				<p class="intro">{t("Photography, films and visual stories")}<br />{t("by Daniel Pasqualini.")}</p>
+
+				<div class="links-stack">
+					<a class="featured-film" href="https://www.youtube.com/watch?v=9BHvhDwwQFo" target="_blank" rel="noopener noreferrer" aria-label={t("Watch the full Pathway to Purpose film on YouTube")}>
+						<img src="/images/films/pathway-to-purpose-800w.webp" srcset="/images/films/pathway-to-purpose-480w.webp 480w, /images/films/pathway-to-purpose-800w.webp 800w, /images/films/pathway-to-purpose-1200w.webp 1200w" sizes="(max-width: 600px) calc(100vw - 94px), 446px" alt={t("Pathway to Purpose — trainees and mentors with motorcycles at sunset")} width="1600" height="900" loading="eager" decoding="async" />
+						<span>{t("Watch the full video now")}</span>
+					</a>
+					<a class="link-button primary" href={url("/")}>{t("Visit the website")}</a>
+					<a class="link-button" href={url("/#work")}>{t("View selected work")}</a>
+					<a class="link-button" href={url("/#contact")}>{t("Start a conversation")}</a>
+					<a
+						class="link-button"
+						href="https://www.instagram.com/danielpasqualini_/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Instagram
+					</a>
+					<a class="link-button" href="mailto:hello@smoothcornerstudio.com.au">{t("Email Smooth Corner Studio")}</a>
+				</div>
+
+				<p class="small-note">{t("Smooth Corner Studio creates photography, films and visual stories for people, places and projects with character.")}</p>
+			</section>
+		</main>
+
+		<SiteFooter locale={locale} />
+	<LanguageControls locale={locale} path="/links" />
+	</body>
+</html>
+
+<style>
+	.links-page {
+		min-height: 100vh;
+		display: grid;
+		place-items: center;
+		padding: clamp(24px, 5vw, 56px);
+		background:
+			linear-gradient(rgba(28, 28, 27, 0.72), rgba(28, 28, 27, 0.88)),
+			url("/images/title-background.jpg") center center / cover no-repeat;
+	}
+
+	.links-card {
+		width: min(100%, 560px);
+		padding: clamp(28px, 6vw, 56px);
+		border: 1px solid rgba(244, 234, 220, 0.18);
+		border-radius: 42px;
+		background:
+			radial-gradient(ellipse at top left, rgba(215, 174, 129, 0.28), transparent 65%),
+			radial-gradient(ellipse at bottom right, rgba(82, 116, 132, 0.3), transparent 65%),
+			linear-gradient(145deg, rgba(48, 43, 37, 0.9), rgba(28, 33, 38, 0.9));
+		backdrop-filter: blur(16px);
+		box-shadow: 0 28px 90px rgba(0, 0, 0, 0.34);
+		text-align: center;
+	}
+
+	.logo-wrap {
+		width: min(180px, 75.6%);
+		margin: 0 auto 38px;
+	}
+
+	.logo-wrap img {
+		width: 100%;
+		height: auto;
+	}
+
+	.links-card .eyebrow {
+		margin: 0 0 18px;
+		color: var(--sand);
+		font-size: clamp(0.7216rem, 1.584vw, 0.88rem);
+	}
+
+	.links-card h1 {
+		margin: 0;
+		color: var(--sand);
+		font-size: clamp(2.87385rem, 10.98825vw, 5.7477rem);
+		line-height: 0.88;
+		letter-spacing: 0.015em;
+		text-shadow: 0 8px 32px rgba(0, 0, 0, 0.34);
+	}
+
+	.intro {
+		max-width: 420px;
+		margin: 28px auto 0;
+		color: rgba(244, 234, 220, 0.9);
+		font-size: clamp(1rem, 2.4vw, 1.18rem);
+		line-height: 1.55;
+	}
+
+	.links-stack {
+		display: grid;
+		gap: 12px;
+		margin-top: 34px;
+	}
+
+	.link-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 54px;
+		padding: 14px 20px;
+		border: 1px solid rgba(215, 174, 129, 0.42);
+		border-radius: 999px;
+		color: var(--sand);
+		background: rgba(28, 28, 27, 0.34);
+		font-size: 1rem;
+		transition:
+			transform 180ms ease,
+			background 180ms ease,
+			border-color 180ms ease,
+			color 180ms ease;
+	}
+
+	.featured-film {
+		display: grid;
+		gap: 16px;
+		margin-bottom: 12px;
+		padding: 12px 12px 20px;
+		border: 1px solid rgba(215, 174, 129, 0.42);
+		border-radius: 28px;
+		color: var(--sand);
+		background: rgba(28, 28, 27, 0.34);
+		transition: border-color 180ms ease, background 180ms ease;
+	}
+
+	.featured-film img {
+		display: block;
+		width: 100%;
+		height: auto;
+		aspect-ratio: 16 / 9;
+		border-radius: 18px;
+	}
+
+	.featured-film > span {
+		font-size: 1rem;
+	}
+
+	.featured-film:hover {
+		border-color: var(--sand);
+		background: rgba(215, 174, 129, 0.1);
+	}
+
+	.link-button:hover {
+		transform: translateY(-1px);
+		color: var(--ink);
+		background: var(--sand);
+		border-color: var(--sand);
+	}
+
+	.link-button.primary {
+		color: var(--ink);
+		background: var(--sand);
+		border-color: var(--sand);
+	}
+
+	.link-button.primary:hover {
+		background: var(--cream);
+		border-color: var(--cream);
+	}
+
+	.small-note {
+		margin: 28px auto 0;
+		max-width: 420px;
+		color: rgba(244, 234, 220, 0.68);
+		font-size: 0.9rem;
+		line-height: 1.55;
+	}
+
+	@media (max-width: 600px) {
+		.links-page {
+			padding: 18px;
+			align-items: stretch;
+		}
+
+		.links-card {
+			min-height: calc(100vh - 36px);
+			display: grid;
+			align-content: center;
+			border-radius: 34px;
+		}
+	}
+
+	@media (max-width: 850px) {
+		.links-page {
+			background: linear-gradient(rgba(28, 28, 27, 0.72), rgba(28, 28, 27, 0.88)),
+				url("/images/title-background-800w.webp") center center / cover no-repeat;
+		}
+	}
+
+</style>

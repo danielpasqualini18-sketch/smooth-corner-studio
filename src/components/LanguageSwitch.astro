@@ -1,0 +1,24 @@
+---
+import { type Locale,localizedPath } from '../utils/i18n';
+interface Props { locale: Locale; path: string; }
+const { locale, path } = Astro.props;
+---
+<nav class="language-switch" aria-label={locale === 'it' ? 'Lingua del sito' : 'Website language'}>
+ <a href={localizedPath(path, 'en')} lang="en" hreflang="en" data-language-choice="en" aria-current={locale === 'en' ? 'page' : undefined} aria-label="English">EN</a>
+ <span aria-hidden="true">/</span>
+ <a href={localizedPath(path, 'it')} lang="it" hreflang="it" data-language-choice="it" aria-current={locale === 'it' ? 'page' : undefined} aria-label="Italiano">IT</a>
+</nav>
+<style>
+ .language-switch { display:flex; align-items:center; gap:4px; font-size: .8rem; letter-spacing:.04em; color:var(--cream); }
+ a { display:grid; place-items:center; min-height:44px; min-width:32px; color:var(--cream); opacity:.7; text-decoration:none; }
+ a[aria-current] { color:var(--sand); opacity:1; text-decoration:underline; text-underline-offset:5px; }
+ a:hover { opacity:1; }
+ a:focus-visible { outline:2px solid var(--sand); outline-offset:2px; border-radius:4px; }
+ :global(.site-header) .language-switch { position:absolute; right:clamp(20px,4vw,48px); top:50%; transform:translateY(-50%); }
+ :global(.page-header) .language-switch { position:absolute; right:20px; top:50%; transform:translateY(-50%); }
+ :global(.links-card) { position:relative; }
+ :global(.links-card) .language-switch { position:absolute; right:18px; top:12px; }
+ @media(min-width:851px) and (max-width:1100px) { :global(.site-nav) { gap:12px; font-size:.9rem; } }
+ @media(max-width:850px) { :global(.site-header) .language-switch { right:16px; left:auto; } }
+ @media(max-width:600px) { :global(.page-header) { padding-left:20px; padding-right:104px; } :global(.page-header .back-link) { font-size:.68rem; letter-spacing:.08em; } }
+</style>

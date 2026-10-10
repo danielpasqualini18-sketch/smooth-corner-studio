@@ -1,16 +1,21 @@
 ---
 import { CONTACT_EMAIL, INSTAGRAM_URL, pageDetails,SITE_URL, STUDIO_NAME } from '../data/site';
+import { type Locale,localizedPath } from '../utils/i18n';
 interface Props {
+ locale?: Locale;
  title: string;
  description: string;
  path: string;
  preloadImage?: string;
  noindex?: boolean;
 }
-const { title, description, path, preloadImage, noindex = false } = Astro.props;
+const { title, description, path, preloadImage, noindex = false, locale = "en" } = Astro.props;
 const origin = Astro.site ?? new URL(SITE_URL);
-const canonical = new URL(path === '/' || /\.[a-z0-9]+$/i.test(path) ? path : `${path.replace(/\/$/, '')}/`, origin).href;
+const localePath = localizedPath(path, locale);
+const canonical = new URL(localePath === '/' || /\.[a-z0-9]+$/i.test(path) ? localePath : `${localePath.replace(/\/$/, '')}/`, origin).href;
 const details = pageDetails[path] ?? pageDetails['/'];
+const imageAlt = locale === 'it' ? ({ '/': 'Logo dorato di Smooth Corner Studio su dune e formazioni calcaree', '/links': 'Logo dorato di Smooth Corner Studio su dune e formazioni calcaree', '/photography': 'Una persona in costume arancione tra dune e mare turchese', '/events': 'Una coppia di sposi vicino a un’auto d’epoca sotto alberi autunnali', '/films': 'Partecipanti e mentori riuniti in una stazione pastorale nella luce dorata' } as Record<string,string>)[path] ?? details.imageAlt : details.imageAlt;
+const pageName = locale === 'it' ? ({ '/': 'Fotografo e filmmaker a Perth', '/links': 'Contatti e link', '/photography': 'Fotografia di ritratto e brand', '/events': 'Fotografia di matrimoni ed eventi', '/films': 'Documentari e film per brand' } as Record<string,string>)[path] ?? details.name : details.name;
 const image = new URL(details.image, origin).href;
 const studioId = new URL('/#studio', origin).href;
 const websiteId = new URL('/#website', origin).href;
@@ -19,19 +24,19 @@ const graph: Record<string, unknown>[] = [
  {
   '@type': 'Organization', '@id': studioId,
   name: STUDIO_NAME, url: origin.href,
-  description: 'Photography, filmmaking and visual storytelling by Daniel Pasqualini, based in Boorloo / Perth, Western Australia.',
+  description: locale === 'it' ? 'Fotografia, film e racconti per immagini di Daniel Pasqualini, di base a Boorloo/Perth, Western Australia, disponibile in Italia, Australia e all’estero.' : 'Photography, filmmaking and visual storytelling by Daniel Pasqualini, based in Boorloo / Perth, Western Australia.',
   image: new URL(pageDetails['/'].image, origin).href,
-  logo: { '@type': 'ImageObject', url: new URL('/apple-touch-icon.png', origin).href, width: 180, height: 180 },
+  logo: { '@type': 'ImageObject', url: new URL('/images/brand/smooth-corner-header-badge-600w.webp', origin).href, width: 600, height: 503 },
   email: CONTACT_EMAIL,
   location: { '@type': 'Place', name: 'Boorloo / Perth, Western Australia' },
   sameAs: [INSTAGRAM_URL],
  },
- { '@type': 'WebSite', '@id': websiteId, url: origin.href, name: STUDIO_NAME, publisher: { '@id': studioId }, inLanguage: 'en-AU' },
+ { '@type': 'WebSite', '@id': websiteId, url: origin.href, name: STUDIO_NAME, publisher: { '@id': studioId }, inLanguage: locale === 'it' ? 'it-IT' : 'en-AU' },
  {
   '@type': details.service ? 'CollectionPage' : 'WebPage', '@id': pageId,
-  url: canonical, name: title, description, inLanguage: 'en-AU',
+  url: canonical, name: title, description, inLanguage: locale === 'it' ? 'it-IT' : 'en-AU',
   isPartOf: { '@id': websiteId }, publisher: { '@id': studioId },
-  primaryImageOfPage: { '@type': 'ImageObject', url: image, width: 1200, height: 630, caption: details.imageAlt },
+  primaryImageOfPage: { '@type': 'ImageObject', url: image, width: 1200, height: 630, caption: imageAlt },
   ...(path !== '/' ? { breadcrumb: { '@id': `${canonical}#breadcrumb` } } : {}),
   ...(details.service ? { about: { '@id': `${canonical}#service` } } : {}),
  },
@@ -39,14 +44,14 @@ const graph: Record<string, unknown>[] = [
 if (path !== '/') graph.push({
  '@type': 'BreadcrumbList', '@id': `${canonical}#breadcrumb`,
  itemListElement: [
-  { '@type': 'ListItem', position: 1, name: STUDIO_NAME, item: origin.href },
-  { '@type': 'ListItem', position: 2, name: details.name, item: canonical },
+  { '@type': 'ListItem', position: 1, name: STUDIO_NAME, item: new URL(localizedPath('/', locale), origin).href },
+  { '@type': 'ListItem', position: 2, name: pageName, item: canonical },
  ],
 });
 if (details.service) graph.push({
- '@type': 'Service', '@id': `${canonical}#service`, name: details.name,
- serviceType: details.service, description, url: canonical, provider: { '@id': studioId },
- areaServed: [{ '@type': 'City', name: 'Perth' }, { '@type': 'State', name: 'Western Australia' }],
+ '@type': 'Service', '@id': `${canonical}#service`, name: pageName,
+ serviceType: locale === "it" ? ({ "/photography": "Fotografia di ritratto, editoriale, lifestyle e brand", "/events": "Fotografia di matrimoni, persone, comunità ed eventi", "/films": "Documentari, film per brand e produzione video" } as Record<string,string>)[path] : details.service, description, url: canonical, provider: { '@id': studioId },
+ areaServed: locale === 'it' ? [{ '@type': 'Country', name: 'Italy' }, { '@type': 'Country', name: 'Australia' }, { '@type': 'Place', name: 'International' }] : [{ '@type': 'City', name: 'Perth' }, { '@type': 'State', name: 'Western Australia' }],
 });
 ---
 <meta charset="utf-8" />
@@ -57,21 +62,26 @@ if (details.service) graph.push({
 <meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large"} />
 <meta name="theme-color" content="#1c1c1b" />
 <link rel="canonical" href={canonical} />
+{!noindex && <>
+ <link rel="alternate" hreflang="en" href={new URL(path === '/' ? '/' : `${path}/`, origin).href} />
+ <link rel="alternate" hreflang="it" href={new URL(path === '/' ? '/it/' : `/it${path}/`, origin).href} />
+ <link rel="alternate" hreflang="x-default" href={new URL(path === '/' ? '/' : `${path}/`, origin).href} />
+</>}
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content={STUDIO_NAME} />
-<meta property="og:locale" content="en_AU" />
+<meta property="og:locale" content={locale === "it" ? "it_IT" : "en_AU"} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
 <meta property="og:image" content={image} />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content={details.imageAlt} />
+<meta property="og:image:alt" content={imageAlt} />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={image} />
-<meta name="twitter:image:alt" content={details.imageAlt} />
+<meta name="twitter:image:alt" content={imageAlt} />
 <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=colour-bars" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

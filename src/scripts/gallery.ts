@@ -33,7 +33,7 @@ function initialiseGalleries() {
    gallery.append(...mixed);
    filters.forEach(filter => filter.setAttribute('aria-pressed', String(filter === button)));
    const status = root.querySelector('.gallery-status');
-   if (status) status.textContent = `${cards.filter(card => !card.hidden).length} photographs${collection === 'all' ? '' : ` · ${button.textContent}`}`;
+   if (status) status.textContent = `${cards.filter(card => !card.hidden).length} ${root.dataset.photoWord ?? "photographs"}${collection === 'all' ? '' : ` · ${button.textContent}`}`;
    layout();
   }));
   layout();
@@ -44,6 +44,11 @@ function initialiseGalleries() {
   children: '.curated-photo:not([hidden]) a',
   pswpModule: () => import('photoswipe'),
   preload: [1, 1],
+  closeTitle: document.documentElement.lang === "it" ? "Chiudi" : "Close",
+  zoomTitle: document.documentElement.lang === "it" ? "Ingrandisci" : "Zoom",
+  arrowPrevTitle: document.documentElement.lang === "it" ? "Precedente" : "Previous",
+  arrowNextTitle: document.documentElement.lang === "it" ? "Successiva" : "Next",
+  errorMsg: document.documentElement.lang === "it" ? "Impossibile caricare la fotografia." : "The image cannot be loaded.",
   paddingFn: viewport => ({ top: viewport.x < 850 ? 72 : 96, bottom: viewport.x < 850 ? 72 : 96, left: viewport.x < 850 ? 22 : 72, right: viewport.x < 850 ? 22 : 72 }),
  });
  lightbox.init();
