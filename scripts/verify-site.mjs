@@ -56,7 +56,7 @@ for (const file of files.filter(file => file.endsWith('.html'))) {
  titles.add(title); descriptions.add(description);
  const canonical = [...html.matchAll(/<link\b[^>]*>/g)].map(match => match[0]).find(tag => attribute(tag, 'rel') === 'canonical');
  assert(attribute(canonical ?? '', 'href').startsWith(origin), `${urlPath}: production canonical`);
- if (!urlPath.includes('404')) {
+ if (!meta.some(tag => attribute(tag, 'name') === 'robots' && attribute(tag, 'content').includes('noindex'))) {
   const json = [...html.matchAll(/<script type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)].map(match => JSON.parse(match[1]));
   assert(json.some(value => value['@graph']?.some(node => ['WebPage', 'CollectionPage'].includes(node['@type']))), `${urlPath}: page schema`);
  }
@@ -88,7 +88,7 @@ for (const file of files.filter(file => file.endsWith('.css'))) {
 for (const file of files.filter(file => file.endsWith('.xml'))) {
  const xml = await fs.readFile(file, 'utf8');
  for (const match of xml.matchAll(/<(?:loc|image:loc)>(.*?)<\/(?:loc|image:loc)>/g)) await checkReference(decode(match[1]), '/');
- if (file.endsWith('sitemap-0.xml')) assert(!/films-stories|\/404|image-sitemap/.test(xml), 'Only indexable pages in sitemap');
+ if (file.endsWith('sitemap-0.xml')) assert(!/films-stories|\/404|client-gallery|\/clients\/|image-sitemap/.test(xml), 'Only indexable pages in sitemap');
 }
 for (const file of files) assert((await fs.stat(file)).size < 25 * 1024 * 1024, `${file}: Cloudflare Pages file size`);
 assert.equal(issues.length, 0, issues.join('\n'));
