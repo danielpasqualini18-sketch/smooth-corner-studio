@@ -1,0 +1,100 @@
+---
+import '../styles/global.css';
+
+import PhotoGallery from '../components/PhotoGallery.astro';
+import SeoHead from '../components/SeoHead.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+const {galleryTitle='Private Client Gallery',galleryPath='/client-gallery'}=Astro.props;
+---
+<!doctype html>
+<html lang="en">
+ <head>
+  <SeoHead title={`${galleryTitle} | Smooth Corner Studio`} description={`${galleryTitle}: your photography gallery from Smooth Corner Studio.`} path={galleryPath} noindex />
+ </head>
+ <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="client-header">
+   <a class="back-link" href="/">Back to the studio</a>
+   <a class="brand-logo" href="/" aria-label="Smooth Corner Studio home"><img src="/images/brand/smooth-corner-header-badge-240w.webp" alt="Smooth Corner Studio" width="240" height="201" /></a>
+  </header>
+  <main id="main-content" class="client-stage" data-client-state="locked" tabindex="-1">
+   <section class="client-hero">
+    <div class="client-background" data-client-background hidden aria-hidden="true"><img data-client-cover alt="" width="1920" height="2560" decoding="async" fetchpriority="high" /></div>
+    <div class="client-shell hero-inner">
+   <section class="client-intro">
+    <p class="eyebrow">Client gallery</p>
+    <h1 class="display-title" data-client-title>Your photographs.</h1>
+    <p class="client-name" data-client-name hidden></p>
+   </section>
+   <div class="unlock-panel" data-client-locked>
+    <form data-client-unlock method="post">
+     <label for="gallery-password">Gallery password</label>
+     <div class="unlock-fields">
+      <input id="gallery-password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required maxlength="256" aria-describedby="gallery-feedback" />
+      <button type="submit" class="button primary">Open gallery</button>
+     </div>
+    </form>
+    <p class="gallery-feedback" id="gallery-feedback" role="status" aria-live="polite">Checking your gallery…</p>
+   </div>
+    </div>
+   </section>
+   <div class="client-collections client-shell" data-client-collections hidden></div>
+   <template id="client-gallery-template"><PhotoGallery id="client-preview" groups={[]} /></template>
+   <noscript><p>Please enable JavaScript to unlock your private gallery.</p></noscript>
+  </main>
+  <SiteFooter />
+  <script>import '../scripts/client-gallery';</script>
+ </body>
+</html>
+<style>
+ body { min-height:100vh; color:var(--cream); background:var(--ink); }
+ .client-stage { border-radius:0 0 68px 68px; overflow:hidden; background:radial-gradient(ellipse at 90% 0%,rgba(122,138,133,.16),transparent 40rem),linear-gradient(145deg,#242d3b,#202628 70%,#1c1c1b); }
+ .client-hero { position:relative; isolation:isolate; min-height:70svh; display:grid; align-content:center; padding:180px 0 96px; overflow:hidden; border-radius:0 0 68px 68px; background:var(--deep-blue); }
+ .hero-inner { position:relative; z-index:1; }
+ .client-background { position:absolute; inset:0; z-index:-1; pointer-events:none; overflow:hidden; }
+ .client-background img { width:100%; height:100%; object-fit:cover; object-position:center 40%; }
+ .client-background::after { content:""; position:absolute; inset:0; background:linear-gradient(125deg,rgba(28,28,27,.78),rgba(37,43,58,.64) 55%,rgba(28,28,27,.58)); }
+ [hidden] { display:none !important; }
+ .client-header { position:absolute; top:0; left:0; width:100%; z-index:2; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:20px; padding:18px clamp(20px,4vw,48px); border-radius:0 0 48px 48px; background:linear-gradient(120deg,rgba(56,51,45,.82),rgba(36,46,54,.8)); border-bottom:1px solid var(--line); }
+ .brand-logo { width:92px; margin-bottom:4px; }
+ .brand-logo img { display:block; width:100%; height:auto; }
+ .back-link { justify-self:start; font-size:.8rem; color:var(--text-soft); }
+ .client-shell { width:min(100% - 40px,1180px); margin:0 auto; }
+ .client-stage[data-client-state="locked"] .client-hero { min-height:100svh; padding:160px 0 72px; }
+ .client-stage[data-client-state="locked"] .client-intro { text-align:center; }
+ .client-stage[data-client-state="locked"] h1 { margin-inline:auto; }
+ .client-intro { margin-bottom:0; }
+ .client-stage[data-client-state="locked"] .client-intro { margin-bottom:clamp(28px,4vw,56px); }
+ .client-intro .eyebrow { margin:0 0 20px; }
+ .client-name { margin:20px 0 0; color:var(--text-soft); font-size:clamp(1rem,2vw,1.25rem); line-height:1.5; }
+ h1 { max-width:1100px; margin:0; font-size:clamp(3rem,7vw,7rem); overflow-wrap:anywhere; }
+ .unlock-panel { width:min(100%,620px); margin-inline:auto; padding:clamp(24px,4vw,40px); border:1px solid var(--line); border-radius:32px; background:linear-gradient(130deg,rgba(56,51,45,.84),rgba(37,46,56,.84)); backdrop-filter:blur(14px); }
+ label { display:block; margin-bottom:12px; font-size:.9rem; }
+ .unlock-fields { display:flex; gap:12px; align-items:stretch; }
+ input { width:100%; min-width:0; border:1px solid var(--line); border-radius:24px; padding:13px 18px; font:inherit; color:var(--cream); background:rgba(28,28,27,.55); }
+ input::placeholder { color:var(--text-soft); }
+ input:focus-visible { outline:2px solid var(--sand); outline-offset:3px; }
+ .unlock-fields .button { flex-shrink:0; font:inherit; cursor:pointer; }
+ button:disabled { opacity:.55; cursor:wait; }
+ .gallery-feedback { min-height:1.5em; margin:16px 0 0; color:var(--text-soft); font-size:.9rem; line-height:1.5; }
+ .gallery-feedback[data-error] { color:#f1bf9d; }
+ .client-collections { display:grid; gap:clamp(64px,9vw,120px); padding-top:clamp(45.54px,6.325vw,82.225px); padding-bottom:clamp(72px,10vw,130px); }
+ .client-collections :global(.client-collection) { min-width:0; }
+ @media(max-width:850px) {
+  .client-stage, .client-hero { border-radius:0 0 48px 48px; }
+  .client-hero { min-height:64svh; padding:160px 0 72px; }
+  .client-stage { background:radial-gradient(circle at 82% 10%,rgba(122,138,133,.34) 0,rgba(122,138,133,.12) 12rem,transparent 22rem),radial-gradient(circle at 12% 92%,rgba(60,71,97,.3) 0,rgba(60,71,97,.1) 11rem,transparent 21rem),linear-gradient(135deg,rgba(36,45,59,.98) 0%,rgba(60,71,97,.94) 48%,rgba(122,138,133,.86) 100%); }
+ }
+ .client-collections :global(h2) { font-family:var(--font-title); font-size:clamp(2rem,4vw,3.5rem); font-weight:400; line-height:1.1; margin:0 0 28px; }
+ .client-collections :global(.collection-empty) { display:grid; place-items:center; min-height:180px; padding:24px; border:1px solid var(--line); border-radius:28px; background:linear-gradient(130deg,rgba(215,174,129,.08),rgba(60,71,97,.22),rgba(122,138,133,.1)); color:var(--text-soft); text-align:center; }
+ .client-collections :global(.collection-empty p) { margin:0; font-size:.95rem; }
+ .client-collections :global(.gallery-nav), .client-collections :global(.gallery-status) { display:none; }
+ :global(.pswp__img) { border-radius:28px; }
+ :global(.pswp__img--placeholder) { border-radius:4px; }
+ :global(.pswp__bg) { background:rgba(28,28,27,.92); }
+ :global(.pswp) { --pswp-icon-color:var(--sand); --pswp-icon-color-secondary:rgba(28,28,27,.72); --pswp-bg:rgba(28,28,27,.92); }
+ :global(.pswp__button), :global(.pswp__counter) { color:var(--sand) !important; opacity:.92; }
+ :global(.pswp__button svg), :global(.pswp__icn) { color:var(--sand) !important; fill:var(--sand) !important; stroke:var(--sand) !important; }
+ :global(.pswp__button:hover svg), :global(.pswp__button:hover .pswp__icn) { color:var(--cream) !important; fill:var(--cream) !important; stroke:var(--cream) !important; }
+ @media(max-width:600px) { .client-header { grid-template-columns:1fr 80px 1fr; gap:8px; padding:12px 20px; border-radius:0 0 32px 32px; } .brand-logo { width:80px; } .back-link { font-size:.7rem; max-width:80px; line-height:1.4; } .unlock-fields { flex-direction:column; } .unlock-fields .button { min-height:46px; } }
+</style>

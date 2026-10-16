@@ -1,0 +1,31 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { randomBytes } from 'node:crypto';
+
+import { deriveGalleryKey, encode64 } from '../src/lib/client-gallery-crypto.mjs';
+const slug=process.argv[2];
+if(!slug || !/^[a-z0-9-]+$/.test(slug))throw new Error('Provide a prepared gallery slug.');
+const password=process.env.CLIENT_GALLERY_PASSWORD;
+if(!password || password.length<12)throw new Error('Set CLIENT_GALLERY_PASSWORD (12 characters minimum).');
+const source=path.join('work/client-galleries',slug);
+const manifest=JSON.parse(await fs.readFile(path.join(source,'gallery.json'),'utf8'));
+const assets=`/client-assets/${slug}/`;
+const media=file=>assets+file;
+const photo=photo=>({src:media(photo.file),thumbnail:media(photo.thumbnail),width:photo.width,height:photo.height,alt:photo.alt,srcset:photo.variants.map(v=>`${media(v.file)} ${v.width}w`).join(', ')});
+const data={title:manifest.title,clientName:manifest.clientName,groups:manifest.groups.map(g=>({title:g.title,photos:g.photos.map(photo)}))};
+const salt=encode64(randomBytes(16));
+const iv=randomBytes(12);
+const iterations=210000;
+const raw=await deriveGalleryKey(password,salt,iterations);
+const key=await crypto.subtle.importKey('raw',raw,'AES-GCM',false,['encrypt']);
+const ciphertext=await crypto.subtle.encrypt({name:'AES-GCM',iv,additionalData:new TextEncoder().encode(slug)},key,new TextEncoder().encode(JSON.stringify(data)));
+const cover=manifest.cover;
+const descriptor={title:manifest.title,clientName:manifest.clientName,cover:cover?{src:media(cover.file),width:cover.width,height:cover.height,srcset:cover.variants.map(v=>`${media(v.file)} ${v.width}w`).join(', ')}:null,encrypted:{salt,iterations,iv:encode64(iv),data:encode64(ciphertext)}};
+const files=new Set(manifest.groups.flatMap(g=>g.photos.flatMap(p=>[p.file,p.thumbnail,...p.variants.map(v=>v.file)])));
+if(cover)for(const file of [cover.file,...cover.variants.map(v=>v.file)])files.add(file);
+const destination=path.join('public/client-assets',slug);
+await fs.mkdir(destination,{recursive:true});
+for(const file of files){if(!/^[a-z0-9-]+\.webp$/.test(file))throw new Error('Unsafe asset filename');await fs.copyFile(path.join(source,file),path.join(destination,file));}
+await fs.mkdir('public/client-galleries',{recursive:true});
+await fs.writeFile(`public/client-galleries/${slug}.json`,JSON.stringify(descriptor));
+console.log(`Prepared ${slug}: ${data.groups.map(g=>`${g.photos.length} ${g.title}`).join(', ')}; ${files.size} public optimised assets. No plaintext password or source filenames published.`);

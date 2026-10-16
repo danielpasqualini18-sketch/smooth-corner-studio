@@ -10,3 +10,19 @@
 
 /images/*
   Cache-Control: public, max-age=3600
+
+/clients/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
+
+/client-gallery/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
+
+/client-galleries/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
+
+/client-assets/*
+  X-Robots-Tag: noindex, noarchive
+  Cache-Control: public, max-age=3600

@@ -1,0 +1,13 @@
+---
+import fs from 'node:fs/promises';
+
+import ClientGallery from '../client-gallery.astro';
+export async function getStaticPaths() {
+ const files = await fs.readdir('public/client-galleries');
+ return Promise.all(files.filter(file=>/^[a-z0-9-]+\.json$/.test(file)).map(async file=>{
+  const welcome=JSON.parse(await fs.readFile(`public/client-galleries/${file}`,'utf8'));
+  return {params:{slug:file.slice(0,-5)},props:{galleryTitle:welcome.title,galleryPath:`/clients/${file.slice(0,-5)}/`}};
+ }));
+}
+---
+<ClientGallery {...Astro.props} />

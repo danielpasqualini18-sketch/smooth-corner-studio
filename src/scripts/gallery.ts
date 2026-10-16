@@ -60,3 +60,5 @@ if (document.readyState === 'loading') {
  initialiseGalleries();
 }
 document.addEventListener('astro:page-load', initialiseGalleries);
+
+document.addEventListener('smooth-corner:gallery-ready', initialiseGalleries);
